@@ -32,10 +32,7 @@ public class MenuPrincipal extends Activity {
         buttonPlay.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));
         buttonOptions.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));
         buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));*/
-        Dialog dialog = new Dialog(this, android.R.style.Theme_Translucent_NoTitleBar);
 
-        dialog.setContentView(R.layout.layout_dialog_inicio);
-        dialog.show();
     }
 
     public void jugar(View view){

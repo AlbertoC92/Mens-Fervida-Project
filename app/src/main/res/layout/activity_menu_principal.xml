@@ -11,10 +11,14 @@
     android:weightSum="10"
     android:background="@drawable/fondo">
 
-    <Space
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"/>
+        android:layout_weight="2"
+        android:background="@drawable/cinta">
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -132,7 +136,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/button9"
             android:layout_weight="1.5"
-            android:background="@drawable/g7169" />
+            android:background="@drawable/boton_compartir" />
 
         <Space
             android:layout_width="0dp"
@@ -144,7 +148,7 @@
             android:layout_height="match_parent"
             android:id="@+id/button8"
             android:layout_weight="1.5"
-            android:background="@drawable/g7169" />
+            android:background="@drawable/boton_podio" />
     </LinearLayout>
 
 </LinearLayout>
