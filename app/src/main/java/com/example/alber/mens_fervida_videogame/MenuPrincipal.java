@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MenuPrincipal extends Activity {
     private Button buttonPlay,buttonOptions,buttonExit;
@@ -36,6 +37,7 @@ public class MenuPrincipal extends Activity {
     }
 
     public void jugar(View view){
+        Toast.makeText(this, "Entra", Toast.LENGTH_SHORT);
 
     }
 
