@@ -24,7 +24,7 @@
     <Button
         android:text="PLAY"
         android:layout_marginTop="162dp"
-        android:background="@drawable/boton_redondeado"
+        android:background="@drawable/boton"
         android:id="@+id/buttonPlay"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -45,7 +45,7 @@
         android:text="Options"
         android:layout_width="170dp"
         android:layout_marginTop="35dp"
-        android:background="@drawable/boton_redondeado"
+        android:background="@drawable/boton"
         android:id="@+id/buttonOptions"
         android:textStyle="normal|bold"
         android:layout_height="70dp"
@@ -55,7 +55,7 @@
 
     <Button
         android:text="Exit"
-        android:background="@drawable/boton_redondeado"
+        android:background="@drawable/boton"
         android:layout_marginTop="35dp"
         android:id="@+id/buttonExit"
         android:textStyle="normal|bold"
