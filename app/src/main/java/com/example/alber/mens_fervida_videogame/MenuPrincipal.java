@@ -1,6 +1,7 @@
 package com.example.alber.mens_fervida_videogame;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -22,11 +23,7 @@ public class MenuPrincipal extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//Línea para ocultar la barra de información de la batería,etc...
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
-        titulo = (TextView)findViewById(R.id.titulo);
-        titulo.setTextSize(50);
-        titulo.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/edosz.ttf"));
-        titulo.setTextColor(Color.rgb(255,128,0));
-        buttonPlay = (Button)findViewById(R.id.buttonPlay);
+       /* buttonPlay = (Button)findViewById(R.id.buttonPlay);
         buttonOptions = (Button)findViewById(R.id.buttonOptions);
         buttonExit = (Button)findViewById(R.id.buttonExit);
         buttonPlay.setTextSize(30);
@@ -34,7 +31,11 @@ public class MenuPrincipal extends Activity {
         buttonExit.setTextSize(30);
         buttonPlay.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));
         buttonOptions.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));
-        buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));
+        buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));*/
+        Dialog dialog = new Dialog(this, android.R.style.Theme_Translucent_NoTitleBar);
+
+        dialog.setContentView(R.layout.layout_dialog_inicio);
+        dialog.show();
     }
 
     public void jugar(View view){
