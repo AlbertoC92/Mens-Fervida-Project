@@ -23,15 +23,15 @@ public class MenuPrincipal extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//Línea para ocultar la barra de información de la batería,etc...
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
-       /* buttonPlay = (Button)findViewById(R.id.buttonPlay);
-        buttonOptions = (Button)findViewById(R.id.buttonOptions);
-        buttonExit = (Button)findViewById(R.id.buttonExit);
-        buttonPlay.setTextSize(30);
-        buttonOptions.setTextSize(30);
-        buttonExit.setTextSize(30);
-        buttonPlay.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));
-        buttonOptions.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));
-        buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/cinnabar brush.ttf"));*/
+        buttonPlay = (Button)findViewById(R.id.bt_jugar);
+        buttonOptions = (Button)findViewById(R.id.bt_opciones);
+        buttonExit = (Button)findViewById(R.id.bt_salir);
+        //buttonPlay.setTextSize(30);
+        //buttonOptions.setTextSize(30);
+        //buttonExit.setTextSize(30);
+        buttonPlay.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
+        buttonOptions.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
+        buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
 
     }
 

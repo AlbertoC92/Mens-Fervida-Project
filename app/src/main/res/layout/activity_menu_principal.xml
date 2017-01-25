@@ -52,12 +52,18 @@
                 android:gravity="center_horizontal">
 
                 <Button
-                    android:text="Button"
+                    android:text="@string/bt_jugar"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/button"
+                    android:id="@+id/bt_jugar"
                     android:layout_weight="1"
-                    android:background="@drawable/boton" />
+                    android:background="@drawable/boton"
+                    android:textSize="@dimen/tamano_texto_boton"
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="@color/colorBotonVerde"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="10"/>
             </LinearLayout>
 
             <Space
@@ -75,12 +81,18 @@
                 >
 
                 <Button
-                    android:text="Button"
+                    android:text="@string/bt_opciones"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/button5"
+                    android:id="@+id/bt_opciones"
                     android:layout_weight="1"
-                    android:background="@drawable/boton" />
+                    android:background="@drawable/boton"
+                    android:textSize="@dimen/tamano_texto_boton"
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="@color/colorBotonVerde"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="10"/>
             </LinearLayout>
 
             <Space
@@ -97,12 +109,18 @@
                 android:gravity="center_horizontal">
 
                 <Button
-                    android:text="Button"
+                    android:text="@string/bt_salir"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/button7"
+                    android:id="@+id/bt_salir"
                     android:layout_weight="1"
-                    android:background="@drawable/boton" />
+                    android:background="@drawable/boton"
+                    android:textSize="@dimen/tamano_texto_boton"
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="@color/colorBotonVerde"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="10"/>
             </LinearLayout>
 
             <Space

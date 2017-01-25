@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mens-Fervida-Videogame</string>
+    <string name="bt_jugar">Jugar</string>
+    <string name="bt_opciones">Opciones</string>
+    <string name="bt_salir">Salir</string>
+</resources>
