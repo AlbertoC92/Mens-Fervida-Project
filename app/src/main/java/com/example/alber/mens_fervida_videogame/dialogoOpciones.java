@@ -56,7 +56,7 @@ public class dialogoOpciones extends Dialog {
         sp.setAdapter(adaptador);
         volver=(Button)findViewById(R.id.btnVolver);
         aceptar=(Button)findViewById(R.id.btnAceptar);
-        gridview=(GridView)findViewById(R.id.gridview);
+        //gridview=(GridView)findViewById(R.id.gridview);
     }
 
     @Override

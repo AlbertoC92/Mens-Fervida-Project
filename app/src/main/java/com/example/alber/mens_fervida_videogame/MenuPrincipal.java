@@ -24,7 +24,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MenuPrincipal extends Activity {
-    private Button buttonPlay,buttonOptions,buttonExit;
+    private Button buttonPlay,buttonOptions,buttonArcade,buttonExit;
     private TextView titulo;
     private dialogoOpciones dialog;
 
@@ -38,12 +38,14 @@ public class MenuPrincipal extends Activity {
         buttonPlay = (Button)findViewById(R.id.bt_jugar);
         buttonOptions = (Button)findViewById(R.id.bt_opciones);
         buttonExit = (Button)findViewById(R.id.bt_salir);
+        buttonArcade = (Button)findViewById(R.id.bt_arcade);
         //buttonPlay.setTextSize(30);
         //buttonOptions.setTextSize(30);
         //buttonExit.setTextSize(30);
         buttonPlay.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         buttonOptions.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
+        buttonArcade.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
 
     }
 

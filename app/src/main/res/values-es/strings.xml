@@ -5,4 +5,5 @@
     <string name="bt_opciones">Opciones</string>
     <string name="bt_salir">Salir</string>
     <string name="textoNombre">Nombre</string>
+    <string name="bt_arcade">Juegos</string>
 </resources>

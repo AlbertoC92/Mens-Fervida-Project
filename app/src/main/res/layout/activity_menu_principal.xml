@@ -34,7 +34,7 @@
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="6"
+            android:layout_weight="8"
             android:background="@drawable/background">
 
             <Space
@@ -108,6 +108,34 @@
                 android:gravity="center_horizontal">
 
                 <Button
+                    android:text="@string/bt_arcade"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bt_arcade"
+                    android:layout_weight="2"
+                    android:background="@drawable/boton"
+                    android:textSize="@dimen/tamano_texto_boton"
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="@color/colorBotonVerde"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="10" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:gravity="center_horizontal">
+
+                <Button
                     android:text="@string/bt_salir"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -121,13 +149,18 @@
                     android:shadowDy="0"
                     android:shadowRadius="10"
                     android:onClick="salir" />
-            </LinearLayout>
 
+            </LinearLayout>
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
         </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <Space
             android:layout_width="0dp"
