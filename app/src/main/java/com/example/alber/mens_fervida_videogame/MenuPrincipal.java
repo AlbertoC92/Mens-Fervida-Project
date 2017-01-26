@@ -2,16 +2,26 @@ package com.example.alber.mens_fervida_videogame;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telecom.Call;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MenuPrincipal extends Activity {
     private Button buttonPlay,buttonOptions,buttonExit;
@@ -42,10 +52,22 @@ public class MenuPrincipal extends Activity {
     }
 
     public void opciones(View view){
-
+        mostrarDialogo();
     }
+
 
     public void salir(View view){
         finish();
     }
+
+    //Llamada al dialogo
+    private void mostrarDialogo()
+    {
+        dialogoOpciones dialog = new dialogoOpciones(this);
+        dialog.show();
+    }
+
+
 }
+
+

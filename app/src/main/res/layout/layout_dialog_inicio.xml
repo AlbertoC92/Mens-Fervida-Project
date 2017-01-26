@@ -1,10 +1,11 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/ventanaopciones"
     android:weightSum="7"
 
     android:id="@+id/rl_main">
@@ -12,7 +13,41 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="0.5" />
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:weightSum="2"
+            android:gravity="center_horizontal">
+
+        <TextView
+            android:text="Nombre:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNombre"
+            android:layout_weight="0.06"
+            android:textSize="@dimen/tamano_texto_boton"
+            android:fontFamily="@string/textoNombre"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/campoNombre"
+            android:layout_weight="1"
+            tools:textAppearance="@style/TextAppearance.AppCompat"
+            android:theme="@style/AppTheme" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
 
     <LinearLayout
             android:orientation="horizontal"
@@ -22,58 +57,73 @@
             android:weightSum="2"
             android:gravity="center_horizontal">
 
-            <Button
-                android:text="Button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/button1"
-                android:layout_weight="1"
-                android:background="@drawable/boton" />
+        <TextView
+            android:text="Pais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textSize="@dimen/tamano_texto_boton" />
 
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spPaises"
+            android:layout_weight="1"
+            android:theme="@style/AppTheme" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:weightSum="1"
+            android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/seleccionavatar"
+            android:id="@+id/imagenAvatares"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:weightSum="2"
-            android:gravity="center_horizontal">
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="12"
+        android:gravity="right">
 
-            <Button
-                android:text="Button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/button2"
-                android:layout_weight="1"
-                android:background="@drawable/boton" />
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:weightSum="2"
-            android:gravity="center_horizontal">
-
-            <Button
-                android:text="Button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/button3"
-                android:layout_weight="1"
-                android:background="@drawable/boton" />
-        </LinearLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAceptar"
+            android:layout_weight="2.5"
+            android:background="@drawable/btn_aceptar"
+            android:layout_gravity="left"
+            android:gravity="left" />
 
         <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnVolver"
+            android:layout_weight="2.5"
+            android:background="@drawable/btno_volver"
+            android:onClick="volver" />
+
+    </LinearLayout>
+
 </LinearLayout>
 
