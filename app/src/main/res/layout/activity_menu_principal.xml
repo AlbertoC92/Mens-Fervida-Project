@@ -8,7 +8,7 @@
     android:padding="10dp"
     android:orientation="vertical"
     android:weightSum="10"
-    android:background="@drawable/fondo2">
+    android:background="@drawable/fondo_res">
 
     <LinearLayout
         android:orientation="vertical"

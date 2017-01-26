@@ -68,8 +68,8 @@ public class dialogoOpciones extends Dialog {
         int position = i.getIntExtra("position", -1);// -1 si no se encontró la referencia
         AvataresAdapter adapter = new AvataresAdapter(context);
 
-        avatares= (ImageView)findViewById(R.id.imagenAvatares);
-        avatares.setImageResource((int) adapter.getItemId(position));
+       // avatares= (ImageView)findViewById(R.id.imagenAvatares);
+       // avatares.setImageResource((int) adapter.getItemId(position));
     }
 
 }
