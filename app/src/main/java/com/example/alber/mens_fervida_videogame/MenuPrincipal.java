@@ -26,13 +26,14 @@ import java.util.ArrayList;
 public class MenuPrincipal extends Activity {
     private Button buttonPlay,buttonOptions,buttonExit;
     private TextView titulo;
-
+    private dialogoOpciones dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//Línea para ocultar la barra de información de la batería,etc...
         super.onCreate(savedInstanceState);
+        dialogoOpciones dialog = new dialogoOpciones(this);
         setContentView(R.layout.activity_menu_principal);
         buttonPlay = (Button)findViewById(R.id.bt_jugar);
         buttonOptions = (Button)findViewById(R.id.bt_opciones);
@@ -52,7 +53,7 @@ public class MenuPrincipal extends Activity {
     }
 
     public void opciones(View view){
-        mostrarDialogo();
+       dialog.show();
     }
 
 
@@ -60,12 +61,8 @@ public class MenuPrincipal extends Activity {
         finish();
     }
 
-    //Llamada al dialogo
-    private void mostrarDialogo()
-    {
-        dialogoOpciones dialog = new dialogoOpciones(this);
-        dialog.show();
-    }
+
+
 
 
 }
