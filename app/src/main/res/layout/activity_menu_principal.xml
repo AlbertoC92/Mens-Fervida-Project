@@ -9,7 +9,7 @@
     android:padding="10dp"
     android:orientation="vertical"
     android:weightSum="10"
-    android:background="@drawable/fondo">
+    android:background="@drawable/fondo_res">
 
     <LinearLayout
         android:orientation="vertical"
@@ -28,7 +28,7 @@
 
         <Space
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2" />
 
         <LinearLayout
@@ -132,7 +132,7 @@
 
         <Space
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2" />
 
     </LinearLayout>
