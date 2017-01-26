@@ -77,19 +77,26 @@
         android:layout_height="0dp"
         android:layout_weight="0.5" />
 
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:weightSum="1"
-            android:gravity="center_horizontal">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/seleccionavatar"
+        android:padding="30dp">
 
-        <GridView
+        <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/seleccionavatar" />
-    </LinearLayout>
+            android:weightSum="1"
+            android:orientation="vertical">
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listaPersonajes" />
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -97,42 +104,56 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:weightSum="12"
-        android:gravity="right">
+        android:gravity="center_horizontal">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnAceptar"
-            android:layout_weight="2.5"
-            android:background="@drawable/btn_aceptar"
+            android:layout_weight="2"
+            android:background="@drawable/btn_aceptar_azul"
             android:layout_gravity="left"
             android:gravity="left" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button"
-            android:layout_weight="1" />
 
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="7" />
+            android:layout_weight="1" />
 
         <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_weight="2"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/btn_musica_rojo" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
+            android:layout_weight="2"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/btn_volumne_verde" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnVolver"
-            android:layout_weight="2.5"
-            android:background="@drawable/btno_volver"
+            android:layout_weight="2"
+            android:background="@drawable/btn_volver_azul"
             android:onClick="volver" />
 
     </LinearLayout>
