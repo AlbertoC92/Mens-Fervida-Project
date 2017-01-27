@@ -8,13 +8,16 @@ import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -56,7 +59,8 @@ public class dialogoOpciones extends Dialog {
         int height = size.y;
         getWindow().setLayout((int)(size.x*0.7), (int)(size.y*0.7));
         getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN );
+        setCanceledOnTouchOutside(true);
     }
 
 
@@ -78,15 +82,13 @@ public class dialogoOpciones extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         configurarDialogo();
-        //Esta parte reconoce el adaptador de avatares creado en otra clase
-        Intent i = new Intent();
-        int position = i.getIntExtra("position", -1);// -1 si no se encontró la referencia
-        AvataresAdapter adapter = new AvataresAdapter(context);
         listaPersonajes.setAdapter(adaptador);
-
-
-       // avatares= (ImageView)findViewById(R.id.imagenAvatares);
-       // avatares.setImageResource((int) adapter.getItemId(position));
+        listaPersonajes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(view.getContext(), listaPersonajes.getSelectedItem().toString(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 }

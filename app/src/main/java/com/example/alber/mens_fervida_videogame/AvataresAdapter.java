@@ -30,7 +30,9 @@ public class AvataresAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        ImageView imageView= new ImageView(mContext.getApplicationContext());
+        imageView.setImageResource(caracteres[position]);
+        return imageView;
     }
 
     @Override
