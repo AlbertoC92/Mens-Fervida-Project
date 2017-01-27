@@ -37,11 +37,12 @@ public class dialogoOpciones extends Dialog {
     private Context context;
     private Button volver,aceptar;
     private AvataresAdapter adaptador;
+    private GridView listaPersonajes;
 
 
-    public dialogoOpciones(Context context) {
-
-        super(context);
+    public dialogoOpciones(Context context, int themeResId) {
+        super(context, themeResId);
+        this.context=context;
     }
 
 
@@ -49,14 +50,14 @@ public class dialogoOpciones extends Dialog {
     public void configurarDialogo(){
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.layout_dialog_inicio);
+        listaPersonajes=(GridView)findViewById(R.id.listaPersonajes);
         adaptador=new AvataresAdapter(context);
         campoNombre=(EditText)findViewById(R.id.campoNombre);
-        sp=(Spinner)findViewById(R.id.spPaises);
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,paises);
-        sp.setAdapter(adaptador);
+        //sp=(Spinner)findViewById(R.id.spPaises);
+        //ArrayAdapter<String> adaptador = new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,paises);
+        //sp.setAdapter(adaptador);
         volver=(Button)findViewById(R.id.btnVolver);
         aceptar=(Button)findViewById(R.id.btnAceptar);
-        //gridview=(GridView)findViewById(R.id.gridview);
     }
 
     @Override
@@ -67,6 +68,8 @@ public class dialogoOpciones extends Dialog {
         Intent i = new Intent();
         int position = i.getIntExtra("position", -1);// -1 si no se encontró la referencia
         AvataresAdapter adapter = new AvataresAdapter(context);
+        listaPersonajes.setAdapter(adaptador);
+
 
        // avatares= (ImageView)findViewById(R.id.imagenAvatares);
        // avatares.setImageResource((int) adapter.getItemId(position));

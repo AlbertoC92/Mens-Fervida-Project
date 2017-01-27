@@ -5,12 +5,15 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telecom.Call;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -33,7 +36,7 @@ public class MenuPrincipal extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//Línea para ocultar la barra de información de la batería,etc...
         super.onCreate(savedInstanceState);
-        dialogoOpciones dialog = new dialogoOpciones(this);
+
         setContentView(R.layout.activity_menu_principal);
         buttonPlay = (Button)findViewById(R.id.bt_jugar);
         buttonOptions = (Button)findViewById(R.id.bt_opciones);
@@ -55,12 +58,42 @@ public class MenuPrincipal extends Activity {
     }
 
     public void opciones(View view){
-       dialog.show();
+        Dialog();
     }
 
 
     public void salir(View view){
         finish();
+    }
+
+    private void Dialog() {    String gender;
+
+    // creating a dialog object and specifying the activity it pops on .
+    // R.style.FullHeightDialog specifies that dialog box has height
+    // equivalent to screen height
+
+        final dialogoOpciones dialog = new dialogoOpciones(MenuPrincipal.this,R.style.AppTheme);
+
+        //dialog.setContentView(R.layout.layout_dialog_inicio);//setting the dialog xml layout
+
+        /* adding action when image buttons of dialog are clicked */
+        /*dialog.findViewById(R.id.ImgBtn_id).setOnClickListener(
+                new OnClickListener() {
+                    public void onClick(View v) {
+                        //put your code here
+                        dialog.dismiss();//closes the dialog box
+                    }
+                });*/
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        int height = size.y;
+        dialog.getWindow().setLayout((int)(size.x*0.7), (int)(size.y*0.7));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        dialog.show();//pops the dialog box
+
     }
 
 

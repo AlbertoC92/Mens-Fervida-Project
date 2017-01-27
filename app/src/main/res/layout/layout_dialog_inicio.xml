@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/ventanaopciones"
     android:weightSum="7"
-
     android:id="@+id/rl_main">
 
     <Space
@@ -87,14 +86,16 @@
         <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:weightSum="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="25dp">
 
             <GridView
                 android:layout_width="match_parent"
+                android:id="@+id/listaPersonajes"
                 android:layout_height="wrap_content"
-                android:id="@+id/listaPersonajes" />
+                android:numColumns="auto_fit" />
         </LinearLayout>
     </ScrollView>
 
