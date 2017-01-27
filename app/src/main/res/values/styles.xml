@@ -9,6 +9,10 @@
         <item name="editTextBackground">@drawable/campo_texto</item>
     </style>
 
+    <style name="Tema" parent="Theme.AppCompat">
+        <item name="editTextBackground">@drawable/campo_texto</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

@@ -40,7 +40,9 @@
             android:id="@+id/campoNombre"
             android:layout_weight="1"
             tools:textAppearance="@style/TextAppearance.AppCompat"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:background="@drawable/campo_texto"
+            android:padding="5dp" />
     </LinearLayout>
 
     <Space
