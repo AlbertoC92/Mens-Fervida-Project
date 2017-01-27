@@ -1,14 +1,19 @@
 package com.example.alber.mens_fervida_videogame;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.telecom.Call;
 import android.telecom.Call.Details;
+import android.view.Display;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -36,13 +41,29 @@ public class dialogoOpciones extends Dialog {
     private ImageView avatares;
     private Context context;
     private Button volver,aceptar;
+    private Activity activity;
     private AvataresAdapter adaptador;
     private GridView listaPersonajes;
 
 
-    public dialogoOpciones(Context context, int themeResId) {
+    public dialogoOpciones(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
         this.context=context;
+        this.activity=activity;
+        quitarFondoRedimensionar();
+
+    }
+
+    public void quitarFondoRedimensionar(){
+        this.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        int height = size.y;
+        getWindow().setLayout((int)(size.x*0.7), (int)(size.y*0.7));
+        getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
     }
 
 

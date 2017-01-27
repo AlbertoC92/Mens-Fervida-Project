@@ -72,7 +72,7 @@ public class MenuPrincipal extends Activity {
     // R.style.FullHeightDialog specifies that dialog box has height
     // equivalent to screen height
 
-        final dialogoOpciones dialog = new dialogoOpciones(MenuPrincipal.this,R.style.AppTheme);
+        final dialogoOpciones dialog = new dialogoOpciones(MenuPrincipal.this,R.style.AppTheme, this);
 
         //dialog.setContentView(R.layout.layout_dialog_inicio);//setting the dialog xml layout
 
@@ -84,14 +84,7 @@ public class MenuPrincipal extends Activity {
                         dialog.dismiss();//closes the dialog box
                     }
                 });*/
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
-        int height = size.y;
-        dialog.getWindow().setLayout((int)(size.x*0.7), (int)(size.y*0.7));
-        dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+
         dialog.show();//pops the dialog box
 
     }
