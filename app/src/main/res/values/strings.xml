@@ -7,4 +7,5 @@
     <string name="title_activity_avatares_grid_view">AvataresGridView</string>
     <string name="bt_arcade">Games</string>
     <string name="txt_pais">Country: </string>
+
 </resources>

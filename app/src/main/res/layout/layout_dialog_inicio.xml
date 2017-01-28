@@ -72,7 +72,8 @@
             android:id="@+id/spPaises"
             android:layout_weight="1.00"
             android:theme="@style/AppTheme"
-            android:background="@drawable/backtexto" />
+            android:background="@drawable/backtexto"
+            android:entries="@string/bt_salir" />
     </LinearLayout>
 
     <Space
@@ -87,10 +88,10 @@
         android:background="@drawable/seleccionavatar"
         android:padding="30dp">
 
-        <LinearLayout
+        <RelativeLayout
 
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             android:weightSum="1"
             android:orientation="vertical"
             android:layout_margin="25dp">
@@ -98,9 +99,9 @@
             <GridView
                 android:layout_width="match_parent"
                 android:id="@+id/listaPersonajes"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:numColumns="auto_fit" />
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 
     <LinearLayout
