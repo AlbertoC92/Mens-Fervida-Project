@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="tamano_texto_boton">38sp</dimen>
+    <dimen name="tamano_texto_boton">42sp</dimen>
+    <dimen name="tamano_text_normal">32sp</dimen>
 </resources>

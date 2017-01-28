@@ -23,12 +23,12 @@
             android:gravity="center_horizontal">
 
         <TextView
-            android:text="Nombre:"
+            android:text="@string/textoNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txtNombre"
             android:layout_weight="0.06"
-            android:textSize="@dimen/tamano_texto_boton"
+            android:textSize="@dimen/tamano_text_normal"
             android:fontFamily="@string/textoNombre"
             android:gravity="center_vertical" />
 
@@ -59,18 +59,20 @@
             android:gravity="center_horizontal">
 
         <TextView
-            android:text="Pais"
+            android:text="@string/txt_pais"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
-            android:textSize="@dimen/tamano_texto_boton" />
+            android:textSize="@dimen/tamano_text_normal"
+            android:layout_weight="0.13" />
 
         <Spinner
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="43dp"
             android:id="@+id/spPaises"
-            android:layout_weight="1"
-            android:theme="@style/AppTheme" />
+            android:layout_weight="1.00"
+            android:theme="@style/AppTheme"
+            android:background="@drawable/backtexto" />
     </LinearLayout>
 
     <Space

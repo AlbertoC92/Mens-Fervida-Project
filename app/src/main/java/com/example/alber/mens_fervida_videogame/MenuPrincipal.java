@@ -21,6 +21,8 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +30,7 @@ import java.util.ArrayList;
 
 public class MenuPrincipal extends Activity {
     private Button buttonPlay,buttonOptions,buttonArcade,buttonExit;
+    LinearLayout relativeLayout;
     private TextView titulo;
     private dialogoOpciones dialog;
 
@@ -49,6 +52,7 @@ public class MenuPrincipal extends Activity {
         buttonOptions.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         buttonArcade.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
+        relativeLayout=(LinearLayout) findViewById(R.id.activity_main);
 
     }
 

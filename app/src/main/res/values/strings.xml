@@ -3,7 +3,8 @@
     <string name="bt_jugar">Play</string>
     <string name="bt_opciones">Settings</string>
     <string name="bt_salir">Exit</string>
-    <string name="textoNombre">Name</string>
+    <string name="textoNombre">Name: </string>
     <string name="title_activity_avatares_grid_view">AvataresGridView</string>
     <string name="bt_arcade">Games</string>
+    <string name="txt_pais">Country: </string>
 </resources>
