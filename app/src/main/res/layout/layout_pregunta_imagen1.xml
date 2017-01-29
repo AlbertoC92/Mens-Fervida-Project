@@ -36,7 +36,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="7"
                 android:background="@drawable/ventana_preg1"
-                android:weightSum="50">
+                android:weightSum="10">
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -64,15 +64,33 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="215">
+                    android:layout_height="0dp"
+                    android:layout_weight="4.50">
 
-                    <TextView
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView6"
-                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4.5"
+                    android:weightSum="10"
+                    android:layout_margin="0dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:background="@drawable/campo_texto"
+                        android:layout_margin="32dp"
+                        android:padding="0dp"></LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
