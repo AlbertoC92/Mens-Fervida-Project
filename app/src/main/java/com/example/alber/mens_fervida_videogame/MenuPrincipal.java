@@ -59,6 +59,7 @@ public class MenuPrincipal extends Activity {
     public void jugar(View view){
         Intent i = new Intent(this,Niveles.class);
         startActivity(i);
+
     }
 
     public void opciones(View view){
