@@ -57,7 +57,8 @@ public class MenuPrincipal extends Activity {
     }
 
     public void jugar(View view){
-        Toast.makeText(this, "Entra", Toast.LENGTH_SHORT);
+        Intent i = new Intent(this,Niveles.class);
+        startActivity(i);
 
     }
 
