@@ -8,6 +8,7 @@ import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -16,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -67,7 +69,10 @@ public class dialogoOpciones extends Dialog {
     //metodo que inicializa botones
     public void configurarDialogo(){
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.layout_dialog_inicio);
+
+        LinearLayout ll=(LinearLayout) LayoutInflater.from(context).inflate(R.layout.layout_dialog_inicio, null);
+        setContentView(ll);
+
         listaPersonajes=(GridView)findViewById(R.id.listaPersonajes);
         adaptador=new AvataresAdapter(context);
         campoNombre=(EditText)findViewById(R.id.campoNombre);
@@ -89,6 +94,10 @@ public class dialogoOpciones extends Dialog {
                 Toast.makeText(view.getContext(), "Hola", Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    public void okOpciones(View vista){
+        Toast.makeText(context, "hola", Toast.LENGTH_SHORT);
     }
 
 }
