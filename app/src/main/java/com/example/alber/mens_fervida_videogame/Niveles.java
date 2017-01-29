@@ -15,7 +15,6 @@ public class Niveles extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//Línea para ocultar la barra de información de la batería,etc...
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_niveles);
-        //comentario
     }
 
 
