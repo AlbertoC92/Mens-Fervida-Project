@@ -48,11 +48,11 @@ public class dialogoOpciones extends Dialog {
         super(context, themeResId);
         this.context=context;
         this.activity=activity;
-        quitarFondoRedimensionar();
+        quitarFondoRedimensionarEfectos();
 
     }
 
-    public void quitarFondoRedimensionar(){
+    public void quitarFondoRedimensionarEfectos(){
         this.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         Display display = activity.getWindowManager().getDefaultDisplay();
         Point size = new Point();
