@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:background="@drawable/background">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7.5"
+        android:weightSum="10">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7.5"
+            android:weightSum="8">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/campo_texto"
+                android:weightSum="10"
+                android:padding="10dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button11"
+                    android:layout_weight="3"
+                    android:background="@drawable/boton_facebook" />
+
+                <TextView
+                    android:text="Facebook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView9"
+                    android:layout_weight="7"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="normal|bold"
+                    android:textColor="@android:color/white"
+                    android:shadowColor="@color/colorBotonVerde"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="10"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/campo_texto"
+                android:weightSum="10"
+                android:padding="10dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button11"
+                    android:layout_weight="3"
+                    android:background="@drawable/boton_twitter" />
+
+                <TextView
+                    android:text="Twitter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView9"
+                    android:layout_weight="7"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="@android:color/white"
+                    android:shadowColor="@color/colorBotonVerde"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="10"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/campo_texto"
+                android:weightSum="10"
+                android:padding="10dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button11"
+                    android:layout_weight="3"
+                    android:background="@drawable/boton_g" />
+
+                <TextView
+                    android:text="Google +"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView9"
+                    android:layout_weight="7"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="@android:color/white"
+                    android:shadowColor="@color/colorBotonVerde"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="10"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5" />
+</LinearLayout>
