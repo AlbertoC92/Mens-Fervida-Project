@@ -3,7 +3,6 @@ package com.example.alber.mens_fervida_videogame;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -21,15 +20,13 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 
-import static android.content.Intent.getIntent;
 
 /**
  * Created by alber on 26/01/2017.
  */
 //Clase dialogoOpciones que maneja todas las opciones que aparecen en el dialogo
-public class dialogoOpciones extends Dialog {
+public class dialogoOpciones extends Dialog implements View.OnClickListener{
     //campo que controla el editext del nombre
     private EditText campoNombre;
     //Spinner para los paises
@@ -80,7 +77,9 @@ public class dialogoOpciones extends Dialog {
         //ArrayAdapter<String> adaptador = new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,paises);
         //sp.setAdapter(adaptador);
         volver=(Button)findViewById(R.id.btnVolver);
-        aceptar=(Button)findViewById(R.id.btnAceptar);
+        aceptar=(Button)findViewById(R.id.btnAceptar_dialog_opc);
+        aceptar.setOnClickListener(this);
+
     }
 
     @Override
@@ -96,8 +95,16 @@ public class dialogoOpciones extends Dialog {
         });
     }
 
-    public void okOpciones(View vista){
-        Toast.makeText(context, "hola", Toast.LENGTH_SHORT);
+    public void ok(){
+        Toast.makeText(context, "hola", Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btnAceptar_dialog_opc:
+                ok();
+                break;
+        }
+    }
 }

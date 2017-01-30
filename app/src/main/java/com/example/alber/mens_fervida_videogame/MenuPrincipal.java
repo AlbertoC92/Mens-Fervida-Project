@@ -80,7 +80,6 @@ public class MenuPrincipal extends Activity {
         final dialogoOpciones dialog = new dialogoOpciones(MenuPrincipal.this,R.style.AppTheme, this);
 
         //dialog.setContentView(R.layout.layout_dialog_inicio);//setting the dialog xml layout
-
         /* adding action when image buttons of dialog are clicked */
         /*dialog.findViewById(R.id.ImgBtn_id).setOnClickListener(
                 new OnClickListener() {
