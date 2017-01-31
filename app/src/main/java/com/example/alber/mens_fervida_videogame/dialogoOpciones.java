@@ -87,12 +87,12 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         configurarDialogo();
         listaPersonajes.setAdapter(adaptador);
-        listaPersonajes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*listaPersonajes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(view.getContext(), "Hola", Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
     }
 
     public void ok(){
