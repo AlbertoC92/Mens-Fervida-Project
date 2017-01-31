@@ -51,7 +51,7 @@ public class AvataresAdapter extends BaseAdapter {
             y con recorte alrededor del centro
              */
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(150,150));
+            imageView.setLayoutParams(new GridView.LayoutParams(((int)(parent.getWidth()/2.3)),(int)(parent.getWidth()/2)));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         } else {
             imageView = (ImageView) convertView;

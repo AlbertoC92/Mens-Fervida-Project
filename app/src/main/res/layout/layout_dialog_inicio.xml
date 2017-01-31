@@ -65,14 +65,6 @@
             android:textSize="@dimen/tamano_text_normal"
             android:layout_weight="0.13" />
 
-        <Spinner
-            android:layout_width="0dp"
-            android:layout_height="43dp"
-            android:id="@+id/spPaises"
-            android:layout_weight="1.00"
-            android:theme="@style/AppTheme"
-            android:background="@drawable/backtexto"
-            android:entries="@string/bt_salir" />
     </LinearLayout>
 
     <Space
@@ -80,28 +72,50 @@
         android:layout_height="0dp"
         android:layout_weight="0.5" />
 
-    <ScrollView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
+        android:weightSum="1"
         android:background="@drawable/seleccionavatar"
-        android:padding="30dp">
+        android:gravity="center">
 
-        <RelativeLayout
-
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.65"
             android:weightSum="1"
-            android:orientation="vertical"
-            android:layout_margin="25dp">
+            android:gravity="center">
 
-            <GridView
-                android:layout_width="match_parent"
-                android:id="@+id/listaPersonajes"
+            <ScrollView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:numColumns="auto_fit" />
-        </RelativeLayout>
-    </ScrollView>
+                android:layout_weight="0.8"
+                android:nestedScrollingEnabled="true">
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="vertical"
+                    android:layout_margin="0dp"
+                    android:elevation="1dp">
+
+                    <GridView
+                        android:layout_width="match_parent"
+                        android:id="@+id/listaPersonajes"
+                        android:layout_height="wrap_content"
+                        android:numColumns="2"
+                        android:choiceMode="singleChoice"
+                        android:scrollbars="horizontal|vertical" />
+                </RelativeLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
