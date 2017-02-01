@@ -46,7 +46,8 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button13"
                     android:layout_weight="2"
-                    android:background="@drawable/boton_num_1" />
+                    android:background="@drawable/boton_num_6"
+                    android:enabled="false" />
 
                 <Space
                     android:layout_width="0dp"
@@ -58,7 +59,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button12"
                     android:layout_weight="2"
-                    android:background="@drawable/boton_num_2"
+                    android:background="@drawable/boton_num_7"
                     android:enabled="false" />
             </LinearLayout>
             <LinearLayout
@@ -74,7 +75,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button13"
                     android:layout_weight="2"
-                    android:background="@drawable/boton_num_3"
+                    android:background="@drawable/boton_num_8"
                     android:enabled="false" />
 
                 <Space
@@ -87,7 +88,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button12"
                     android:layout_weight="2"
-                    android:background="@drawable/boton_num_4"
+                    android:background="@drawable/boton_num_9"
                     android:enabled="false" />
             </LinearLayout>
             <LinearLayout
@@ -101,10 +102,9 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/button13"
+                    android:id="@+id/btn_pan_nivel_prev"
                     android:layout_weight="2"
-                    android:background="@drawable/boton_num_5"
-                    android:enabled="false" />
+                    android:background="@drawable/boton_previo" />
 
                 <Space
                     android:layout_width="0dp"
@@ -114,9 +114,11 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/btn_pn_nv1"
+                    android:id="@+id/button13"
                     android:layout_weight="2"
-                    android:background="@drawable/boton_siguiente" />
+                    android:background="@drawable/boton_num_10"
+                    android:enabled="false" />
+
             </LinearLayout>
 
         </LinearLayout>

@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Niveles"></activity>
+        <activity android:name=".MenuNivelesActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

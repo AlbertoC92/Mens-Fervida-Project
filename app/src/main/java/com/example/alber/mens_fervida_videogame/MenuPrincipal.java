@@ -57,7 +57,7 @@ public class MenuPrincipal extends Activity {
     }
 
     public void jugar(View view){
-        Intent i = new Intent(this,Niveles.class);
+        Intent i = new Intent(this,MenuNivelesActivity.class);
         startActivity(i);
 
     }
