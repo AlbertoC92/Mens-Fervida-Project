@@ -185,7 +185,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/button9"
             android:layout_weight="1.5"
-            android:background="@drawable/boton_compartir" />
+            android:background="@drawable/boton_compartir"
+            android:onClick="compartir" />
 
         <Space
             android:layout_width="0dp"

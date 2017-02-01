@@ -41,7 +41,7 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/button11"
+                    android:id="@+id/btnfa"
                     android:layout_weight="3"
                     android:background="@drawable/boton_facebook" />
 
@@ -49,7 +49,7 @@
                     android:text="Facebook"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView9"
+                    android:id="@+id/txtfa"
                     android:layout_weight="7"
                     android:textAlignment="center"
                     android:textSize="30sp"
@@ -78,7 +78,7 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/button11"
+                    android:id="@+id/btntw"
                     android:layout_weight="3"
                     android:background="@drawable/boton_twitter" />
 
@@ -86,7 +86,7 @@
                     android:text="Twitter"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView9"
+                    android:id="@+id/txttw"
                     android:layout_weight="7"
                     android:textAlignment="center"
                     android:textSize="30sp"
@@ -114,7 +114,7 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/button11"
+                    android:id="@+id/btngo"
                     android:layout_weight="3"
                     android:background="@drawable/boton_g" />
 
@@ -122,7 +122,7 @@
                     android:text="Google +"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView9"
+                    android:id="@+id/txtgo"
                     android:layout_weight="7"
                     android:textAlignment="center"
                     android:textSize="30sp"

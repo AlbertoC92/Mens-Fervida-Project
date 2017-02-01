@@ -142,7 +142,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button"
+            android:id="@+id/btnmusica"
             android:layout_weight="2"
             android:layout_gravity="left"
             android:gravity="left"
@@ -156,7 +156,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button2"
+            android:id="@+id/btnsonido"
             android:layout_weight="2"
             android:layout_gravity="left"
             android:gravity="left"

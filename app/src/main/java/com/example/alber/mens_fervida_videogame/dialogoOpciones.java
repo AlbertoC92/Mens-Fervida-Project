@@ -1,17 +1,22 @@
 package com.example.alber.mens_fervida_videogame;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -20,6 +25,8 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import static android.R.attr.drawable;
+import static android.R.attr.id;
 
 
 /**
@@ -35,7 +42,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     private GridView gridview;
     private ImageView avatares;
     private Context context;
-    private Button volver,aceptar;
+    private Button volver,aceptar,musica,volumen;
     private Activity activity;
     private AvataresAdapter adaptador;
     private GridView listaPersonajes;
@@ -74,11 +81,15 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         adaptador=new AvataresAdapter(context);
         campoNombre=(EditText)findViewById(R.id.campoNombre);
         //sp=(Spinner)findViewById(R.id.spPaises);
-        //ArrayAdapter<String> adaptador = new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,paises);
-        //sp.setAdapter(adaptador);
+        //ArrayAdapter<String> adaptadorSp = new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,paises);
+        //sp.setAdapter(adaptadorSp);
         volver=(Button)findViewById(R.id.btnVolver);
         aceptar=(Button)findViewById(R.id.btnAceptar_dialog_opc);
+        musica=(Button)findViewById(R.id.btnmusica);
+        volumen=(Button)findViewById(R.id.btnsonido);
+
         aceptar.setOnClickListener(this);
+        musica.setOnClickListener(this);
 
     }
 
@@ -99,12 +110,31 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         Toast.makeText(context, "hola", Toast.LENGTH_SHORT).show();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    public void quitarMusica(){
+        if (musica.getResources().getDrawable(R.drawable.btn_musica_rojo).equals(R.drawable.btn_musica_rojo)){
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                 musica.getResources().getDrawable(R.drawable.musica_off_rojo);
+
+            } else {
+                musica.getResources().getDrawable(R.drawable.musica_off_rojo);
+                musica.getResources().getDrawable(R.drawable.musica_off_rojo);
+
+            }
+
+        }
+    }
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnAceptar_dialog_opc:
                 ok();
                 break;
+            case R.id.btnmusica:
+                quitarMusica();
+
         }
     }
 }

@@ -33,6 +33,7 @@ public class MenuPrincipal extends Activity {
     LinearLayout relativeLayout;
     private TextView titulo;
     private dialogoOpciones dialog;
+    private DialogoCompartir dialogCompartir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +69,14 @@ public class MenuPrincipal extends Activity {
 
 
     public void salir(View view){
+
         finish();
+
+    }
+
+    public void compartir(View view){
+
+        dialogoCompartir();
     }
 
     private void Dialog() {    String gender;
@@ -92,9 +100,27 @@ public class MenuPrincipal extends Activity {
         dialog.show();//pops the dialog box
 
     }
+    private void dialogoCompartir(){
+        dialogCompartir = new DialogoCompartir(MenuPrincipal.this,R.style.AppTheme,this);
+        dialogCompartir.show();
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
 
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.PAUSE);
+        startService(i);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent i = new Intent(this, AudioService.class);
+        i.putExtra("action", AudioService.START);
+        startService(i);
+    }
 
 
 }

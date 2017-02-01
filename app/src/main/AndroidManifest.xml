@@ -20,6 +20,8 @@
         <activity android:name=".Niveles"></activity>
         <activity android:name=".MenuNivelesActivity"
             android:screenOrientation="portrait"></activity>
+
+        <service android:enabled="true" android:name=".AudioService" />
     </application>
 
 </manifest>

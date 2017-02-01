@@ -62,7 +62,7 @@ public class DialogPanelNivelDos extends Dialog implements View.OnClickListener,
             case R.id.btn_pan_nivel_prev:
 
                 this.dismiss();
-                ((MenuNivelesActivity)activity).panel1.show();
+               ((MenuNivelesActivity)activity).panel1.show();
                 break;
 
         }
