@@ -126,7 +126,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     public void quitarMusica(){
         musica.setBackgroundResource(R.drawable.musica_off_rojo);
         Intent i = new Intent(context, AudioService.class);
-        i.putExtra("action", AudioService.STOP);
+        i.putExtra("action", AudioService.PAUSE);
         context.startService(i);
 
         musicState=APAGADA;
@@ -134,9 +134,9 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
     public void activarMusica(){
         //musica.setBackgroundResource(R.drawable.btn_musica_rojo);
-        context.stopService(audio);
         Intent i = new Intent(context, AudioService.class);
         i.putExtra("action", AudioService.START);
+        context.startService(i);
         context.startService(i);
         musicState=ENCENDIDA;
 

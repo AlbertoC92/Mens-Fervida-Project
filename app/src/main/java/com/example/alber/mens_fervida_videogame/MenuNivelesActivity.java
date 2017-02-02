@@ -41,6 +41,8 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_atras_ac_niv:
+                panel1.dismiss();
+                panel2.dismiss();
                 finish();
                 break;
         }
