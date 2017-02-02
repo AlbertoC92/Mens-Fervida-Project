@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -27,6 +28,8 @@ import android.widget.Toast;
 
 import static android.R.attr.drawable;
 import static android.R.attr.id;
+import static com.example.alber.mens_fervida_videogame.AudioService.ACTIVO;
+import static com.example.alber.mens_fervida_videogame.R.drawable.musica_off_rojo;
 
 
 /**
@@ -46,6 +49,9 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     private Activity activity;
     private AvataresAdapter adaptador;
     private GridView listaPersonajes;
+    private Intent audio;
+
+
 
 
     public dialogoOpciones(Context context, int themeResId, Activity activity) {
@@ -87,9 +93,13 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         aceptar=(Button)findViewById(R.id.btnAceptar_dialog_opc);
         musica=(Button)findViewById(R.id.btnmusica);
         volumen=(Button)findViewById(R.id.btnsonido);
+        audio = new Intent(context,AudioService.class);
+        context.startService(audio);
+
 
         aceptar.setOnClickListener(this);
         musica.setOnClickListener(this);
+
 
     }
 
@@ -98,35 +108,40 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         configurarDialogo();
         listaPersonajes.setAdapter(adaptador);
-        /*listaPersonajes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(view.getContext(), "Hola", Toast.LENGTH_LONG).show();
-            }
-        });*/
+
     }
 
     public void ok(){
         Toast.makeText(context, "hola", Toast.LENGTH_SHORT).show();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+
+
+
+
+
     public void quitarMusica(){
-        if (musica.getResources().getDrawable(R.drawable.btn_musica_rojo).equals(R.drawable.btn_musica_rojo)){
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                 musica.getResources().getDrawable(R.drawable.musica_off_rojo);
+                musica.setBackgroundResource(R.drawable.musica_off_rojo);
+                Intent i = new Intent(context, AudioService.class);
+                i.putExtra("action", AudioService.PAUSE);
+                context.startService(i);
 
-            } else {
-                musica.getResources().getDrawable(R.drawable.musica_off_rojo);
-                musica.getResources().getDrawable(R.drawable.musica_off_rojo);
 
-            }
-
-        }
     }
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+
+    public void activarMusica(){
+        musica.setBackgroundResource(R.drawable.btn_musica_rojo);
+        Intent i = new Intent(context, AudioService.class);
+        i.putExtra("action", AudioService.START);
+        context.startService(i);
+
+    }
+
+
+    //@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    //@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    //@Override
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnAceptar_dialog_opc:
@@ -134,7 +149,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
                 break;
             case R.id.btnmusica:
                 quitarMusica();
-
+                break;
         }
     }
 }

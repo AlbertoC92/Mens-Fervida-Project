@@ -13,9 +13,19 @@ import android.util.Log;
  */
 
 public class AudioService extends Service {
-    static final int DECREASE = 1, INCREASE = 2, START = 3, PAUSE = 4,STOP=5;
+    static final int DECREASE = 1, INCREASE = 2, START = 3, PAUSE = 4,STOP=5,ACTIVO=6;
     Boolean shouldPause = false;
     MediaPlayer loop;
+
+
+    public MediaPlayer getLoop() {
+        return loop;
+    }
+
+    public void setLoop(MediaPlayer loop) {
+        this.loop = loop;
+    }
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -65,6 +75,15 @@ public class AudioService extends Service {
 
     }
 
+    public boolean estaActivo(){
+
+        if(loop.isPlaying()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
@@ -95,6 +114,9 @@ public class AudioService extends Service {
                     break;
                 case STOP:
                     stop();
+                    break;
+                case ACTIVO:
+                    estaActivo();
                     break;
             }
         }catch (Exception e){
