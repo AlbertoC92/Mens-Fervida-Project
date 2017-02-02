@@ -7,5 +7,8 @@
     <string name="title_activity_avatares_grid_view">AvataresGridView</string>
     <string name="bt_arcade">Games</string>
     <string name="txt_pais">Country: </string>
+    <string name="p_max">Max Score</string>
+    <string name="estrrellas">Stars</string>
+    <string name="clasi_global">Global</string>
 
 </resources>
