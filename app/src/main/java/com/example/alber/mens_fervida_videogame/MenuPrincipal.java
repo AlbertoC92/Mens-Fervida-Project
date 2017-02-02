@@ -85,7 +85,7 @@ public class MenuPrincipal extends Activity {
     // R.style.FullHeightDialog specifies that dialog box has height
     // equivalent to screen height
 
-        final dialogoOpciones dialog = new dialogoOpciones(MenuPrincipal.this,R.style.AppTheme, this);
+        dialogoOpciones dialog = new dialogoOpciones(MenuPrincipal.this,R.style.AppTheme, this);
 
         //dialog.setContentView(R.layout.layout_dialog_inicio);//setting the dialog xml layout
         /* adding action when image buttons of dialog are clicked */

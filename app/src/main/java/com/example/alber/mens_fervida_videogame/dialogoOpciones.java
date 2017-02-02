@@ -50,6 +50,10 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     private AvataresAdapter adaptador;
     private GridView listaPersonajes;
     private Intent audio;
+    private static int musicState=1;
+    private static final int ENCENDIDA=1;
+    private static final int APAGADA=0;
+    private Intent i;
 
 
 
@@ -89,7 +93,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         //sp=(Spinner)findViewById(R.id.spPaises);
         //ArrayAdapter<String> adaptadorSp = new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,paises);
         //sp.setAdapter(adaptadorSp);
-        volver=(Button)findViewById(R.id.btnVolver);
+        volver=(Button)findViewById(R.id.btn_volver_opc);
         aceptar=(Button)findViewById(R.id.btnAceptar_dialog_opc);
         musica=(Button)findViewById(R.id.btnmusica);
         volumen=(Button)findViewById(R.id.btnsonido);
@@ -99,7 +103,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
         aceptar.setOnClickListener(this);
         musica.setOnClickListener(this);
-
+        volver.setOnClickListener(this);
 
     }
 
@@ -119,21 +123,22 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
 
 
-
     public void quitarMusica(){
-                musica.setBackgroundResource(R.drawable.musica_off_rojo);
-                Intent i = new Intent(context, AudioService.class);
-                i.putExtra("action", AudioService.PAUSE);
-                context.startService(i);
+        musica.setBackgroundResource(R.drawable.musica_off_rojo);
+        Intent i = new Intent(context, AudioService.class);
+        i.putExtra("action", AudioService.STOP);
+        context.startService(i);
 
-
+        musicState=APAGADA;
     }
 
     public void activarMusica(){
-        musica.setBackgroundResource(R.drawable.btn_musica_rojo);
+        //musica.setBackgroundResource(R.drawable.btn_musica_rojo);
+        context.stopService(audio);
         Intent i = new Intent(context, AudioService.class);
         i.putExtra("action", AudioService.START);
         context.startService(i);
+        musicState=ENCENDIDA;
 
     }
 
@@ -141,13 +146,24 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     //@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     //@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     //@Override
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnAceptar_dialog_opc:
                 ok();
                 break;
+            case R.id.btn_volver_opc:
+                this.dismiss();
+                break;
             case R.id.btnmusica:
+                switch (musicState){
+                    case ENCENDIDA:
+                        quitarMusica();
+                        break;
+                    case APAGADA:
+                        activarMusica();
+                        break;
+                }
                 quitarMusica();
                 break;
         }
