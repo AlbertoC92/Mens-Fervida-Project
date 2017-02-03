@@ -74,6 +74,11 @@ public class MenuPrincipal extends Activity {
 
     }
 
+    public void arcades(View view){
+        Intent i=new Intent(this,MenuArcades.class);
+        startActivity(i);
+    }
+
     public void compartir(View view){
 
         dialogoCompartir();
