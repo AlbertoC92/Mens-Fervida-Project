@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
@@ -26,6 +27,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.alber.mens_fervida_videogame.entidades.Pregunta;
+import com.example.alber.mens_fervida_videogame.sqlite.IdiomasSQLiteOpenHelper;
+import com.example.alber.mens_fervida_videogame.sqlite.OperacionesBD;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class MenuPrincipal extends Activity {
@@ -54,6 +60,10 @@ public class MenuPrincipal extends Activity {
         buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         buttonArcade.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         relativeLayout=(LinearLayout) findViewById(R.id.activity_main);
+        IdiomasSQLiteOpenHelper.getInstance(this);
+        System.out.println(new Pregunta(3));
+
+
 
     }
 
