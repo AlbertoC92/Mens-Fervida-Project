@@ -19,15 +19,18 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import static android.R.attr.drawable;
 import static android.R.attr.id;
+import static android.R.id.toggle;
 import static com.example.alber.mens_fervida_videogame.AudioService.ACTIVO;
 import static com.example.alber.mens_fervida_videogame.R.drawable.musica_off_rojo;
 
@@ -45,15 +48,12 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     private GridView gridview;
     private ImageView avatares;
     private Context context;
-    private Button volver,aceptar,musica,volumen;
+    private Button volver,aceptar,volumen;
     private Activity activity;
     private AvataresAdapter adaptador;
     private GridView listaPersonajes;
     private Intent audio;
-    private static int musicState=1;
-    private static final int ENCENDIDA=1;
-    private static final int APAGADA=0;
-    private Intent i;
+    private ToggleButton musica;
 
 
 
@@ -95,7 +95,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         //sp.setAdapter(adaptadorSp);
         volver=(Button)findViewById(R.id.btn_volver_opc);
         aceptar=(Button)findViewById(R.id.btnAceptar_dialog_opc);
-        musica=(Button)findViewById(R.id.btnmusica);
+        musica=(ToggleButton) findViewById(R.id.btnmusica);
         volumen=(Button)findViewById(R.id.btnsonido);
         audio = new Intent(context,AudioService.class);
         context.startService(audio);
@@ -124,23 +124,28 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
 
     public void quitarMusica(){
-        musica.setBackgroundResource(R.drawable.musica_off_rojo);
-        Intent i = new Intent(context, AudioService.class);
-        i.putExtra("action", AudioService.PAUSE);
-        context.startService(i);
+        musica = (ToggleButton) findViewById(R.id.btnmusica);
+        musica.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    musica.setBackgroundResource(R.drawable.btn_musica_rojo);
+                    Intent i = new Intent(context, AudioService.class);
+                    i.putExtra("action", AudioService.START);
+                    context.startService(i);
 
-        musicState=APAGADA;
+
+                } else {
+                    musica.setBackgroundResource(R.drawable.btn_musica_off_gris);
+                    Intent i = new Intent(context, AudioService.class);
+                    i.putExtra("action", AudioService.PAUSE);
+                    context.startService(i);
+                }
+            }
+        });
+
     }
 
-    public void activarMusica(){
-        //musica.setBackgroundResource(R.drawable.btn_musica_rojo);
-        Intent i = new Intent(context, AudioService.class);
-        i.putExtra("action", AudioService.START);
-        context.startService(i);
-        context.startService(i);
-        musicState=ENCENDIDA;
 
-    }
 
 
     //@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -156,14 +161,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
                 this.dismiss();
                 break;
             case R.id.btnmusica:
-                switch (musicState){
-                    case ENCENDIDA:
-                        quitarMusica();
-                        break;
-                    case APAGADA:
-                        activarMusica();
-                        break;
-                }
+
                 quitarMusica();
                 break;
         }

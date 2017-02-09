@@ -139,14 +139,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <Button
+        <ToggleButton
+            android:text="ToggleButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnmusica"
             android:layout_weight="2"
-            android:layout_gravity="left"
-            android:gravity="left"
-            android:background="@drawable/btn_musica_rojo" />
+            android:background="@drawable/btn_musica_rojo"
+            android:textOff=" "
+            android:textOn=" "/>
 
         <Space
             android:layout_width="0dp"
