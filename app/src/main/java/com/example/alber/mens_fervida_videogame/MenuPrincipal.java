@@ -61,8 +61,6 @@ public class MenuPrincipal extends Activity {
         buttonArcade.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         relativeLayout=(LinearLayout) findViewById(R.id.activity_main);
         IdiomasSQLiteOpenHelper.getInstance(this);
-        System.out.println(new Pregunta(3));
-
 
 
     }

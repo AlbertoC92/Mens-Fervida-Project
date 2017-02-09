@@ -26,7 +26,7 @@ import android.widget.Toast;
 public class DialogPanelNivelUno extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
     private Context mContext;
     private Activity activity;
-    private Button btnSiguiente;
+    private Button btnSiguiente, btn1, btn2, btn3,btn4,btn5;
 
     public DialogPanelNivelUno(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
@@ -56,6 +56,16 @@ public class DialogPanelNivelUno extends Dialog implements View.OnClickListener,
         setContentView(R.layout.layout_dialog_niveles1);
         btnSiguiente=(Button) findViewById(R.id.btn_pn_nv1);
         btnSiguiente.setOnClickListener(this);
+        btn1=(Button) findViewById(R.id.btn_nivel_1);
+        btn1.setOnClickListener(this);
+        btn2=(Button) findViewById(R.id.btn_nivel_2);
+        btn2.setOnClickListener(this);
+        btn3=(Button) findViewById(R.id.btn_nivel_3);
+        btn3.setOnClickListener(this);
+        btn4=(Button) findViewById(R.id.btn_nivel_4);
+        btn4.setOnClickListener(this);
+        btn5=(Button) findViewById(R.id.btn_nivel_5);
+        btn5.setOnClickListener(this);
         this.setOnKeyListener(this);
 
 
@@ -68,6 +78,25 @@ public class DialogPanelNivelUno extends Dialog implements View.OnClickListener,
                 ((MenuNivelesActivity)activity).panel2.show();
                 this.dismiss();
                 break;
+            case R.id.btn_nivel_1:
+                btn2.setEnabled(true);
+                break;
+            case R.id.btn_nivel_2:
+                btn3.setEnabled(true);
+                break;
+            case R.id.btn_nivel_3:
+                btn4.setEnabled(true);
+                break;
+            case R.id.btn_nivel_4:
+                btn5.setEnabled(true);
+                break;
+            case R.id.btn_nivel_5:
+                btn2.setEnabled(false);
+                btn3.setEnabled(false);
+                btn4.setEnabled(false);
+                btn5.setEnabled(false);
+                break;
+
 
         }
     }

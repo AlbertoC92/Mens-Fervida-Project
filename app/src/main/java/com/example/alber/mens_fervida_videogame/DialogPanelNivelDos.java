@@ -21,7 +21,7 @@ import android.widget.Toast;
 public class DialogPanelNivelDos extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
     private Context mContext;
     private Activity activity;
-    private Button btnPrevius;
+    private Button btnPrevius, btn6, btn7, btn8,btn9,btn10;
 
     public DialogPanelNivelDos(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
@@ -64,6 +64,25 @@ public class DialogPanelNivelDos extends Dialog implements View.OnClickListener,
                 this.dismiss();
                ((MenuNivelesActivity)activity).panel1.show();
                 break;
+            case R.id.btn_nivel_6:
+                btn7.setEnabled(true);
+                break;
+            case R.id.btn_nivel_7:
+                btn8.setEnabled(true);
+                break;
+            case R.id.btn_nivel_8:
+                btn9.setEnabled(true);
+                break;
+            case R.id.btn_nivel_9:
+                btn10.setEnabled(true);
+                break;
+            case R.id.btn_nivel_10:
+                btn7.setEnabled(false);
+                btn8.setEnabled(false);
+                btn9.setEnabled(false);
+                btn10.setEnabled(false);
+                break;
+
 
         }
     }

@@ -34,7 +34,6 @@ public class IdiomasSQLiteOpenHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        System.out.println("ENTRA oncreate");
         String[]sentencias=cargarDatosArchivoSQL();
         System.out.println(sentencias.length);
         for(int i=0; i<sentencias.length-1;i++){
@@ -45,10 +44,9 @@ public class IdiomasSQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        System.out.println("ENTRA upgrade");
-        for(String sentencia: cargarDatosArchivoSQL()){
-            System.out.print(sentencia);
-            sqLiteDatabase.execSQL(sentencia);
+        String[]sentencias=cargarDatosArchivoSQL();
+        for(int j=0; j<sentencias.length-1;j++){
+            sqLiteDatabase.execSQL(String.format("%s;",sentencias[i]));
         }
     }
 
@@ -63,11 +61,9 @@ public class IdiomasSQLiteOpenHelper extends SQLiteOpenHelper {
 
             }
         } catch (FileNotFoundException e) {
-            System.out.println("ERROR FILE NOT FOUND");
             e.printStackTrace();
 
         } catch (IOException e) {
-            System.out.println("IOEXCEPITON");
             e.printStackTrace();
 
         }
