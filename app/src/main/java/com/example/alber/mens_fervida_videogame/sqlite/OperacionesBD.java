@@ -13,10 +13,10 @@ public class OperacionesBD {
     public static String[] cargarPregunta(int nivelJuego){
         int nivelPalbra=1;
         if(nivelJuego%2==0){
-            nivelPalbra=nivelJuego-1;
+            nivelPalbra=nivelJuego/2;
         }
         else{
-            nivelPalbra=nivelJuego;
+            nivelPalbra=nivelJuego/2+1;
         }
         String args[]={String.valueOf(nivelPalbra)};
         SQLiteDatabase db =IdiomasSQLiteOpenHelper.getInstance(null).getReadableDatabase();
