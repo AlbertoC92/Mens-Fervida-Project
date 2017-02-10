@@ -171,8 +171,8 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         Jugador.getInstance().setNombre(campoNombre.getText().toString());
         Jugador.getInstance().setAvatar(avatarElegido);
         if(rbSpanish.isChecked()==true) {
-            Jugador.getInstance().setIdioma(Jugador.SPANISH);
-            Toast.makeText(context.getApplicationContext(), String.valueOf(Jugador.getInstance().getIdioma()), Toast.LENGTH_SHORT);
+            Jugador.getInstance().setIdioma(0);
+            System.out.println(Jugador.getInstance().getIdioma());
         }
         else if(rbPolish.isChecked()==true){
             Jugador.getInstance().setIdioma(Jugador.POLISH);
@@ -180,6 +180,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         }
         else if(rbGerman.isChecked()==true){
             Jugador.getInstance().setIdioma(Jugador.GERMAN);
+            System.out.println(Jugador.getInstance().getIdioma());
         }
         else{
             Jugador.getInstance().setIdioma(Jugador.NO_LANGUAGE);

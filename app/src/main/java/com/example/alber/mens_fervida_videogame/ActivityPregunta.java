@@ -94,6 +94,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         iniciarContador();
         timer.start();
         diaPregunta.show();
+        System.out.println(pregunta);
     }
     public void preguntaAcertada(){
         puntuacionNivel=puntuacionNivel+ nivel*PREGUNTA_ACERTADA_MULT+puntosSegundos;
