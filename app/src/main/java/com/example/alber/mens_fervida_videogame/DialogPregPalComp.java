@@ -46,7 +46,7 @@ public class DialogPregPalComp extends Dialog implements View.OnClickListener, D
         int width = size.x;
         int height = size.y;
         getWindow().setLayout((int)(size.x*0.8), (int)(size.y*0.56));
-        getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        getWindow().getAttributes().windowAnimations = R.style.PanelPregunta;
         getWindow().getAttributes().gravity= Gravity.TOP | Gravity.CENTER_HORIZONTAL;
         getWindow().getAttributes().y= (int) (height*0.1);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);

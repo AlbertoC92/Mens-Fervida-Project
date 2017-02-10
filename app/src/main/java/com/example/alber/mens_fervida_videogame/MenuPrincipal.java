@@ -1,40 +1,18 @@
 package com.example.alber.mens_fervida_videogame;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Color;
-import android.graphics.Point;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.telecom.Call;
-import android.view.Display;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.GridView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.alber.mens_fervida_videogame.entidades.Jugador;
-import com.example.alber.mens_fervida_videogame.entidades.Pregunta;
 import com.example.alber.mens_fervida_videogame.sqlite.IdiomasSQLiteOpenHelper;
-import com.example.alber.mens_fervida_videogame.sqlite.OperacionesBD;
-
-import java.io.IOException;
-import java.util.ArrayList;
 
 public class MenuPrincipal extends Activity {
     private Button buttonPlay,buttonOptions,buttonArcade,buttonExit;
@@ -70,13 +48,19 @@ public class MenuPrincipal extends Activity {
     }
 
     public void jugar(View view){
-        Intent i = new Intent(this,MenuNivelesActivity.class);
-        startActivity(i);
+        if(Jugador.getInstance().getNombre()==null){
+            abrirOpciones();
+        }
+        else{
+            Intent i = new Intent(this,MenuNivelesActivity.class);
+            startActivity(i);
+        }
+
 
     }
 
     public void opciones(View view){
-        Dialog();
+        abrirOpciones();
     }
 
 
@@ -96,25 +80,10 @@ public class MenuPrincipal extends Activity {
         dialogoCompartir();
     }
 
-    private void Dialog() {    String gender;
-
-    // creating a dialog object and specifying the activity it pops on .
-    // R.style.FullHeightDialog specifies that dialog box has height
-    // equivalent to screen height
-
+    private void abrirOpciones() {
+        String gender;
         dialogoOpciones dialog = new dialogoOpciones(MenuPrincipal.this,R.style.AppTheme, this);
-
-        //dialog.setContentView(R.layout.layout_dialog_inicio);//setting the dialog xml layout
-        /* adding action when image buttons of dialog are clicked */
-        /*dialog.findViewById(R.id.ImgBtn_id).setOnClickListener(
-                new OnClickListener() {
-                    public void onClick(View v) {
-                        //put your code here
-                        dialog.dismiss();//closes the dialog box
-                    }
-                });*/
-
-        dialog.show();//pops the dialog box
+        dialog.show();
 
     }
     private void dialogoCompartir(){
@@ -135,7 +104,7 @@ public class MenuPrincipal extends Activity {
     protected void onResume() {
         super.onResume();
         if(Jugador.getInstance(this).getNombre()==null){
-            Dialog();
+            abrirOpciones();
         }
         if(Jugador.getInstance().isMusicaPlaying()){
             Intent i = new Intent(this, AudioService.class);
