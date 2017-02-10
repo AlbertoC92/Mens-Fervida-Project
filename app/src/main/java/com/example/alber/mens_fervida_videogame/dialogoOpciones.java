@@ -125,6 +125,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         configurarDialogo();
         listaPersonajes.setAdapter(adaptador);
+
         listaPersonajes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
@@ -136,6 +137,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
                 avatarElegido=pos;
             }
         });
+        listaPersonajes.setItemChecked(Jugador.getInstance().getAvatar(), true);
 
     }
 

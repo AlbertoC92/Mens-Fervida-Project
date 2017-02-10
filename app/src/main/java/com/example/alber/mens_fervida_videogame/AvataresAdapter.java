@@ -2,13 +2,17 @@ package com.example.alber.mens_fervida_videogame;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.alber.mens_fervida_videogame.entidades.Jugador;
 
 /**
  * Created by alber on 26/01/2017.
@@ -82,6 +86,10 @@ public class AvataresAdapter extends BaseAdapter {
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         } else {
             imageView = (ImageView) convertView;
+            imageView.setAlpha((float) 0.8);
+        }
+        if(position== Jugador.getInstance().getAvatar()){
+            imageView.setAlpha((float) 0.5);
         }
 
 

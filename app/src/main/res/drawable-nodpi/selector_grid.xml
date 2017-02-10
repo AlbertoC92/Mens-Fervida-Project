@@ -3,5 +3,6 @@
 
     <item android:state_pressed="true" android:drawable="@color/colorAccent" />
     <item android:state_selected="true" android:drawable="@color/colorAccent" />
+    <item android:state_checked="true" android:drawable="@color/colorPrimary"/>
     <item android:drawable="@color/colorPrimary" />
 </selector>
