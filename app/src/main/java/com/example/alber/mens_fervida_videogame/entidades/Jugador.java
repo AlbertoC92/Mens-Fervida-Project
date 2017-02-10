@@ -14,7 +14,7 @@ public class Jugador {
     private static Jugador jugador;
 
     private Jugador(){
-        setPuntuacion(1);
+        setPuntuacion(0);
         //cargarSharedPreferences();
 
     }

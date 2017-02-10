@@ -68,7 +68,6 @@ public class DialogPanelNivelUno extends Dialog implements View.OnClickListener,
         btn4.setOnClickListener(this);
         btn5=(Button) findViewById(R.id.btn_nivel_5);
         btn5.setOnClickListener(this);
-        btn5.setEnabled(true);
         this.setOnKeyListener(this);
 
 

@@ -8,6 +8,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     Pregunta pregunta;
     CountDownTimer timer;
     TextView puntuacion;
+    Button atras;
 
 
     @Override
@@ -51,6 +53,8 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         setContentView(R.layout.layout_pregunta_palabra_comp);
         puntuacion=(TextView) findViewById(R.id.text_puntuacion) ;
         puntuacion.setText(String.format("%d",Jugador.getInstance().getPuntuacion()));
+        atras=(Button)findViewById(R.id.btn_atras_pre_com);
+        atras.setOnClickListener(this);
         iniciarContador();
         nuevaPregunta();
 
@@ -149,6 +153,10 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.btn_atras_pre_com:
+                diaPregunta.dismiss();
+                finish();
+                break;
 
         }
     }

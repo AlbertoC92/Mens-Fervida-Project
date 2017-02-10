@@ -218,8 +218,24 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
-    <Space
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:weightSum="10">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_atras_pre_com"
+            android:layout_weight="1.3"
+            android:background="@drawable/boton_atras" />
+
+    </LinearLayout>
 </LinearLayout>

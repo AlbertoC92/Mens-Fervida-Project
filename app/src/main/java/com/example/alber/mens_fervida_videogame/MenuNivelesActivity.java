@@ -30,6 +30,7 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//Línea para ocultar la barra de información de la batería,etc...
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_niveles2);
+        Jugador.getInstance().setPuntuacion(0);
         salir=(Button) findViewById(R.id.btn_atras_ac_niv);
         salir.setOnClickListener(this);
         puntuacionJugador=(TextView)findViewById(R.id.txt_puntuacion_niveles);
