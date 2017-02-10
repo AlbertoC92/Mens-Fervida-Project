@@ -82,7 +82,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     }
 
     private void nuevaPregunta() {
-        pregunta=new Pregunta(nivel);
+        pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
         diaPregunta=new DialogPregPalComp(this, R.style.AppTheme, this);
         iniciarContador();
         timer.start();

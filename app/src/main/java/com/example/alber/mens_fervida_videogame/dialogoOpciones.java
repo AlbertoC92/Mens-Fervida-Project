@@ -91,7 +91,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
         listaPersonajes=(GridView)findViewById(R.id.listaPersonajes);
         adaptador=new AvataresAdapter(context);
-        campoNombre=(EditText)findViewById(R.id.campoNombre);
+        campoNombre=(EditText)findViewById(R.id.campo_nombre);
         //sp=(Spinner)findViewById(R.id.spPaises);
         //ArrayAdapter<String> adaptadorSp = new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,paises);
         //sp.setAdapter(adaptadorSp);
@@ -102,7 +102,9 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         volumen=(Button)findViewById(R.id.btnsonido);
         audio = new Intent(context,AudioService.class);
         context.startService(audio);
-
+        if(Jugador.getInstance().getNombre()!=null){
+            campoNombre.setText(Jugador.getInstance().getNombre());
+        }
 
         aceptar.setOnClickListener(this);
         musica.setOnClickListener(this);
@@ -125,7 +127,12 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     }
 
     public void ok(){
-        Toast.makeText(context, "hola", Toast.LENGTH_SHORT).show();
+        Jugador.getInstance().setNombre(campoNombre.getText().toString());
+        Jugador.getInstance().setAvatar(0);
+        Jugador.getInstance().setIdioma(0);
+        Jugador.getInstance().setMusicaPlaying(musica.isChecked());
+        Jugador.getInstance().guardarSharedPreferences();
+        this.dismiss();
     }
 
 

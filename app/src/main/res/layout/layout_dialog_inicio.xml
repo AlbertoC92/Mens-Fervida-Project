@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/campoNombre"
+            android:id="@+id/campo_nombre"
             android:layout_weight="1"
             tools:textAppearance="@style/TextAppearance.AppCompat"
             android:theme="@style/AppTheme"

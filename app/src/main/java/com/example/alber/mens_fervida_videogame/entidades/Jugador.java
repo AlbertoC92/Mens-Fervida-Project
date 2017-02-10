@@ -1,10 +1,20 @@
 package com.example.alber.mens_fervida_videogame.entidades;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+
 /**
  * Created by PedroMiguel on 09/02/2017.
  */
 
 public class Jugador {
+    private final String CAMPO_PUNT_MAX="puntMax";
+    private final String CAMPO_AVATAR="avatar";
+    private final String CAMPO_IDIOMA="idioma";
+    private final String CAMPO_NOMBRE="nombre";
+    private final String CAMPO_ESTRELLAS="estrellas";
+    private final String CAMPO_MUSICA="musicaPlaying";
     private int puntuacion;
     private int puntuacionMax;
     private int avatar;
@@ -13,6 +23,8 @@ public class Jugador {
     private float estrellas;
     private static Jugador jugador;
     private boolean musicaPlaying;
+    private Activity mActivity;
+    private SharedPreferences preferences;
 
     public boolean isMusicaPlaying() {
         return musicaPlaying;
@@ -28,14 +40,55 @@ public class Jugador {
         //cargarSharedPreferences();
 
     }
+    private Jugador(Activity activity){
+        setPuntuacion(0);
+        setMusicaPlaying(true);
+        mActivity=activity;
+        cargarSharedPreferences();
+
+    }
     public static Jugador getInstance(){
         if(jugador==null){
             jugador=new Jugador();
         }
         return jugador;
     }
+    public static Jugador getInstance(Activity activity){
+        if(jugador==null){
+            jugador=new Jugador(activity);
+        }
+        return jugador;
+    }
 
-    private void cargarSharedPreferences() {
+    public void cargarSharedPreferences() {
+        preferences=mActivity.getSharedPreferences("jugador", Context.MODE_PRIVATE);
+        int puntuacionMaxSP=preferences.getInt(CAMPO_PUNT_MAX, 0);
+        String nombreSP=preferences.getString(CAMPO_NOMBRE, "");
+        boolean musicaSP=preferences.getBoolean(CAMPO_MUSICA, true);
+        int idiomaSP=preferences.getInt(CAMPO_IDIOMA, 0);
+        int avatarSP=preferences.getInt(CAMPO_AVATAR, 0);
+        float estrellasSP=preferences.getFloat(CAMPO_ESTRELLAS, 0);
+        setPuntuacionMax(puntuacionMaxSP);
+        if(!nombreSP.isEmpty()){
+            setNombre(nombreSP);
+        }
+        setMusicaPlaying(musicaSP);
+        setIdioma(idiomaSP);
+        setAvatar(avatarSP);
+        setEstrellas(estrellasSP);
+
+    }
+
+    public void guardarSharedPreferences() {
+        SharedPreferences.Editor editor=preferences.edit();
+        editor.putString(CAMPO_NOMBRE, getNombre());
+        editor.putInt(CAMPO_PUNT_MAX, getPuntuacion());
+        editor.putBoolean(CAMPO_MUSICA, isMusicaPlaying());
+        editor.putInt(CAMPO_IDIOMA, getIdioma());
+        editor.putInt(CAMPO_AVATAR, getAvatar());
+        editor.putFloat(CAMPO_ESTRELLAS, getAvatar());
+        editor.commit();
+
 
     }
 

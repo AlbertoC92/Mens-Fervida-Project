@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Point;
@@ -62,9 +63,8 @@ public class MenuPrincipal extends Activity {
         buttonArcade.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         relativeLayout=(LinearLayout) findViewById(R.id.activity_main);
         IdiomasSQLiteOpenHelper.getInstance(this);
-        if(Jugador.getInstance().getNombre()==null){
-            Dialog();
-        }
+        Jugador.getInstance(this);
+
 
 
     }
@@ -134,6 +134,9 @@ public class MenuPrincipal extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        if(Jugador.getInstance(this).getNombre()==null){
+            Dialog();
+        }
         if(Jugador.getInstance().isMusicaPlaying()){
             Intent i = new Intent(this, AudioService.class);
             i.putExtra("action", AudioService.START);

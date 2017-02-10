@@ -28,8 +28,8 @@ public class Pregunta {
         setTipo(valoresPregunta[5]);
 
     }
-    public Pregunta(int nivelJuego){
-        this(nivelJuego,OperacionesBD.cargarPregunta(nivelJuego));
+    public Pregunta(int idioma, int nivelJuego){
+        this(nivelJuego,OperacionesBD.cargarPregunta(idioma,nivelJuego));
 
     }
 
