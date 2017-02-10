@@ -60,7 +60,8 @@ public class AudioService extends Service {
                 new Runnable() {
                     public void run() {
                         if(shouldPause) {
-                            loop.pause();
+                            if(loop!=null)
+                                loop.pause();
 
 
                         }

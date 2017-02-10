@@ -60,26 +60,30 @@ public class DialogPregPalComp extends Dialog implements View.OnClickListener, D
         setContentView(R.layout.layout_dialog_pregunta_normal);
         word=(TextView) findViewById(R.id.text_word);
         respuesta=(EditText)findViewById(R.id.et_respuesta);
+        respuesta.setBackgroundResource(R.drawable.campo_texto);
         word.setText(((ActivityPregunta)activity).pregunta.getWord());
         btnAceptarRes=(Button) findViewById(R.id.btn_aceptar_pregunta);
         btnAceptarRes.setOnClickListener(this);
         this.setOnKeyListener(this);
 
     }
+    public void comprobarPregunta(){
+        if(respuesta.getText().toString().equals("") || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)activity).pregunta.getTl1()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)activity).pregunta.getTl2()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)activity).pregunta.getTl3())){
+            ((ActivityPregunta)activity).preguntaAcertada();
+            this.dismiss();
+        }
+        else{
+            ((ActivityPregunta)activity).preguntaFallada();
+            this.dismiss();
+
+        }
+    }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_aceptar_pregunta:
-                if(respuesta.getText().toString().equals("") || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)activity).pregunta.getTl1()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)activity).pregunta.getTl2()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)activity).pregunta.getTl3())){
-                    ((ActivityPregunta)activity).preguntaAcertada();
-                    this.dismiss();
-                }
-                else{
-                    ((ActivityPregunta)activity).preguntaFallada();
-                    this.dismiss();
-
-                }
+                comprobarPregunta();
                 break;
 
 
@@ -93,6 +97,9 @@ public class DialogPregPalComp extends Dialog implements View.OnClickListener, D
     public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {
         if (i == KeyEvent.KEYCODE_BACK) {
 
+        }
+        if(i==KeyEvent.KEYCODE_ENTER){
+            comprobarPregunta();
         }
         return true;
     }
