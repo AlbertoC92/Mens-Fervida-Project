@@ -11,4 +11,5 @@
     <string name="respuesta_hint">Respuesta...</string>
     <string name="nombre">Nombre...</string>
     <string name="estrrellas">Estrellas</string>
+    <string name="p_max">Puntuaxion Máx.</string>
 </resources>
