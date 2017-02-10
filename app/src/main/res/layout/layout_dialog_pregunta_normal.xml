@@ -57,13 +57,13 @@
             android:weightSum="1"
             android:gravity="center_horizontal">
             <TextView
-                android:text="Escribe en inglés es el significado de:"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/textView7"
                 android:layout_weight="0.8"
                 android:textAlignment="center"
-                android:textSize="@dimen/tamano_text_normal" />
+                android:textSize="@dimen/tamano_text_normal"
+                android:text="@string/titulo_pregunta_tuidioma" />
 
         </LinearLayout>
         <LinearLayout

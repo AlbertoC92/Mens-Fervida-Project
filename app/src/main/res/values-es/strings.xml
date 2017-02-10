@@ -7,4 +7,8 @@
     <string name="textoNombre">Nombre: </string>
     <string name="bt_arcade">Juegos</string>
     <string name="txt_pais">País: </string>
+    <string name="titulo_pregunta_tuidioma">Escribe en tu idioma la palabra:</string>
+    <string name="respuesta_hint">Respuesta...</string>
+    <string name="nombre">Nombre...</string>
+    <string name="estrrellas">Estrellas</string>
 </resources>
