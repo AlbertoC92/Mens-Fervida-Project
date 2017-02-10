@@ -24,6 +24,8 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -58,6 +60,8 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     private Intent audio;
     private ToggleButton musica;
     private View imagenActual;
+    private RadioGroup grupoIdiomas;
+    private RadioButton rbSpanish, rbPolish, rbGerman, rbFrench;
 
 
 
@@ -138,6 +142,12 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
             }
         });
         listaPersonajes.setItemChecked(Jugador.getInstance().getAvatar(), true);
+
+        rbSpanish=(RadioButton)findViewById(R.id.rb_spanish);
+        rbPolish=(RadioButton)findViewById(R.id.rb_polish);
+        rbGerman=(RadioButton)findViewById(R.id.rb_german);
+        rbFrench=(RadioButton)findViewById(R.id.rb_french);
+        grupoIdiomas=(RadioGroup) findViewById(R.id.grupo_idiomas);
 
     }
 

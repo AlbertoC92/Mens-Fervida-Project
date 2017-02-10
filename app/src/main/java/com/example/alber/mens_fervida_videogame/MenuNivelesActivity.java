@@ -143,7 +143,7 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
     @Override
     protected void onResume() {
         super.onResume();
-        if(!(siguienteNivel/5>=1) || siguienteNivel%5==0){
+        if(!(siguienteNivel/5>=1) || siguienteNivel==5){
             panel1.show();
         }
         else{

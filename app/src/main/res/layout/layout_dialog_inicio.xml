@@ -17,23 +17,13 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5"
+            android:layout_weight="0.7"
             android:weightSum="2"
             android:gravity="center_horizontal">
 
-        <TextView
-            android:text="@string/textoNombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtNombre"
-            android:layout_weight="0.06"
-            android:textSize="@dimen/tamano_text_normal"
-            android:fontFamily="@string/textoNombre"
-            android:gravity="center_vertical" />
-
         <EditText
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/campo_nombre"
@@ -41,13 +31,15 @@
             tools:textAppearance="@style/TextAppearance.AppCompat"
             android:theme="@style/AppTheme"
             android:background="@drawable/campo_texto"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:hint="@string/nombre"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.2"/>
 
     <LinearLayout
             android:orientation="horizontal"
@@ -57,20 +49,57 @@
             android:weightSum="2"
             android:gravity="center_horizontal">
 
-        <TextView
-            android:text="@string/txt_pais"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:textSize="@dimen/tamano_text_normal"
-            android:layout_weight="0.13" />
+        <RadioGroup
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:id="@+id/grupo_idiomas">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rb_german"
+                android:layout_weight="0.7"
+                android:background="@drawable/es"
+                android:button="@android:drawable/btn_radio"
+                android:layout_margin="10dp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rb_spanish"
+                android:layout_weight="0.7"
+                android:background="@drawable/pl"
+                android:button="@android:drawable/btn_radio"
+                android:layout_margin="10dp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rb_french"
+                android:layout_weight="0.7"
+                android:background="@drawable/de"
+                android:button="@android:drawable/btn_radio"
+                android:layout_margin="10dp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rb_polish"
+                android:layout_weight="0.7"
+                android:background="@drawable/fr"
+                android:button="@android:drawable/btn_radio"
+                android:layout_margin="10dp" />
+
+        </RadioGroup>
 
     </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="0.3" />
 
     <LinearLayout
         android:orientation="vertical"

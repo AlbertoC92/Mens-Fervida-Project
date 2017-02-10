@@ -11,5 +11,6 @@
     <string name="estrrellas">Stars</string>
     <string name="clasi_global">Global</string>
     <string name="respuesta_hint">Answer...</string>
+    <string name="nombre">Name...</string>
 
 </resources>
