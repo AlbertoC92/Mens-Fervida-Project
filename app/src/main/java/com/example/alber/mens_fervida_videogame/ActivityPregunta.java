@@ -55,7 +55,6 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         puntuacion.setText(String.format("%d",Jugador.getInstance().getPuntuacion()));
         atras=(Button)findViewById(R.id.btn_atras_pre_com);
         atras.setOnClickListener(this);
-        iniciarContador();
         nuevaPregunta();
 
     }
@@ -82,8 +81,16 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     }
 
     private void nuevaPregunta() {
-        pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
-        diaPregunta=new DialogPregPalComp(this, R.style.AppTheme, this);
+        //pregunta Facil
+        if(nivel%2==0){
+            pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
+            diaPregunta=new DialogPregPalComp(this, R.style.AppTheme, this);
+        }
+        //pregunta difucil
+        else{
+            pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
+            diaPregunta=new DialogPregPalComp(this, R.style.AppTheme, this);
+        }
         iniciarContador();
         timer.start();
         diaPregunta.show();
