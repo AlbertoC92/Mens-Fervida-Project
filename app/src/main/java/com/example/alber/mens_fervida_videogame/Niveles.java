@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.example.alber.mens_fervida_videogame.entidades.Jugador;
+
 public class Niveles extends Activity {
 
     @Override
@@ -55,8 +57,10 @@ public class Niveles extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.START);
-        startService(i);
+        if(Jugador.getInstance().isMusicaPlaying()){
+            Intent i = new Intent(this, AudioService.class);
+            i.putExtra("action", AudioService.START);
+            startService(i);
+        }
     }
 }

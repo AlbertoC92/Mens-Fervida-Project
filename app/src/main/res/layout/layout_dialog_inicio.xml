@@ -140,12 +140,11 @@
             android:layout_weight="1" />
 
         <ToggleButton
-            android:text="ToggleButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnmusica"
             android:layout_weight="2"
-            android:background="@drawable/btn_musica_rojo"
+            android:background="@drawable/boton_sonido"
             android:textOff=" "
             android:textOn=" "/>
 

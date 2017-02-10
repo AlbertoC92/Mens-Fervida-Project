@@ -27,6 +27,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.alber.mens_fervida_videogame.entidades.Jugador;
 import com.example.alber.mens_fervida_videogame.entidades.Pregunta;
 import com.example.alber.mens_fervida_videogame.sqlite.IdiomasSQLiteOpenHelper;
 import com.example.alber.mens_fervida_videogame.sqlite.OperacionesBD;
@@ -130,9 +131,11 @@ public class MenuPrincipal extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.START);
-        startService(i);
+        if(Jugador.getInstance().isMusicaPlaying()){
+            Intent i = new Intent(this, AudioService.class);
+            i.putExtra("action", AudioService.START);
+            startService(i);
+        }
     }
 
 

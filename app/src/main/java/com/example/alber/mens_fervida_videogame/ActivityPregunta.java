@@ -172,9 +172,11 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     @Override
     protected void onResume() {
         super.onResume();
+        if(Jugador.getInstance().isMusicaPlaying()){
+            Intent i = new Intent(this, AudioService.class);
+            i.putExtra("action", AudioService.START);
+            startService(i);
+        }
 
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.START);
-        startService(i);
     }
 }

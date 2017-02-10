@@ -12,9 +12,19 @@ public class Jugador {
     private String nombre;
     private float estrellas;
     private static Jugador jugador;
+    private boolean musicaPlaying;
+
+    public boolean isMusicaPlaying() {
+        return musicaPlaying;
+    }
+
+    public void setMusicaPlaying(boolean musica) {
+        this.musicaPlaying = musica;
+    }
 
     private Jugador(){
         setPuntuacion(0);
+        setMusicaPlaying(true);
         //cargarSharedPreferences();
 
     }

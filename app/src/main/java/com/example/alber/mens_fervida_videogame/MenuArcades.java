@@ -10,6 +10,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.example.alber.mens_fervida_videogame.entidades.Jugador;
+
 public class MenuArcades extends Activity implements View.OnClickListener{
     Dialog juego1, juego2, juego3;
     Button volver;
@@ -52,9 +54,10 @@ public class MenuArcades extends Activity implements View.OnClickListener{
     @Override
     protected void onResume() {
         super.onResume();
-
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.START);
-        startService(i);
+        if(Jugador.getInstance().isMusicaPlaying()){
+            Intent i = new Intent(this, AudioService.class);
+            i.putExtra("action", AudioService.START);
+            startService(i);
+        }
     }
 }

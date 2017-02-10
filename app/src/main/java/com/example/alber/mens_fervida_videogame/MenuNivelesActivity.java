@@ -140,8 +140,10 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
             panel2.show();
         }
         puntuacionJugador.setText(String.format("%d",Jugador.getInstance().getPuntuacion()));
-        Intent i = new Intent(this, AudioService.class);
-        i.putExtra("action", AudioService.START);
-        startService(i);
+        if(Jugador.getInstance().isMusicaPlaying()){
+            Intent i = new Intent(this, AudioService.class);
+            i.putExtra("action", AudioService.START);
+            startService(i);
+        }
     }
 }

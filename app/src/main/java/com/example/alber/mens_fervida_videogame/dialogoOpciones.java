@@ -28,6 +28,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.example.alber.mens_fervida_videogame.entidades.Jugador;
+
 import static android.R.attr.drawable;
 import static android.R.attr.id;
 import static android.R.id.toggle;
@@ -96,6 +98,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         volver=(Button)findViewById(R.id.btn_volver_opc);
         aceptar=(Button)findViewById(R.id.btnAceptar_dialog_opc);
         musica=(ToggleButton) findViewById(R.id.btnmusica);
+
         volumen=(Button)findViewById(R.id.btnsonido);
         audio = new Intent(context,AudioService.class);
         context.startService(audio);
@@ -103,6 +106,12 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
         aceptar.setOnClickListener(this);
         musica.setOnClickListener(this);
+        if(Jugador.getInstance().isMusicaPlaying()){
+            musica.setChecked(true);
+        }
+        else{
+            musica.setChecked(false);
+        }
         volver.setOnClickListener(this);
 
     }
@@ -124,24 +133,19 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
 
     public void quitarMusica(){
-        musica = (ToggleButton) findViewById(R.id.btnmusica);
-        musica.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    musica.setBackgroundResource(R.drawable.btn_musica_rojo);
-                    Intent i = new Intent(context, AudioService.class);
-                    i.putExtra("action", AudioService.START);
-                    context.startService(i);
+        if (musica.isChecked()) {
+            Intent i = new Intent(context, AudioService.class);
+            i.putExtra("action", AudioService.START);
+            context.startService(i);
+            Jugador.getInstance().setMusicaPlaying(true);
 
 
-                } else {
-                    musica.setBackgroundResource(R.drawable.btn_musica_off_gris);
-                    Intent i = new Intent(context, AudioService.class);
-                    i.putExtra("action", AudioService.PAUSE);
-                    context.startService(i);
-                }
-            }
-        });
+        } else {
+            Intent i = new Intent(context, AudioService.class);
+            i.putExtra("action", AudioService.PAUSE);
+            context.startService(i);
+            Jugador.getInstance().setMusicaPlaying(false);
+        }
 
     }
 
