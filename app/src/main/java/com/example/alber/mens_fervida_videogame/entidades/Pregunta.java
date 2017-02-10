@@ -39,7 +39,7 @@ public class Pregunta {
 
     public void setWord(String word) {
         if(!word.isEmpty())
-            this.word = word;
+            this.word = word.toUpperCase();
         else
             throw new IllegalArgumentException(ERROR_WORD);
     }
@@ -50,7 +50,7 @@ public class Pregunta {
 
     public void setTl1(String tl1) {
         if(!tl1.isEmpty()){
-            this.tl1 = tl1;
+            this.tl1 = tl1.toUpperCase();
         }
         else{
             throw new IllegalArgumentException(ERROR_TRANSLATE);
@@ -63,7 +63,7 @@ public class Pregunta {
 
     public void setTl2(String tl2) {
         if(!tl2.isEmpty()){
-            this.tl2 = tl2;
+            this.tl2 = tl2.toUpperCase();
         }else{
             this.tl2=null;
         }
@@ -75,7 +75,7 @@ public class Pregunta {
 
     public void setTl3(String tl3) {
         if(!tl3.isEmpty()){
-            this.tl3 = tl3;
+            this.tl3 = tl3.toUpperCase();
         }else{
             this.tl3=null;
         }

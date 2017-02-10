@@ -1,7 +1,7 @@
 package com.example.alber.mens_fervida_videogame.entidades;
 
 /**
- * Created by Profesor on 09/02/2017.
+ * Created by PedroMiguel on 09/02/2017.
  */
 
 public class Jugador {
@@ -14,8 +14,8 @@ public class Jugador {
     private static Jugador jugador;
 
     private Jugador(){
-        setPuntuacion(0);
-        cargarSharedPreferences();
+        setPuntuacion(1);
+        //cargarSharedPreferences();
 
     }
     public static Jugador getInstance(){

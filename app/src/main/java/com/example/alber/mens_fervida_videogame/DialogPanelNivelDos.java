@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ import android.widget.Toast;
 public class DialogPanelNivelDos extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
     private Context mContext;
     private Activity activity;
-    private Button btnPrevius, btn6, btn7, btn8,btn9,btn10;
+    public Button btnPrevius, btn6, btn7, btn8,btn9,btn10;
 
     public DialogPanelNivelDos(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
@@ -51,6 +52,16 @@ public class DialogPanelNivelDos extends Dialog implements View.OnClickListener,
         setContentView(R.layout.layout_dialog_niveles2);
         btnPrevius =(Button) findViewById(R.id.btn_pan_nivel_prev);
         btnPrevius.setOnClickListener(this);
+        btn6=(Button) findViewById(R.id.btn_nivel_6);
+        btn6.setOnClickListener(this);
+        btn7=(Button) findViewById(R.id.btn_nivel_7);
+        btn7.setOnClickListener(this);
+        btn8=(Button) findViewById(R.id.btn_nivel_8);
+        btn8.setOnClickListener(this);
+        btn9=(Button) findViewById(R.id.btn_nivel_9);
+        btn9.setOnClickListener(this);
+        btn10=(Button) findViewById(R.id.btn_nivel_10);
+        btn10.setOnClickListener(this);
         this.setOnKeyListener(this);
 
 
@@ -58,6 +69,7 @@ public class DialogPanelNivelDos extends Dialog implements View.OnClickListener,
 
     @Override
     public void onClick(View view) {
+        Intent i;
         switch (view.getId()){
             case R.id.btn_pan_nivel_prev:
 
@@ -65,22 +77,34 @@ public class DialogPanelNivelDos extends Dialog implements View.OnClickListener,
                ((MenuNivelesActivity)activity).panel1.show();
                 break;
             case R.id.btn_nivel_6:
-                btn7.setEnabled(true);
+                i = new Intent(view.getContext(),ActivityPregunta.class);
+                i.putExtra("nivel",6);
+                ((MenuNivelesActivity)mContext).startActivityForResult(i,MenuNivelesActivity.NIVEL_FINALIZADO);
+                this.dismiss();
                 break;
             case R.id.btn_nivel_7:
-                btn8.setEnabled(true);
+                i = new Intent(view.getContext(),ActivityPregunta.class);
+                i.putExtra("nivel",7);
+                ((MenuNivelesActivity)mContext).startActivityForResult(i,MenuNivelesActivity.NIVEL_FINALIZADO);
+                this.dismiss();
                 break;
             case R.id.btn_nivel_8:
-                btn9.setEnabled(true);
+                i = new Intent(view.getContext(),ActivityPregunta.class);
+                i.putExtra("nivel",8);
+                ((MenuNivelesActivity)mContext).startActivityForResult(i,MenuNivelesActivity.NIVEL_FINALIZADO);
+                this.dismiss();
                 break;
             case R.id.btn_nivel_9:
-                btn10.setEnabled(true);
+                i = new Intent(view.getContext(),ActivityPregunta.class);
+                i.putExtra("nivel",9);
+                ((MenuNivelesActivity)mContext).startActivityForResult(i,MenuNivelesActivity.NIVEL_FINALIZADO);
+                this.dismiss();
                 break;
             case R.id.btn_nivel_10:
-                btn7.setEnabled(false);
-                btn8.setEnabled(false);
-                btn9.setEnabled(false);
-                btn10.setEnabled(false);
+                i = new Intent(view.getContext(),ActivityPregunta.class);
+                i.putExtra("nivel",10);
+                ((MenuNivelesActivity)mContext).startActivityForResult(i,MenuNivelesActivity.NIVEL_FINALIZADO);
+                this.dismiss();
                 break;
 
 

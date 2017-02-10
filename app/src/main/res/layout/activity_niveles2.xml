@@ -22,10 +22,9 @@
             android:layout_margin="10dp">
 
             <TextView
-                android:text="10000"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView6"
+                android:id="@+id/txt_puntuacion_niveles"
                 android:textAlignment="center"
                 android:paddingTop="6dp"
                 android:paddingLeft="20dp"

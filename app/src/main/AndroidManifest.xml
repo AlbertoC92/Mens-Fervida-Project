@@ -17,16 +17,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Niveles" />
+        <activity android:name=".Niveles"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MenuNivelesActivity"
             android:screenOrientation="portrait" />
+
 
         <service
             android:name=".AudioService"
             android:enabled="true" />
 
         <activity android:name=".MenuArcades"></activity>
+        <activity
+            android:name=".ActivityPregunta"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
