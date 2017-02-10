@@ -69,7 +69,7 @@ public class Jugador {
         int puntuacionMaxSP=preferences.getInt(CAMPO_PUNT_MAX, 0);
         String nombreSP=preferences.getString(CAMPO_NOMBRE, "");
         boolean musicaSP=preferences.getBoolean(CAMPO_MUSICA, true);
-        int idiomaSP=preferences.getInt(CAMPO_IDIOMA, NO_LANGUAGE);
+        int idiomaSP=preferences.getInt(CAMPO_IDIOMA, SPANISH);
         int avatarSP=preferences.getInt(CAMPO_AVATAR, 0);
         float estrellasSP=preferences.getFloat(CAMPO_ESTRELLAS, 0);
         setPuntuacionMax(puntuacionMaxSP);

@@ -148,22 +148,37 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         rbGerman=(RadioButton)findViewById(R.id.rb_german);
         rbFrench=(RadioButton)findViewById(R.id.rb_french);
         grupoIdiomas=(RadioGroup) findViewById(R.id.grupo_idiomas);
+        idiomaSeleccionado();
 
+    }
+
+    private void idiomaSeleccionado() {
+        switch(Jugador.getInstance().getIdioma()){
+            case Jugador.SPANISH:
+                rbSpanish.setChecked(true);
+                break;
+            case Jugador.POLISH:
+                rbPolish.setChecked(true);
+                break;
+            case Jugador.GERMAN:
+                rbGerman.setChecked(true);
+                break;
+        }
     }
 
     public void ok(){
         Toast.makeText(context.getApplicationContext(), String.valueOf(Jugador.getInstance().getIdioma()), Toast.LENGTH_SHORT);
         Jugador.getInstance().setNombre(campoNombre.getText().toString());
         Jugador.getInstance().setAvatar(avatarElegido);
-        if(rbSpanish.isSelected()) {
+        if(rbSpanish.isChecked()==true) {
             Jugador.getInstance().setIdioma(Jugador.SPANISH);
             Toast.makeText(context.getApplicationContext(), String.valueOf(Jugador.getInstance().getIdioma()), Toast.LENGTH_SHORT);
         }
-        else if(rbPolish.isSelected()){
+        else if(rbPolish.isChecked()==true){
             Jugador.getInstance().setIdioma(Jugador.POLISH);
             System.out.println(Jugador.getInstance().getIdioma());
         }
-        else if(rbGerman.isSelected()){
+        else if(rbGerman.isChecked()==true){
             Jugador.getInstance().setIdioma(Jugador.GERMAN);
         }
         else{
