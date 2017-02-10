@@ -15,6 +15,10 @@ public class Jugador {
     private final String CAMPO_NOMBRE="nombre";
     private final String CAMPO_ESTRELLAS="estrellas";
     private final String CAMPO_MUSICA="musicaPlaying";
+    public static final int SPANISH=0;
+    public static final int POLISH=1;
+    public static final int GERMAN=2;
+    public static final int NO_LANGUAGE=-1;
     private int puntuacion;
     private int puntuacionMax;
     private int avatar;
@@ -65,7 +69,7 @@ public class Jugador {
         int puntuacionMaxSP=preferences.getInt(CAMPO_PUNT_MAX, 0);
         String nombreSP=preferences.getString(CAMPO_NOMBRE, "");
         boolean musicaSP=preferences.getBoolean(CAMPO_MUSICA, true);
-        int idiomaSP=preferences.getInt(CAMPO_IDIOMA, 0);
+        int idiomaSP=preferences.getInt(CAMPO_IDIOMA, NO_LANGUAGE);
         int avatarSP=preferences.getInt(CAMPO_AVATAR, 0);
         float estrellasSP=preferences.getFloat(CAMPO_ESTRELLAS, 0);
         setPuntuacionMax(puntuacionMaxSP);
@@ -130,7 +134,7 @@ public class Jugador {
     }
 
     public void setIdioma(int idioma) {
-        if(idioma==0 || idioma==1 || idioma==2)
+        if(idioma==SPANISH || idioma==POLISH || idioma==GERMAN || idioma==NO_LANGUAGE)
             this.idioma = idioma;
         else
             throw new IllegalArgumentException();

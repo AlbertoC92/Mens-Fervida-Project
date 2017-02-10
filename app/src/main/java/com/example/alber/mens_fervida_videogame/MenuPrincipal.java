@@ -32,9 +32,6 @@ public class MenuPrincipal extends Activity {
         buttonOptions = (Button)findViewById(R.id.bt_opciones);
         buttonExit = (Button)findViewById(R.id.bt_salir);
         buttonArcade = (Button)findViewById(R.id.bt_arcade);
-        //buttonPlay.setTextSize(30);
-        //buttonOptions.setTextSize(30);
-        //buttonExit.setTextSize(30);
         buttonPlay.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         buttonOptions.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
@@ -48,7 +45,7 @@ public class MenuPrincipal extends Activity {
     }
 
     public void jugar(View view){
-        if(Jugador.getInstance().getNombre()==null){
+        if(Jugador.getInstance().getNombre()==null || Jugador.getInstance().getIdioma()==Jugador.NO_LANGUAGE){
             abrirOpciones();
         }
         else{

@@ -102,7 +102,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         //ArrayAdapter<String> adaptadorSp = new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item,paises);
         //sp.setAdapter(adaptadorSp);
         volver=(Button)findViewById(R.id.btn_volver_opc);
-        aceptar=(Button)findViewById(R.id.btnAceptar_dialog_opc);
+        aceptar=(Button)findViewById(R.id.btn_aceptar_dialog_opc);
         musica=(ToggleButton) findViewById(R.id.btnmusica);
 
         volumen=(Button)findViewById(R.id.btnsonido);
@@ -152,9 +152,24 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     }
 
     public void ok(){
+        Toast.makeText(context.getApplicationContext(), String.valueOf(Jugador.getInstance().getIdioma()), Toast.LENGTH_SHORT);
         Jugador.getInstance().setNombre(campoNombre.getText().toString());
         Jugador.getInstance().setAvatar(avatarElegido);
-        Jugador.getInstance().setIdioma(0);
+        if(rbSpanish.isSelected()) {
+            Jugador.getInstance().setIdioma(Jugador.SPANISH);
+            Toast.makeText(context.getApplicationContext(), String.valueOf(Jugador.getInstance().getIdioma()), Toast.LENGTH_SHORT);
+        }
+        else if(rbPolish.isSelected()){
+            Jugador.getInstance().setIdioma(Jugador.POLISH);
+            System.out.println(Jugador.getInstance().getIdioma());
+        }
+        else if(rbGerman.isSelected()){
+            Jugador.getInstance().setIdioma(Jugador.GERMAN);
+        }
+        else{
+            Jugador.getInstance().setIdioma(Jugador.NO_LANGUAGE);
+            System.out.println(Jugador.getInstance().getIdioma());
+        }
         Jugador.getInstance().setMusicaPlaying(musica.isChecked());
         Jugador.getInstance().guardarSharedPreferences();
         this.dismiss();
@@ -190,7 +205,8 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btnAceptar_dialog_opc:
+            case R.id.btn_aceptar_dialog_opc:
+                System.out.println("ENTRA");
                 ok();
                 break;
             case R.id.btn_volver_opc:
