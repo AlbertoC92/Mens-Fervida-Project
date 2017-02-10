@@ -93,7 +93,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.8"
-                android:nestedScrollingEnabled="true">
+                android:nestedScrollingEnabled="false"
+                android:clickable="true">
 
                 <RelativeLayout
 
@@ -110,7 +111,8 @@
                         android:layout_height="wrap_content"
                         android:numColumns="2"
                         android:choiceMode="singleChoice"
-                        android:scrollbars="horizontal|vertical" />
+                        android:scrollbars="horizontal|vertical"
+                        android:listSelector="@drawable/selector_grid" />
                 </RelativeLayout>
             </ScrollView>
         </LinearLayout>

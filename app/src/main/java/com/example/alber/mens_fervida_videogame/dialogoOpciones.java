@@ -44,6 +44,7 @@ import static com.example.alber.mens_fervida_videogame.R.drawable.musica_off_roj
 public class dialogoOpciones extends Dialog implements View.OnClickListener{
     //campo que controla el editext del nombre
     private EditText campoNombre;
+    private int avatarElegido=0;
     //Spinner para los paises
     private Spinner sp;
     private String paises[]={"España","Polonia","Alemania","Francia"};
@@ -56,6 +57,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     private GridView listaPersonajes;
     private Intent audio;
     private ToggleButton musica;
+    private View imagenActual;
 
 
 
@@ -123,12 +125,23 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         configurarDialogo();
         listaPersonajes.setAdapter(adaptador);
+        listaPersonajes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
+                if(imagenActual!=null){
+                    imagenActual.setAlpha((float) 1.0);
+                }
+                view.setAlpha((float) 0.5);
+                imagenActual=view;
+                avatarElegido=pos;
+            }
+        });
 
     }
 
     public void ok(){
         Jugador.getInstance().setNombre(campoNombre.getText().toString());
-        Jugador.getInstance().setAvatar(0);
+        Jugador.getInstance().setAvatar(avatarElegido);
         Jugador.getInstance().setIdioma(0);
         Jugador.getInstance().setMusicaPlaying(musica.isChecked());
         Jugador.getInstance().guardarSharedPreferences();

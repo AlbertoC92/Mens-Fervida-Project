@@ -17,6 +17,7 @@ import android.widget.TextView;
 public class AvataresAdapter extends BaseAdapter {
     private Context mContext;
     private Activity actividad;
+    ImageView imageView;
 
     private Integer[] caracteres = {
             R.drawable.avatar1,R.drawable.avatar2, R.drawable.avatar3,
@@ -59,10 +60,10 @@ public class AvataresAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        ImageView imageView= new ImageView(mContext.getApplicationContext());
         imageView.setImageResource(caracteres[position]);
         return imageView;
     }
+
 
     @Override
     public long getItemId(int position) {
@@ -72,7 +73,7 @@ public class AvataresAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView;
+
 
         if (convertView == null) {
 
