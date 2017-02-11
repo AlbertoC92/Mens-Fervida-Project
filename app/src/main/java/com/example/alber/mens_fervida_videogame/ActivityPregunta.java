@@ -3,6 +3,8 @@ package com.example.alber.mens_fervida_videogame;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -27,16 +29,14 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     private final int PREGUNTA_POR_NIVEL=20;
     private final int SEGUNDOS_TOTAL_MS=60000;
     private final int TIEMPO_RESTA_PUNTI=1000;
-    public int puntosSegundos;
-    public int vidas;
-    public int nivel;
-    public int numeroPregunta;
+    public int nivel,numeroPregunta,vidas,puntosSegundos,idAciertoSound,idFalloSound;
     TextView timerDisplay;
     Dialog diaPregunta;
     Pregunta pregunta;
     CountDownTimer timer;
     TextView puntuacion;
     Button atras;
+    SoundPool soundPool;
 
 
     @Override
@@ -56,8 +56,16 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         atras=(Button)findViewById(R.id.btn_atras_pre_com);
         atras.setOnClickListener(this);
         nuevaPregunta();
+        cargarEfectosSonidos();
 
     }
+
+    private void cargarEfectosSonidos() {
+        soundPool=new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
+        idAciertoSound=soundPool.load(this, R.raw.win_sound, 0);
+        idFalloSound=soundPool.load(this, R.raw.bad_sound, 0);
+    }
+
 
     private void iniciarContador() {
         puntosSegundos=TIMER_A_CERO;
@@ -101,6 +109,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         puntosSegundos=TIMER_A_CERO;
         puntuacion.setText(String.format("%d",puntuacionNivel));
         timer.cancel();
+        soundPool.play(idAciertoSound, 1, 1, 1, 0, 1);
         if(numeroPregunta>=PREGUNTA_POR_NIVEL){
             finalizaNivelOk();
         }
@@ -110,10 +119,12 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
             numeroPregunta++;
         }
     }
+
     public void preguntaFallada(){
         vidas--;
         puntosSegundos=TIMER_A_CERO;
         timer.cancel();
+        soundPool.play(idFalloSound, 1, 1, 0, 0, 1);
         switch (vidas){
             case 5:
                 LinearLayout linearLayout=(LinearLayout) findViewById(R.id.linear_vida_6);
