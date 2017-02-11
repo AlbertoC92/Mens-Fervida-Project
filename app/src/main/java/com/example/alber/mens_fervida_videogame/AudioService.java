@@ -34,7 +34,7 @@ public class AudioService extends Service {
 
     private void startLoop(){
         if(loop == null){
-            loop = MediaPlayer.create(this, R.raw.main_theme);
+            loop = MediaPlayer.create(this, R.raw.jump_and_run);
         }
         if(!loop.isPlaying()){
             loop.setLooping(true);
