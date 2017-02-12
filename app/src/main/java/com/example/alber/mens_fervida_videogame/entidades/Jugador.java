@@ -90,7 +90,7 @@ public class Jugador {
         editor.putBoolean(CAMPO_MUSICA, isMusicaPlaying());
         editor.putInt(CAMPO_IDIOMA, getIdioma());
         editor.putInt(CAMPO_AVATAR, getAvatar());
-        editor.putFloat(CAMPO_ESTRELLAS, getAvatar());
+        editor.putFloat(CAMPO_ESTRELLAS, getEstrellas());
         editor.commit();
 
 

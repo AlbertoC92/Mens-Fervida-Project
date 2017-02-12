@@ -19,7 +19,7 @@ import com.example.alber.mens_fervida_videogame.entidades.Jugador;
 public class MenuNivelesActivity extends Activity implements View.OnClickListener{
     Dialog panel1, panel2;
     public static final int NIVEL_FINALIZADO=1;
-    TextView puntuacionJugador;
+    TextView puntuacionJugador, estrellasJugador;
     Button salir;
     private int siguienteNivel=2;
 
@@ -34,6 +34,8 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
         salir=(Button) findViewById(R.id.btn_atras_ac_niv);
         salir.setOnClickListener(this);
         puntuacionJugador=(TextView)findViewById(R.id.txt_puntuacion_niveles);
+        estrellasJugador=(TextView)findViewById(R.id.text_estrellas_niveles);
+        estrellasJugador.setText(String.format("%.1f", Jugador.getInstance().getEstrellas()));
         cargarPaneles();
 
     }
@@ -54,6 +56,10 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
         switch (requestCode){
             case NIVEL_FINALIZADO:
                 if(resultCode==RESULT_OK){
+                    Jugador.getInstance().setEstrellas(Jugador.getInstance().getEstrellas()+bundle.getFloat("estrellasConseguidas"));
+                    Jugador.getInstance().guardarSharedPreferences();
+                    estrellasJugador.setText(String.format("%.1f", Jugador.getInstance().getEstrellas()));
+
                     switch (bundle.getInt("nivelFinalizado")){
                         case 1:
                             ((DialogPanelNivelUno)panel1).btn1.setClickable(false);

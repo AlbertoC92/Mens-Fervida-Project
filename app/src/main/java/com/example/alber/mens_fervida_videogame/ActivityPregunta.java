@@ -30,11 +30,10 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     private final int SEGUNDOS_TOTAL_MS=60000;
     private final int TIEMPO_RESTA_PUNTI=1000;
     public int nivel,numeroPregunta,vidas,puntosSegundos,idAciertoSound,idFalloSound;
-    TextView timerDisplay;
+    TextView timerDisplay, puntuacion, estrellasPanel;
     Dialog diaPregunta;
     Pregunta pregunta;
     CountDownTimer timer;
-    TextView puntuacion;
     Button atras;
     SoundPool soundPool;
 
@@ -53,6 +52,8 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         setContentView(R.layout.layout_pregunta_palabra_comp);
         puntuacion=(TextView) findViewById(R.id.text_puntuacion) ;
         puntuacion.setText(String.format("%d",Jugador.getInstance().getPuntuacion()));
+        estrellasPanel=(TextView)findViewById(R.id.txt_estrellas_preg);
+        estrellasPanel.setText(String.format("%.1f", Jugador.getInstance().getEstrellas()));
         atras=(Button)findViewById(R.id.btn_atras_pre_com);
         atras.setOnClickListener(this);
         nuevaPregunta();
@@ -163,6 +164,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         Jugador.getInstance().setPuntuacion(Jugador.getInstance().getPuntuacion()+puntuacionNivel);
         Intent intent= new Intent();
         intent.putExtra("nivelFinalizado",nivel);
+        intent.putExtra("estrellasConseguidas",(float)vidas/2);
         setResult(RESULT_OK, intent);
         diaPregunta.dismiss();
         this.finish();
