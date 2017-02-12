@@ -14,5 +14,6 @@
     <string name="nombre">Name...</string>
     <string name="titulo_pregunta_tuidioma">Write in your language the next word:</string>
     <string name="level_completed">Level Completed*</string>
+    <string name="txt_preg_pista">Translate into English: </string>
 
 </resources>

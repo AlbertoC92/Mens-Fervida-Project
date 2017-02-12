@@ -13,4 +13,5 @@
     <string name="estrrellas">Estrellas</string>
     <string name="p_max">Puntuaxion Máx.</string>
     <string name="level_completed">Has completado el nivel satisfacotriamente</string>
+    <string name="txt_preg_pista">"Traduce al inglés: "</string>
 </resources>

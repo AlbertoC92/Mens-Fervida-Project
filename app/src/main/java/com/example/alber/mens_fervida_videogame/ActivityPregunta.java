@@ -21,6 +21,8 @@ import android.widget.Toast;
 import com.example.alber.mens_fervida_videogame.entidades.Jugador;
 import com.example.alber.mens_fervida_videogame.entidades.Pregunta;
 
+import java.util.Random;
+
 /**
  * Created by PedroMiguel on 01/02/2017.
  */
@@ -95,15 +97,23 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     }
 
     private void nuevaPregunta() {
+        pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
         //pregunta Dificil
         if(nivel%2==0){
-            pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
+
             diaPregunta=new DialogPregPalComp(this, R.style.AppTheme);
         }
         //pregunta Facil
         else{
-            pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
-            diaPregunta=new DialogPregPalOpc(this, R.style.AppTheme);
+            switch (new Random().nextInt(2)){
+                case 0:
+                    diaPregunta=new DialogPregPalPista(this, R.style.AppTheme);
+                    break;
+                case 1:
+                    diaPregunta=new DialogPregPalOpc(this, R.style.AppTheme);
+                    break;
+            }
+
         }
         iniciarContador();
         timer.start();
