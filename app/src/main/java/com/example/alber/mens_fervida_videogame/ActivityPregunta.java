@@ -95,15 +95,15 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     }
 
     private void nuevaPregunta() {
-        //pregunta Facil
+        //pregunta Dificil
         if(nivel%2==0){
             pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
-            diaPregunta=new DialogPregPalComp(this, R.style.AppTheme, this);
+            diaPregunta=new DialogPregPalComp(this, R.style.AppTheme);
         }
-        //pregunta difucil
+        //pregunta Facil
         else{
             pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
-            diaPregunta=new DialogPregPalComp(this, R.style.AppTheme, this);
+            diaPregunta=new DialogPregPalOpc(this, R.style.AppTheme);
         }
         iniciarContador();
         timer.start();
