@@ -68,7 +68,7 @@ public class DialogRankingInd extends Dialog implements View.OnClickListener{
     @Override
     public void show() {
         super.show();
-        estrellas.setText(String.format("%.2f",Jugador.getInstance().getEstrellas()));
+        estrellas.setText(String.format("%.1f",Jugador.getInstance().getEstrellas()));
         puntuacionMax.setText(String.format("%d",Jugador.getInstance().getPuntuacionMax()));
         cargarImagen();
     }

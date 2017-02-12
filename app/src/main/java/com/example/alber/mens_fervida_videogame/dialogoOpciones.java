@@ -125,6 +125,12 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     }
 
     @Override
+    public void show() {
+        super.show();
+        idiomaSeleccionado();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         configurarDialogo();
@@ -148,7 +154,6 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         rbGerman=(RadioButton)findViewById(R.id.rb_german);
         rbFrench=(RadioButton)findViewById(R.id.rb_french);
         grupoIdiomas=(RadioGroup) findViewById(R.id.grupo_idiomas);
-        idiomaSeleccionado();
 
     }
 
