@@ -12,8 +12,9 @@
     <string name="clasi_global">Global</string>
     <string name="respuesta_hint">Answer...</string>
     <string name="nombre">Name...</string>
-    <string name="titulo_pregunta_tuidioma">Write in your language the next word:</string>
+    <string name="titulo_pregunta_tuidioma">Write in YOUR LANGUAGE the next word:</string>
     <string name="level_completed">Level Completed*</string>
     <string name="txt_preg_pista">Translate into English: </string>
+    <string name="titulo_pregunta_english">Write in ENGLISH the next word:</string>
 
 </resources>

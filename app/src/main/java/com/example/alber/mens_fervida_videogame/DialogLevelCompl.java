@@ -21,9 +21,9 @@ import android.widget.TextView;
  * Created by PedroMiguel on 01/02/2017.
  */
 
-public class DialogLevelCompl extends Dialog{
+public class DialogLevelCompl extends Dialog implements View.OnClickListener{
     private Context mContext;
-    private LinearLayout estrellas;
+    private LinearLayout estrellas, panel;
     private TextView puntuacion;
 
 
@@ -51,6 +51,8 @@ public class DialogLevelCompl extends Dialog{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_nivel_comp);
+        panel=(LinearLayout) findViewById(R.id.linear_nivel_comp);
+        panel.setOnClickListener(this);
         estrellas=(LinearLayout)findViewById(R.id.linear_estrellas_lv_comp);
         puntuacion=(TextView)findViewById(R.id.txt_punt_dia_lv_comp);
         puntuacion.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
@@ -92,6 +94,11 @@ public class DialogLevelCompl extends Dialog{
 
     @Override
     public void onBackPressed() {
+        this.dismiss();
+    }
+
+    @Override
+    public void onClick(View view) {
         this.dismiss();
     }
 }

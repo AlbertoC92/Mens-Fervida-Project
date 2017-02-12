@@ -7,7 +7,8 @@
     android:layout_weight="8"
     android:weightSum="10"
     android:gravity="bottom"
-    android:background="@drawable/fondo_niveles">
+    android:background="@drawable/fondo_niveles"
+    android:id="@+id/linear_nivel_comp">
 
     <Space
         android:layout_width="0dp"

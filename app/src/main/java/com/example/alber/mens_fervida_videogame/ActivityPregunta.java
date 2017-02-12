@@ -100,8 +100,14 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         pregunta=new Pregunta(Jugador.getInstance().getIdioma(),nivel);
         //pregunta Dificil
         if(nivel%2==0){
-
-            diaPregunta=new DialogPregPalComp(this, R.style.AppTheme);
+            switch (new Random().nextInt(2)){
+                case 0:
+                    diaPregunta=new DialogPregPalComp(this, R.style.AppTheme);
+                    break;
+                case 1:
+                    diaPregunta=new DialogPregPalCompIng(this, R.style.AppTheme);
+                    break;
+            }
         }
         //pregunta Facil
         else{
