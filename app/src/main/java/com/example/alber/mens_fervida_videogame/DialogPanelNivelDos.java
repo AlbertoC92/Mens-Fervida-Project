@@ -19,7 +19,7 @@ import android.widget.Toast;
  * Created by PedroMiguel on 01/02/2017.
  */
 
-public class DialogPanelNivelDos extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
+public class DialogPanelNivelDos extends Dialog implements View.OnClickListener{
     private Context mContext;
     private Activity activity;
     public Button btnPrevius, btn6, btn7, btn8,btn9,btn10;
@@ -62,7 +62,6 @@ public class DialogPanelNivelDos extends Dialog implements View.OnClickListener,
         btn9.setOnClickListener(this);
         btn10=(Button) findViewById(R.id.btn_nivel_10);
         btn10.setOnClickListener(this);
-        this.setOnKeyListener(this);
 
 
     }
@@ -111,15 +110,10 @@ public class DialogPanelNivelDos extends Dialog implements View.OnClickListener,
         }
     }
 
-
-
     @Override
-    public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {
-        if (i == KeyEvent.KEYCODE_BACK) {
+    public void onBackPressed() {
+        this.dismiss();
+        ((MenuNivelesActivity)mContext).panel1.show();
 
-           /* this.dismiss();
-            ((MenuNivelesActivity)activity).panel1.show();*/
-        }
-        return true;
     }
 }

@@ -13,5 +13,6 @@
     <string name="respuesta_hint">Answer...</string>
     <string name="nombre">Name...</string>
     <string name="titulo_pregunta_tuidioma">Write in your language the next word:</string>
+    <string name="level_completed">Level Completed*</string>
 
 </resources>

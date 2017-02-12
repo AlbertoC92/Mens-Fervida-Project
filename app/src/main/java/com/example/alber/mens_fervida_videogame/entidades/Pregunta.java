@@ -107,6 +107,23 @@ public class Pregunta {
 
     }
 
+    public String[] getOtherWordsEnglish(){
+        String [] conjuntoPalabras=new String[4];
+        conjuntoPalabras[0]=getWord();
+        for (int i=1;i<4;i++){
+            conjuntoPalabras[i]=OperacionesBD.cargarPregunta(Jugador.getInstance().getIdioma(), getNivel())[0];
+        }
+        return conjuntoPalabras;
+    }
+    public String[] getOtherWordsYourLanguage(){
+        String [] conjuntoPalabras=new String[4];
+        conjuntoPalabras[0]=getTl1();
+        for (int i=1;i<4;i++){
+            conjuntoPalabras[i]=OperacionesBD.cargarPregunta(Jugador.getInstance().getIdioma(), getNivel())[1];
+        }
+        return conjuntoPalabras;
+    }
+
     @Override
     public String toString() {
         return String.format("WORD: %s, TL1: %s, TL2: %s, TL3: %s, NIVEL: %d, TIPO: %s",getWord(), getTl1(), getTl2(), getTl3(), getNivel(), getTipo() );

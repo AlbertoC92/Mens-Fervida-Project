@@ -12,4 +12,5 @@
     <string name="nombre">Nombre...</string>
     <string name="estrrellas">Estrellas</string>
     <string name="p_max">Puntuaxion Máx.</string>
+    <string name="level_completed">Has completado el nivel satisfacotriamente</string>
 </resources>

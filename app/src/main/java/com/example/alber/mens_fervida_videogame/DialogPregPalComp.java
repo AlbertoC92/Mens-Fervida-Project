@@ -92,12 +92,8 @@ public class DialogPregPalComp extends Dialog implements View.OnClickListener, D
     }
 
 
-
     @Override
     public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {
-        if (i == KeyEvent.KEYCODE_BACK) {
-
-        }
         if(i==KeyEvent.KEYCODE_ENTER){
             comprobarPregunta();
         }

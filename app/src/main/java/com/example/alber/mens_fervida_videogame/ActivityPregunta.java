@@ -7,11 +7,14 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +33,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     private final int SEGUNDOS_TOTAL_MS=60000;
     private final int TIEMPO_RESTA_PUNTI=1000;
     public int nivel,numeroPregunta,vidas,puntosSegundos,idAciertoSound,idFalloSound;
+    LinearLayout marcador;
     TextView timerDisplay, puntuacion, estrellasPanel;
     Dialog diaPregunta;
     Pregunta pregunta;
@@ -56,6 +60,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         estrellasPanel.setText(String.format("%.1f", Jugador.getInstance().getEstrellas()));
         atras=(Button)findViewById(R.id.btn_atras_pre_com);
         atras.setOnClickListener(this);
+        marcador=(LinearLayout)findViewById(R.id.linear_marcador);
         nuevaPregunta();
         cargarEfectosSonidos();
 
@@ -167,7 +172,8 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         intent.putExtra("estrellasConseguidas",(float)vidas/2);
         setResult(RESULT_OK, intent);
         diaPregunta.dismiss();
-        this.finish();
+        new DialogLevelCompl(this, R.style.AppTheme).show();
+
     }
 
 

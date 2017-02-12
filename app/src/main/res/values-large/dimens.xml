@@ -3,4 +3,6 @@
     <dimen name="activity_horizontal_margin">120dp</dimen>
     <dimen name="tamano_texto_boton">38sp</dimen>
     <dimen name="tamano_text_normal">36sp</dimen>
+    <dimen name="tamano_texto_titulos">42sp</dimen>
+    <dimen name="tamano_texto_punt_dialog">62sp</dimen>
 </resources>
