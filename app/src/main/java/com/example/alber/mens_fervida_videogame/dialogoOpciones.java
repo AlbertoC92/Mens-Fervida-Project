@@ -189,6 +189,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         Jugador.getInstance().setMusicaPlaying(musica.isChecked());
         Jugador.getInstance().guardarSharedPreferences();
         this.dismiss();
+        ((MenuPrincipal)context).onResume();
     }
 
 

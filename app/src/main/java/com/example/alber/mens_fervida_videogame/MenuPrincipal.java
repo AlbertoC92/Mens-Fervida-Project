@@ -2,6 +2,8 @@ package com.example.alber.mens_fervida_videogame;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,8 @@ import android.widget.TextView;
 
 import com.example.alber.mens_fervida_videogame.entidades.Jugador;
 import com.example.alber.mens_fervida_videogame.sqlite.IdiomasSQLiteOpenHelper;
+
+import java.util.Locale;
 
 public class MenuPrincipal extends Activity {
     private Button buttonPlay,buttonOptions,buttonArcade,buttonExit;
@@ -103,10 +107,37 @@ public class MenuPrincipal extends Activity {
         if(Jugador.getInstance(this).getNombre()==null){
             abrirOpciones();
         }
+        cargarIdiomaApp();
         if(Jugador.getInstance().isMusicaPlaying()){
             Intent i = new Intent(this, AudioService.class);
             i.putExtra("action", AudioService.START);
             startService(i);
+        }
+    }
+
+    private void cargarIdiomaApp() {
+        switch (Jugador.getInstance().getIdioma()){
+            case 0:
+                Configuration config1 = new Configuration();
+                config1.setLocale(new Locale("es"));
+                Locale.setDefault(new Locale("es")); // has no effect
+                Resources res = getApplicationContext().getResources();
+                res.updateConfiguration(config1, res.getDisplayMetrics());
+                break;
+            case 1:
+                Configuration config2 = new Configuration();
+                config2.setLocale(new Locale("pl"));
+                Locale.setDefault(new Locale("pl")); // has no effect
+                Resources res2 = getApplicationContext().getResources();
+                res2.updateConfiguration(config2, res2.getDisplayMetrics());
+                break;
+            case 2:
+                Configuration config3 = new Configuration();
+                config3.setLocale(Locale.GERMAN);
+                Locale.setDefault(Locale.GERMAN); // has no effect
+                Resources res3 = getApplicationContext().getResources();
+                res3.updateConfiguration(config3, res3.getDisplayMetrics());
+                break;
         }
     }
 
