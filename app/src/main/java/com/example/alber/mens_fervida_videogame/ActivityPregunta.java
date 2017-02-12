@@ -189,6 +189,11 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         setResult(RESULT_OK, intent);
         diaPregunta.dismiss();
         new DialogLevelCompl(this, R.style.AppTheme).show();
+        if(nivel>=10){
+            if(Jugador.getInstance().getPuntuacionMax()<Jugador.getInstance().getPuntuacion()){
+                Jugador.getInstance().setPuntuacionMax(Jugador.getInstance().getPuntuacion());
+            }
+        }
 
     }
 

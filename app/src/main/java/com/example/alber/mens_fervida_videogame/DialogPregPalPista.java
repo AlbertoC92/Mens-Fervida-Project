@@ -73,19 +73,95 @@ public class DialogPregPalPista extends Dialog implements View.OnClickListener, 
         Random random= new Random();
         String word=((ActivityPregunta)mContext).pregunta.getWord();
         ArrayList<Integer> posAle= new ArrayList<>();
-        while(posAle.size()<3){
-            Integer i=random.nextInt(word.length());
-            if(!posAle.contains(i)){
-                posAle.add(i);
+        String pista="";
+        if (word.length() <=3)  {
+            while(posAle.size()<1){
+                Integer i=random.nextInt(word.length());
+                if(!posAle.contains(i)){
+                    posAle.add(i);
+                }
+            }
+
+            for(int i=0;i<word.length();i++){
+                if(i==posAle.get(0)){
+                    pista=String.format("%s%c ",pista, word.charAt(i));
+                } else
+                    pista=String.format("%s_ ", pista);
             }
         }
-        String pista="";
-        for(int i=0;i<word.length();i++){
-            if(i==posAle.get(0) || i==posAle.get(1) || i==posAle.get(2)){
-                pista=String.format("%s%c ",pista, word.charAt(i));
-            } else
-                pista=String.format("%s_ ", pista);
+        else if (word.length() <=5)  {
+            while(posAle.size()<2){
+                Integer i=random.nextInt(word.length());
+                if(!posAle.contains(i)){
+                    posAle.add(i);
+                }
+            }
+            for(int i=0;i<word.length();i++){
+                if(i==posAle.get(0) || i==posAle.get(1)){
+                    pista=String.format("%s%c ",pista, word.charAt(i));
+                } else
+                    pista=String.format("%s_ ", pista);
+            }
+
         }
+        else if (word.length() <=7)  {
+            while(posAle.size()<3){
+                Integer i=random.nextInt(word.length());
+                if(!posAle.contains(i)){
+                    posAle.add(i);
+                }
+            }
+            for(int i=0;i<word.length();i++){
+                if(i==posAle.get(0) || i==posAle.get(1) || i==posAle.get(2)){
+                    pista=String.format("%s%c ",pista, word.charAt(i));
+                } else
+                    pista=String.format("%s_ ", pista);
+            }
+        }
+        else if (word.length() <=10)  {
+            while(posAle.size()<4){
+                Integer i=random.nextInt(word.length());
+                if(!posAle.contains(i)){
+                    posAle.add(i);
+                }
+            }
+            for(int i=0;i<word.length();i++){
+                if(i==posAle.get(0) || i==posAle.get(1) || i==posAle.get(2) ||i==posAle.get(3)){
+                    pista=String.format("%s%c ",pista, word.charAt(i));
+                } else
+                    pista=String.format("%s_ ", pista);
+            }
+        }
+        else if (word.length() <=13)  {
+            while(posAle.size()<5){
+                Integer i=random.nextInt(word.length());
+                if(!posAle.contains(i)){
+                    posAle.add(i);
+                }
+            }
+            for(int i=0;i<word.length();i++){
+                if(i==posAle.get(0) || i==posAle.get(1) || i==posAle.get(2) ||i==posAle.get(3) || i==posAle.get(4)){
+                    pista=String.format("%s%c ",pista, word.charAt(i));
+                } else
+                    pista=String.format("%s_ ", pista);
+            }
+        }
+        else{
+            while(posAle.size()<6){
+                Integer i=random.nextInt(word.length());
+                if(!posAle.contains(i)){
+                    posAle.add(i);
+                }
+            }
+            for(int i=0;i<word.length();i++){
+                if(i==posAle.get(0) || i==posAle.get(1) || i==posAle.get(2) ||i==posAle.get(3) || i==posAle.get(4) || i==posAle.get(5)){
+                    pista=String.format("%s%c ",pista, word.charAt(i));
+                } else
+                    pista=String.format("%s_ ", pista);
+            }
+        }
+
+
         tl1.setText(pista);
     }
 

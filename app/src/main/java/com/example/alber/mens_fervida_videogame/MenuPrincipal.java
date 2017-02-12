@@ -1,6 +1,7 @@
 package com.example.alber.mens_fervida_videogame;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -21,9 +22,7 @@ import java.util.Locale;
 public class MenuPrincipal extends Activity {
     private Button buttonPlay,buttonOptions,buttonArcade,buttonExit;
     LinearLayout relativeLayout;
-    private TextView titulo;
-    private dialogoOpciones dialog;
-    private DialogoCompartir dialogCompartir;
+    private Dialog dialogCompartir, dialogOpciones, dialogRank;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,13 +81,14 @@ public class MenuPrincipal extends Activity {
     }
 
     private void abrirOpciones() {
-        String gender;
-        dialogoOpciones dialog = new dialogoOpciones(MenuPrincipal.this,R.style.AppTheme, this);
-        dialog.show();
+        if(dialogOpciones==null)
+            dialogOpciones = new dialogoOpciones(MenuPrincipal.this,R.style.AppTheme, this);
+        dialogOpciones.show();
 
     }
     private void dialogoCompartir(){
-        dialogCompartir = new DialogoCompartir(MenuPrincipal.this,R.style.AppTheme,this);
+        if(dialogCompartir==null)
+            dialogCompartir = new DialogoCompartir(MenuPrincipal.this,R.style.AppTheme,this);
         dialogCompartir.show();
     }
 
@@ -139,6 +139,12 @@ public class MenuPrincipal extends Activity {
                 res3.updateConfiguration(config3, res3.getDisplayMetrics());
                 break;
         }
+    }
+
+    public void abrirRanking(View view){
+        if(dialogRank==null)
+            dialogRank=new DialogRankingInd(this, R.style.AppTheme);
+        dialogRank.show();
     }
 
 

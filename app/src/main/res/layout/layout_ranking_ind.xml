@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:gravity="bottom"
+    android:background="@drawable/fondo_niveles"
+    android:visibility="visible"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6.8"
+        android:weightSum="10">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:weightSum="1"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/avatar1"
+                    android:id="@+id/img_rank"></LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.16"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="@string/p_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView10"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/tamano_text_normal" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="1"
+                    android:gravity="center"
+                    android:background="@drawable/backtexto">
+
+                    <TextView
+                        android:text="0"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_puntmax_rank_ind"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/tamano_text_normal" />
+                </LinearLayout>
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.166"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="@string/estrrellas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView18"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/tamano_text_normal" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="1"
+                    android:gravity="center"
+                    android:background="@drawable/backtexto">
+
+                    <TextView
+                        android:text="0,0"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_estrellas_rank_ind"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/tamano_text_normal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:elevation="1dp"
+                android:layout_weight="0.166"
+                android:weightSum="2"
+                android:gravity="center">
+
+
+                <Button
+                    android:text="@string/clasi_global"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btn_rank_global"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/boton"
+                    android:textSize="@dimen/tamano_texto_boton"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.4" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.7" />
+
+</LinearLayout>
+

@@ -199,7 +199,8 @@
             android:layout_height="match_parent"
             android:id="@+id/button8"
             android:layout_weight="1.5"
-            android:background="@drawable/boton_podio" />
+            android:background="@drawable/boton_podio"
+            android:onClick="abrirRanking" />
     </LinearLayout>
 
 </LinearLayout>
