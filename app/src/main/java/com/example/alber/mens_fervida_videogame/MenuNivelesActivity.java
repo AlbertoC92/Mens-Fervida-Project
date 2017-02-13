@@ -17,7 +17,7 @@ import com.example.alber.mens_fervida_videogame.entidades.Jugador;
  */
 
 public class MenuNivelesActivity extends Activity implements View.OnClickListener{
-    Dialog panel1, panel2;
+    Dialog panel1, panel2, diaSalir;
     public static final int NIVEL_FINALIZADO=1;
     TextView puntuacionJugador, estrellasJugador;
     Button salir;
@@ -133,7 +133,9 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
             case R.id.btn_atras_ac_niv:
                 panel1.dismiss();
                 panel2.dismiss();
-                finish();
+                if(diaSalir==null)
+                    diaSalir=new DialogSalir(this, R.style.AppTheme);
+                diaSalir.show();
                 break;
         }
     }
