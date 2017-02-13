@@ -92,7 +92,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
                     setResult(RESULT_CANCELED, null);
                     finish();
                 }
-            }.start();
+            };
         }
     }
 

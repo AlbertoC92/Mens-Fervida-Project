@@ -95,6 +95,12 @@ public class DialogPregPalComp extends Dialog implements View.OnClickListener, D
         if(i==KeyEvent.KEYCODE_ENTER){
             comprobarPregunta();
         }
+        if(i==KeyEvent.KEYCODE_VOLUME_DOWN){
+            return super.onKeyDown(i, keyEvent);
+        }
+        if(i==KeyEvent.KEYCODE_VOLUME_UP){
+            return super.onKeyDown(i, keyEvent);
+        }
         return true;
     }
 }
