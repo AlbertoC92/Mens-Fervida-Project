@@ -126,16 +126,19 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
                 break;
         }
     }
+    public void mostarDiallogSalir(){
+        panel1.dismiss();
+        panel2.dismiss();
+        if(diaSalir==null)
+            diaSalir=new DialogSalir(this, R.style.AppTheme);
+        diaSalir.show();
 
+    }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_atras_ac_niv:
-                panel1.dismiss();
-                panel2.dismiss();
-                if(diaSalir==null)
-                    diaSalir=new DialogSalir(this, R.style.AppTheme);
-                diaSalir.show();
+                mostarDiallogSalir();
                 break;
         }
     }
