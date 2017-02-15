@@ -145,6 +145,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     public void preguntaFallada(){
         vidas--;
         puntosSegundos=TIMER_A_CERO;
+        numeroPregunta++;
         timer.cancel();
         soundPool.play(idFalloSound, 1, 1, 0, 0, 1);
         switch (vidas){

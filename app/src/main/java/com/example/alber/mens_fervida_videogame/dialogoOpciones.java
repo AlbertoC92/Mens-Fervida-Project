@@ -168,6 +168,9 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
             case Jugador.GERMAN:
                 rbGerman.setChecked(true);
                 break;
+            case Jugador.FRENCH:
+                rbFrench.setChecked(true);
+                break;
         }
     }
 
@@ -185,6 +188,10 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         }
         else if(rbGerman.isChecked()==true){
             Jugador.getInstance().setIdioma(Jugador.GERMAN);
+            System.out.println(Jugador.getInstance().getIdioma());
+        }
+        else if(rbFrench.isChecked()==true){
+            Jugador.getInstance().setIdioma(Jugador.FRENCH);
             System.out.println(Jugador.getInstance().getIdioma());
         }
         else{

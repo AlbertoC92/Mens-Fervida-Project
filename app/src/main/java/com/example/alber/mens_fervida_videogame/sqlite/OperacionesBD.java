@@ -3,6 +3,7 @@ package com.example.alber.mens_fervida_videogame.sqlite;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.alber.mens_fervida_videogame.entidades.Jugador;
 import com.example.alber.mens_fervida_videogame.entidades.Pregunta;
 
 /**
@@ -22,14 +23,19 @@ public class OperacionesBD {
         SQLiteDatabase db =IdiomasSQLiteOpenHelper.getInstance(null).getReadableDatabase();
         Cursor curso=null;
         switch (idioma){
-            case 0:
+            case Jugador.SPANISH:
                 curso= db.rawQuery("SELECT rowid _id, * FROM SPANISH WHERE NIVEL=? ORDER BY RANDOM() LIMIT 1;", args);
                 break;
-            case 1:
+            case Jugador.POLISH:
                 curso= db.rawQuery("SELECT rowid _id, * FROM POLISH WHERE NIVEL=? ORDER BY RANDOM() LIMIT 1;", args);
                 break;
-            case 2:
+            case Jugador.GERMAN:
                 curso= db.rawQuery("SELECT rowid _id, * FROM GERMAN WHERE NIVEL=? ORDER BY RANDOM() LIMIT 1;", args);
+                break;
+            case Jugador.FRENCH:
+                nivelPalbra=nivelPalbra/2+1;
+                String [] args2={String.valueOf(nivelPalbra)};
+                curso= db.rawQuery("SELECT rowid _id, * FROM FRENCH WHERE NIVEL=? ORDER BY RANDOM() LIMIT 1;", args2);
                 break;
         }
 

@@ -18,6 +18,7 @@ public class Jugador {
     public static final int SPANISH=0;
     public static final int POLISH=1;
     public static final int GERMAN=2;
+    public static final int FRENCH=3;
     public static final int NO_LANGUAGE=-1;
     private int puntuacion;
     private int puntuacionMax;
@@ -134,7 +135,7 @@ public class Jugador {
     }
 
     public void setIdioma(int idioma) {
-        if(idioma==SPANISH || idioma==POLISH || idioma==GERMAN || idioma==NO_LANGUAGE)
+        if(idioma==SPANISH || idioma==POLISH || idioma==GERMAN ||idioma==Jugador.FRENCH || idioma==NO_LANGUAGE)
             this.idioma = idioma;
         else
             throw new IllegalArgumentException();

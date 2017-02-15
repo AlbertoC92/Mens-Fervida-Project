@@ -117,26 +117,33 @@ public class MenuPrincipal extends Activity {
 
     private void cargarIdiomaApp() {
         switch (Jugador.getInstance().getIdioma()){
-            case 0:
+            case Jugador.SPANISH:
                 Configuration config1 = new Configuration();
                 config1.setLocale(new Locale("es"));
-                Locale.setDefault(new Locale("es")); // has no effect
+                Locale.setDefault(new Locale("es"));
                 Resources res = getApplicationContext().getResources();
                 res.updateConfiguration(config1, res.getDisplayMetrics());
                 break;
-            case 1:
+            case Jugador.POLISH:
                 Configuration config2 = new Configuration();
                 config2.setLocale(new Locale("pl"));
-                Locale.setDefault(new Locale("pl")); // has no effect
+                Locale.setDefault(new Locale("pl"));
                 Resources res2 = getApplicationContext().getResources();
                 res2.updateConfiguration(config2, res2.getDisplayMetrics());
                 break;
-            case 2:
+            case Jugador.GERMAN:
                 Configuration config3 = new Configuration();
                 config3.setLocale(Locale.GERMAN);
-                Locale.setDefault(Locale.GERMAN); // has no effect
+                Locale.setDefault(Locale.GERMAN);
                 Resources res3 = getApplicationContext().getResources();
                 res3.updateConfiguration(config3, res3.getDisplayMetrics());
+                break;
+            case Jugador.FRENCH:
+                Configuration config4 = new Configuration();
+                config4.setLocale(Locale.FRENCH);
+                Locale.setDefault(Locale.FRENCH);
+                Resources res4 = getApplicationContext().getResources();
+                res4.updateConfiguration(config4, res4.getDisplayMetrics());
                 break;
         }
     }

@@ -17,7 +17,7 @@ public class IdiomasSQLiteOpenHelper extends SQLiteOpenHelper {
     public static final String NOMBRE_ARCHIVO_SQL = "bd.sql";
     Context context;
     private static IdiomasSQLiteOpenHelper conexion;
-    private static final int versionBD=12;
+    private static final int versionBD=14;
     private static final String nombreBD="languages.db";
 
     private IdiomasSQLiteOpenHelper(Context context, String nombre, SQLiteDatabase.CursorFactory factory, int version){
@@ -46,7 +46,7 @@ public class IdiomasSQLiteOpenHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         String[]sentencias=cargarDatosArchivoSQL();
         for(int j=0; j<sentencias.length-1;j++){
-            sqLiteDatabase.execSQL(String.format("%s;",sentencias[i]));
+            sqLiteDatabase.execSQL(String.format("%s;",sentencias[j]));
         }
     }
 
