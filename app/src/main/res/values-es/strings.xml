@@ -15,4 +15,6 @@
     <string name="level_completed">Has completado el nivel satisfacotriamente</string>
     <string name="txt_preg_pista">"Traduce al inglés: "</string>
     <string name="titulo_pregunta_english">Escribe en INGLÉS la palabra:</string>
+    <string name="title_activity_avatares_grid_view"></string>
+    <string name="text_salir">¿Estás seguro de que deseas salir? Si sales perderás todos los puntos de la sesión.</string>
 </resources>
