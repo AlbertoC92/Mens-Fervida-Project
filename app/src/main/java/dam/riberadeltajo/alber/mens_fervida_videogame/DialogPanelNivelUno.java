@@ -68,7 +68,7 @@ public class DialogPanelNivelUno extends Dialog implements View.OnClickListener 
     @Override
     public void onBackPressed() {
         this.dismiss();
-        ((MenuNivelesActivity)mContext).finish();
+        ((MenuNivelesActivity)mContext).mostarDiallogSalir();
 
     }
 

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -122,29 +123,50 @@ public class MenuPrincipal extends Activity {
                 Configuration config1 = new Configuration();
                 config1.setLocale(new Locale("es"));
                 Locale.setDefault(new Locale("es"));
-                Resources res = getApplicationContext().getResources();
-                res.updateConfiguration(config1, res.getDisplayMetrics());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+                    this.createConfigurationContext(config1);
+                }
+                else {
+                    Resources res1 = getApplicationContext().getResources();
+                    res1.updateConfiguration(config1, res1.getDisplayMetrics());
+                }
                 break;
             case Jugador.POLISH:
                 Configuration config2 = new Configuration();
                 config2.setLocale(new Locale("pl"));
                 Locale.setDefault(new Locale("pl"));
-                Resources res2 = getApplicationContext().getResources();
-                res2.updateConfiguration(config2, res2.getDisplayMetrics());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+                    this.createConfigurationContext(config2);
+                }
+                else {
+                    Resources res2 = getApplicationContext().getResources();
+                    res2.updateConfiguration(config2, res2.getDisplayMetrics());
+                }
                 break;
             case Jugador.GERMAN:
                 Configuration config3 = new Configuration();
                 config3.setLocale(Locale.GERMAN);
                 Locale.setDefault(Locale.GERMAN);
-                Resources res3 = getApplicationContext().getResources();
-                res3.updateConfiguration(config3, res3.getDisplayMetrics());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+                    this.createConfigurationContext(config3);
+                }
+                else {
+                    Resources res3 = getApplicationContext().getResources();
+                    res3.updateConfiguration(config3, res3.getDisplayMetrics());
+                }
                 break;
             case Jugador.FRENCH:
                 Configuration config4 = new Configuration();
                 config4.setLocale(Locale.FRENCH);
                 Locale.setDefault(Locale.FRENCH);
-                Resources res4 = getApplicationContext().getResources();
-                res4.updateConfiguration(config4, res4.getDisplayMetrics());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+                    this.createConfigurationContext(config4);
+                }
+                else {
+                    Resources res4 = getApplicationContext().getResources();
+                    res4.updateConfiguration(config4, res4.getDisplayMetrics());
+                }
+
                 break;
         }
     }
