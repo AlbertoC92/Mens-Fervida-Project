@@ -1,4 +1,4 @@
-package com.example.alber.mens_fervida_videogame.sqlite;
+package dam.riberadeltajo.alber.mens_fervida_videogame.sqlite;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

@@ -1,4 +1,4 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -14,6 +14,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.alber.mens_fervida_videogame.R;
 
 import java.util.ArrayList;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -10,7 +10,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.alber.mens_fervida_videogame.entidades.Jugador;
+import com.example.alber.mens_fervida_videogame.R;
+
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
 
 /**
  * Created by PedroMiguel on 01/02/2017.
@@ -24,6 +26,7 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
     private int siguienteNivel=2;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
@@ -31,6 +34,7 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_niveles2);
         Jugador.getInstance().setPuntuacion(0);
+
         salir=(Button) findViewById(R.id.btn_atras_ac_niv);
         salir.setOnClickListener(this);
         puntuacionJugador=(TextView)findViewById(R.id.txt_puntuacion_niveles);

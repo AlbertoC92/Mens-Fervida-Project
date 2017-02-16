@@ -1,21 +1,19 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import com.example.alber.mens_fervida_videogame.entidades.Jugador;
+import com.example.alber.mens_fervida_videogame.R;
+
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
 
 /**
- * Created by alber on 26/01/2017.
+ * Created by alberto garcia on 26/01/2017.
  */
 
 public class AvataresAdapter extends BaseAdapter {

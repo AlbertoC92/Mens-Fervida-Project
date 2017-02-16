@@ -1,4 +1,4 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -12,6 +12,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+
+import com.example.alber.mens_fervida_videogame.R;
 
 /**
  * Created by Dani on 03/02/2017.

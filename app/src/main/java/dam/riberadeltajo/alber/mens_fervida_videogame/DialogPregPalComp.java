@@ -1,4 +1,4 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -15,18 +15,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.alber.mens_fervida_videogame.R;
+
 /**
  * Created by PedroMiguel on 01/02/2017.
  */
 
-public class DialogPregPalCompIng extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
+public class DialogPregPalComp extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
     private Context mContext;
     private TextView word;
     private EditText respuesta;
     private Button btnAceptarRes;
 
 
-    public DialogPregPalCompIng(Context context, int themeResId) {
+    public DialogPregPalComp(Context context, int themeResId) {
         super(context, themeResId);
         mContext=context;
         quitarFondoRedimensionarEfectos();
@@ -52,18 +54,18 @@ public class DialogPregPalCompIng extends Dialog implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_dialog_pregunta_ingles);
-        word=(TextView) findViewById(R.id.text_word_ingles);
-        respuesta=(EditText)findViewById(R.id.et_respuesta_ingles);
+        setContentView(R.layout.layout_dialog_pregunta_normal);
+        word=(TextView) findViewById(R.id.text_word);
+        respuesta=(EditText)findViewById(R.id.et_respuesta);
         respuesta.setBackgroundResource(R.drawable.campo_texto);
-        word.setText(((ActivityPregunta)mContext).pregunta.getTl1());
-        btnAceptarRes=(Button) findViewById(R.id.btn_aceptar_pregunta_ingles);
+        word.setText(((ActivityPregunta)mContext).pregunta.getWord());
+        btnAceptarRes=(Button) findViewById(R.id.btn_aceptar_pregunta);
         btnAceptarRes.setOnClickListener(this);
         this.setOnKeyListener(this);
 
     }
     public void comprobarPregunta(){
-        if(respuesta.getText().toString().equals("") || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getWord())){
+        if(respuesta.getText().toString().equals("") || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getTl1()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getTl2()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getTl3())){
             ((ActivityPregunta)mContext).preguntaAcertada();
             this.dismiss();
         }
@@ -77,7 +79,7 @@ public class DialogPregPalCompIng extends Dialog implements View.OnClickListener
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btn_aceptar_pregunta_ingles:
+            case R.id.btn_aceptar_pregunta:
                 comprobarPregunta();
                 break;
 

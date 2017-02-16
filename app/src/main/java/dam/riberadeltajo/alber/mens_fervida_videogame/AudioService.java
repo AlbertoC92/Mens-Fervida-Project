@@ -1,15 +1,16 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Service;
-import android.bluetooth.BluetoothClass;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.example.alber.mens_fervida_videogame.R;
+
 /**
- * Created by alber on 29/01/2017.
+ * Created by alberto garcia on 29/01/2017.
  */
 
 public class AudioService extends Service {

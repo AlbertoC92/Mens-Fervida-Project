@@ -1,6 +1,6 @@
-package com.example.alber.mens_fervida_videogame.entidades;
+package dam.riberadeltajo.alber.mens_fervida_videogame.entidades;
 
-import com.example.alber.mens_fervida_videogame.sqlite.OperacionesBD;
+import dam.riberadeltajo.alber.mens_fervida_videogame.sqlite.OperacionesBD;
 
 /**
  * Created by PedroMiguel on 09/02/2017.
@@ -29,7 +29,7 @@ public class Pregunta {
 
     }
     public Pregunta(int idioma, int nivelJuego){
-        this(nivelJuego,OperacionesBD.cargarPregunta(idioma,nivelJuego));
+        this(nivelJuego, OperacionesBD.cargarPregunta(idioma,nivelJuego));
 
     }
 

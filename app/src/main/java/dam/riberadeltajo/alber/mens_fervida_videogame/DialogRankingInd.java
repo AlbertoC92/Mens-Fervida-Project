@@ -1,4 +1,4 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -10,11 +10,12 @@ import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.alber.mens_fervida_videogame.entidades.Jugador;
+import com.example.alber.mens_fervida_videogame.R;
+
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
 
 /**
  * Created by PedroMiguel on 01/02/2017.

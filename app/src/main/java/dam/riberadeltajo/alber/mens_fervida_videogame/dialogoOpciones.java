@@ -1,25 +1,19 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -30,17 +24,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import com.example.alber.mens_fervida_videogame.entidades.Jugador;
+import com.example.alber.mens_fervida_videogame.R;
 
-import static android.R.attr.drawable;
-import static android.R.attr.id;
-import static android.R.id.toggle;
-import static com.example.alber.mens_fervida_videogame.AudioService.ACTIVO;
-import static com.example.alber.mens_fervida_videogame.R.drawable.musica_off_rojo;
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
 
 
 /**
- * Created by alber on 26/01/2017.
+ * Created by alberto garcia on 26/01/2017.
  */
 //Clase dialogoOpciones que maneja todas las opciones que aparecen en el dialogo
 public class dialogoOpciones extends Dialog implements View.OnClickListener{

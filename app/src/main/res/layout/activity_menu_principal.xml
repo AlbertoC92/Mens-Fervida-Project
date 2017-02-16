@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alber.mens_fervida_videogame.MenuPrincipal"
+    tools:context="com.example.alber.mens_fervida_videogame.dam.example.alber.mens_fervida_videogame.MenuPrincipal"
     android:padding="10dp"
     android:orientation="vertical"
     android:weightSum="10"

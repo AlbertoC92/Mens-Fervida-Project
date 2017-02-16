@@ -1,10 +1,9 @@
-package com.example.alber.mens_fervida_videogame.sqlite;
+package dam.riberadeltajo.alber.mens_fervida_videogame.sqlite;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.alber.mens_fervida_videogame.entidades.Jugador;
-import com.example.alber.mens_fervida_videogame.entidades.Pregunta;
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
 
 /**
  * Created by PedroMiguel on 09/02/2017.

@@ -17,4 +17,6 @@
     <string name="titulo_pregunta_english">Escribe en INGLÉS la palabra:</string>
     <string name="title_activity_avatares_grid_view"></string>
     <string name="text_salir">¿Estás seguro de que deseas salir? Si sales perderás todos los puntos de la sesión.</string>
+    <string name="clasi_global">Global</string>
+    <string name="text_win">Enhorabuena</string>
 </resources>

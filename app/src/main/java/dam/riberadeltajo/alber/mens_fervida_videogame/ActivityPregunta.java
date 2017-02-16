@@ -1,4 +1,4 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -7,19 +7,17 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.AttributeSet;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.alber.mens_fervida_videogame.entidades.Jugador;
-import com.example.alber.mens_fervida_videogame.entidades.Pregunta;
+import com.example.alber.mens_fervida_videogame.R;
+
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Pregunta;
 
 import java.util.Random;
 
@@ -35,6 +33,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
     private final int SEGUNDOS_TOTAL_MS=60000;
     private final int TIEMPO_RESTA_PUNTI=1000;
     public int nivel,numeroPregunta,vidas,puntosSegundos,idAciertoSound,idFalloSound;
+    public float estrellasSesion;
     LinearLayout marcador;
     TextView timerDisplay, puntuacion, estrellasPanel;
     Dialog diaPregunta;
@@ -50,6 +49,7 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         puntuacionNivel=0;
         numeroPregunta=1;
         vidas=6;
+        estrellasSesion=0;
         Bundle bundle=getIntent().getExtras();
         nivel=bundle.getInt("nivel");
         requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
@@ -183,14 +183,25 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         }
     }
     public void finalizaNivelOk(){
-        Jugador.getInstance().setPuntuacion(Jugador.getInstance().getPuntuacion()+puntuacionNivel);
-        Intent intent= new Intent();
-        intent.putExtra("nivelFinalizado",nivel);
-        intent.putExtra("estrellasConseguidas",(float)vidas/2);
-        setResult(RESULT_OK, intent);
-        diaPregunta.dismiss();
-        new DialogLevelCompl(this, R.style.AppTheme).show();
-        if(nivel>=10){
+        if(nivel<10){
+            Jugador.getInstance().setPuntuacion(Jugador.getInstance().getPuntuacion()+puntuacionNivel);
+            estrellasSesion=estrellasSesion+((float)vidas/2);
+            Intent intent= new Intent();
+            intent.putExtra("nivelFinalizado",nivel);
+            intent.putExtra("estrellasConseguidas",(float)vidas/2);
+            setResult(RESULT_OK, intent);
+            diaPregunta.dismiss();
+            new DialogLevelCompl(this, R.style.AppTheme).show();
+
+            }else{
+            Jugador.getInstance().setPuntuacion(Jugador.getInstance().getPuntuacion()+puntuacionNivel);
+            estrellasSesion=estrellasSesion+((float)vidas/2);
+            Intent intent= new Intent();
+            intent.putExtra("nivelFinalizado",nivel);
+            intent.putExtra("estrellasConseguidas",(float)vidas/2);
+            setResult(RESULT_OK, intent);
+            diaPregunta.dismiss();
+            new DialogFinalNiveles(this,R.style.AppTheme).show();
             if(Jugador.getInstance().getPuntuacionMax()<Jugador.getInstance().getPuntuacion()){
                 Jugador.getInstance().setPuntuacionMax(Jugador.getInstance().getPuntuacion());
             }

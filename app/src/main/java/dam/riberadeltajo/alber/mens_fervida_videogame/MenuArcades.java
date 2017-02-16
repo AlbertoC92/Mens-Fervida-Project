@@ -1,16 +1,17 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.example.alber.mens_fervida_videogame.entidades.Jugador;
+import com.example.alber.mens_fervida_videogame.R;
+
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
 
 public class MenuArcades extends Activity implements View.OnClickListener{
     Dialog juego1, juego2, juego3;

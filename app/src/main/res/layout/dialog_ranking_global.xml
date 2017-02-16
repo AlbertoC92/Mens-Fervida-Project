@@ -44,7 +44,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/boton_1"
-                    android:id="@+id/imageView5"
+                    android:id="@+id/btn1"
                     android:layout_weight="2" />
 
                 <Space
@@ -65,7 +65,7 @@
                         android:text="TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView9"
+                        android:id="@+id/txt1"
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_texto_boton" />
@@ -88,7 +88,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/boton_2"
-                    android:id="@+id/imageView5"
+                    android:id="@+id/btn2"
                     android:layout_weight="2" />
 
                 <Space
@@ -109,7 +109,7 @@
                         android:text="TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView9"
+                        android:id="@+id/txt2"
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_texto_boton" />
@@ -133,7 +133,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/boton_3"
-                    android:id="@+id/imageView5"
+                    android:id="@+id/btn3"
                     android:layout_weight="2" />
 
                 <Space
@@ -154,7 +154,7 @@
                         android:text="TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView9"
+                        android:id="@+id/txt3"
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_texto_boton" />
@@ -178,7 +178,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/boton_num_4"
-                    android:id="@+id/imageView5"
+                    android:id="@+id/btn4"
                     android:layout_weight="2" />
 
                 <Space
@@ -199,7 +199,7 @@
                         android:text="TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView9"
+                        android:id="@+id/txt4"
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_texto_boton" />
@@ -223,7 +223,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/boton_5"
-                    android:id="@+id/imageView5"
+                    android:id="@+id/btn5"
                     android:layout_weight="2" />
 
                 <Space
@@ -244,7 +244,7 @@
                         android:text="TextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView9"
+                        android:id="@+id/txt5"
                         android:layout_weight="1"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_texto_boton" />

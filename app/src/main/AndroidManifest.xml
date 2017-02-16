@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MenuPrincipal"
+            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuPrincipal"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,20 +17,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Niveles"
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.Niveles"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".MenuNivelesActivity"
+            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuNivelesActivity"
             android:screenOrientation="portrait" />
 
 
         <service
-            android:name=".AudioService"
+            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.AudioService"
             android:enabled="true" />
 
-        <activity android:name=".MenuArcades"></activity>
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuArcades"></activity>
         <activity
-            android:name=".ActivityPregunta"
+            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.ActivityPregunta"
             android:screenOrientation="portrait" />
     </application>
 

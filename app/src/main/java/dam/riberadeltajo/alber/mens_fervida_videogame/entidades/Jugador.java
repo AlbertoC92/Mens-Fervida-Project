@@ -1,4 +1,4 @@
-package com.example.alber.mens_fervida_videogame.entidades;
+package dam.riberadeltajo.alber.mens_fervida_videogame.entidades;
 
 import android.app.Activity;
 import android.content.Context;

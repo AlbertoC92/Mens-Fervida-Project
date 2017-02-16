@@ -1,4 +1,4 @@
-package com.example.alber.mens_fervida_videogame;
+package dam.riberadeltajo.alber.mens_fervida_videogame;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -12,10 +12,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.example.alber.mens_fervida_videogame.entidades.Jugador;
-import com.example.alber.mens_fervida_videogame.sqlite.IdiomasSQLiteOpenHelper;
+import com.example.alber.mens_fervida_videogame.R;
+
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
+import dam.riberadeltajo.alber.mens_fervida_videogame.sqlite.IdiomasSQLiteOpenHelper;
 
 import java.util.Locale;
 
