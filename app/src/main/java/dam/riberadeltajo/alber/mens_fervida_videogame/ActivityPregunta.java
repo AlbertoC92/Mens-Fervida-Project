@@ -116,7 +116,14 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
                     diaPregunta=new DialogPregPalPista(this, R.style.AppTheme);
                     break;
                 case 1:
-                    diaPregunta=new DialogPregPalOpc(this, R.style.AppTheme);
+                    if(Math.random()<0.25){
+                        pregunta=new Pregunta(Jugador.NO_LANGUAGE,nivel);
+                        diaPregunta=new DialogPregPalOpcIma(this, R.style.AppTheme);
+                    }
+                    else{
+                        diaPregunta=new DialogPregPalOpc(this, R.style.AppTheme);
+                    }
+
                     break;
             }
 

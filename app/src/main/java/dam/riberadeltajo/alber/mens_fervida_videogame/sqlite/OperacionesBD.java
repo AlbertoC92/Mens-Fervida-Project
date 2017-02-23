@@ -36,6 +36,9 @@ public class OperacionesBD {
                 String [] args2={String.valueOf(nivelPalbra)};
                 curso= db.rawQuery("SELECT rowid _id, * FROM FRENCH WHERE NIVEL=? ORDER BY RANDOM() LIMIT 1;", args2);
                 break;
+            case Jugador.NO_LANGUAGE:
+                curso= db.rawQuery("SELECT rowid _id, * FROM IMAGES WHERE NIVEL=? ORDER BY RANDOM() LIMIT 1;", args);
+                break;
         }
 
         curso.moveToFirst();

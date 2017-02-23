@@ -17,7 +17,7 @@ public class IdiomasSQLiteOpenHelper extends SQLiteOpenHelper {
     public static final String NOMBRE_ARCHIVO_SQL = "bd.sql";
     Context context;
     private static IdiomasSQLiteOpenHelper conexion;
-    private static final int versionBD=14;
+    private static final int versionBD=15;
     private static final String nombreBD="languages.db";
 
     private IdiomasSQLiteOpenHelper(Context context, String nombre, SQLiteDatabase.CursorFactory factory, int version){

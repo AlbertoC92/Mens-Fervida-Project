@@ -1544,3 +1544,42 @@ INSERT INTO `FRENCH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('can','boîte','','',
 INSERT INTO `FRENCH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('tin','boîte','','',1,'FOOD');
 INSERT INTO `FRENCH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('carafe','carafe','','',1,'FOOD');
 INSERT INTO `FRENCH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('carton','brique','carton','',1,'FOOD');
+DROP TABLE IF EXISTS "IMAGES";
+CREATE TABLE "IMAGES" (
+	`WORD`	TEXT NOT NULL,
+	`TL1`	TEXT NOT NULL,
+	`TL2`	TEXT,
+	`TL3`	TEXT,
+	`NIVEL`	INTEGER NOT NULL,
+	`TIPO`	TEXT NOT NULL
+);
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('sieve','peeler','colander','grater',1,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('peeler','grater','whisk','ladle',2,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('grater','peeler','mortar and pestle','masher',3,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('whisk','ladle','hob','sieve',3,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baking pan','tray','drainer','colander',2,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('ladle','pie slice','masher','soup spoon',4,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('jug','pot','drainer','colander',2,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('tray','drainer','baking pan','platter',1,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('mincer','masher','whisk','mortar and pestle',4,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('masher','mincer','grater','scales',5,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('pie slice','ladle','peeler','steel',5,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('drainer','baking pan','tray','hob',2,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('corkscrew','mortar and pestle','tin opener','rolling pin',4,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('mortar and pestle','masher','rolling pin','jug',5,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('colander','sieve','baking pan','saucepan',5,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('hob','oven','stove','work top',4,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('oven','hob','stove','cooker',4,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('scales','mortar and pestle','steel','corkscrew',3,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('rolling pin','steel','pie slice','sieve',3,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('steel','corkscrew','mincer','ladle',5,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('Boxing','Fighting','Wrestling','Kicking',1,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('American Football','Soccer','Football','Basketball',2,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('Football','Ball kicking','Handball','Basketball',1,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('Chequered Flag','Square Flag','Rounded Flag','White and black flag',5,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('Volley shot','Free kick','Snapshot','Penalty kick',3,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('Mountain bike','Touring bicycle','Flat bike','Motorbike',2,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('Racquet','Rocket','Raquet','Racket',1,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('Hockey','Hoquey','Jockey','Hoky',1,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('Swimming','Smiling','Snorkelling','Scuba diving',3,'FOOD/SPORT');
+INSERT INTO `IMAGES` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('Scuba diving','Swimming','Snorkelling','Breathing',4,'FOOD/SPORT');
