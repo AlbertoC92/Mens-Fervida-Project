@@ -29,6 +29,8 @@ public class Conexion extends AsyncTask<Void, Void, String> {
             URL url = new URL("http://riberadeltajo.es/mediahub/public_access/scores/select_top_scores.php");
 
             urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setConnectTimeout(15000);
+            urlConnection.setReadTimeout(10000);
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
@@ -68,7 +70,11 @@ public class Conexion extends AsyncTask<Void, Void, String> {
     }
     @Override
     protected void onPostExecute(String s) {
-        super.onPostExecute(s);
-        Log.i("json", s);
+        if(s!=null){
+            super.onPostExecute(s);
+            Log.i("json", s);
+        }
+
     }
+
 }

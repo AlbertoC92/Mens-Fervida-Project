@@ -80,11 +80,14 @@ public class DialogRankingGlobal extends Dialog implements View.OnClickListener{
     private void cargarPuntuacion() {
         Puntuacion punt= new Puntuacion();
         String [][] puntuaciones= (String[][]) punt.conseguirPuntuacion();
-        for(int i=0;i<puntuaciones.length;i++){
-            ((TextView)usuarios[i]).setText(puntuaciones[i][0]);
-            ((TextView)puntuacion[i]).setText(puntuaciones[i][1]);
-            cargarImagen(i, puntuaciones[i][4]);
+        if(puntuaciones!=null){
+            for(int i=0;i<puntuaciones.length;i++){
+                ((TextView)usuarios[i]).setText(puntuaciones[i][0]);
+                ((TextView)puntuacion[i]).setText(puntuaciones[i][1]);
+                cargarImagen(i, puntuaciones[i][4]);
+            }
         }
+
     }
 
     private void cargarImagen(int i, String s) {
