@@ -3,19 +3,16 @@ package dam.riberadeltajo.alber.mens_fervida_videogame;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Point;
-import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.alber.mens_fervida_videogame.R;
 
-import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
 import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Puntuacion;
 
 /**
@@ -26,6 +23,7 @@ public class DialogRankingGlobal extends Dialog implements View.OnClickListener{
     private Context mContext;
     private TextView puntuacion[]=new TextView[5];
     private TextView usuarios[]=new TextView[5];
+    private ImageView paisesImagenes[]=new ImageView[5];
     private int[] avatares={R.drawable.avatar1,R.drawable.avatar2,R.drawable.avatar3,R.drawable.avatar4,R.drawable.avatar5,R.drawable.avatar6,R.drawable.avatar7,R.drawable.avatar8};
 
 
@@ -56,14 +54,24 @@ public class DialogRankingGlobal extends Dialog implements View.OnClickListener{
 
         usuarios[0]=(TextView) findViewById(R.id.txt_user1);
         puntuacion[0]=(TextView) findViewById(R.id.txt_punt1);
+        paisesImagenes[0]=(ImageView) findViewById(R.id.ima_pos1_1);
+
         usuarios[1]=(TextView) findViewById(R.id.txt_user2);
         puntuacion[1]=(TextView) findViewById(R.id.txt_punt2);
+        paisesImagenes[1]=(ImageView) findViewById(R.id.ima_pos2_2);
+
         usuarios[2]=(TextView) findViewById(R.id.txt_user3);
         puntuacion[2]=(TextView) findViewById(R.id.txt_punt3);
+        paisesImagenes[2]=(ImageView) findViewById(R.id.ima_pos3_3);
+
         usuarios[3]=(TextView) findViewById(R.id.txt_user4);
         puntuacion[3]=(TextView) findViewById(R.id.txt_punt4);
+        paisesImagenes[3]=(ImageView) findViewById(R.id.ima_pos4_4);
+
         usuarios[4]=(TextView) findViewById(R.id.txt_user5);
         puntuacion[4]=(TextView) findViewById(R.id.txt_punt5);
+        paisesImagenes[4]=(ImageView) findViewById(R.id.ima_pos5_5);
+
         cargarPuntuacion();
 
 
@@ -73,8 +81,29 @@ public class DialogRankingGlobal extends Dialog implements View.OnClickListener{
         Puntuacion punt= new Puntuacion();
         String [][] puntuaciones= (String[][]) punt.conseguirPuntuacion();
         for(int i=0;i<puntuaciones.length;i++){
-            ((TextView)puntuacion[i]).setText(puntuaciones[i][1]);
             ((TextView)usuarios[i]).setText(puntuaciones[i][0]);
+            ((TextView)puntuacion[i]).setText(puntuaciones[i][1]);
+            cargarImagen(i, puntuaciones[i][4]);
+        }
+    }
+
+    private void cargarImagen(int i, String s) {
+        switch (s){
+            case "0":
+                paisesImagenes[i].setBackground(getContext().getDrawable(R.drawable.es));
+                break;
+            case "1":
+                paisesImagenes[i].setBackground(getContext().getDrawable(R.drawable.pl));
+                break;
+            case "2":
+                paisesImagenes[i].setBackground(getContext().getDrawable(R.drawable.de));
+                break;
+            case "3":
+                paisesImagenes[i].setBackground(getContext().getDrawable(R.drawable.fr));
+                break;
+            default:
+                paisesImagenes[i].setBackground(null);
+                break;
         }
     }
 

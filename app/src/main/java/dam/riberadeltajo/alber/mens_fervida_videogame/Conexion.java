@@ -23,39 +23,28 @@ public class Conexion extends AsyncTask<Void, Void, String> {
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
-        // Will contain the raw JSON response as a string.
         String json = null;
 
         try {
-            // Construct the URL for the OpenWeatherMap query
-            // Possible parameters are avaiable at OWM's forecast API page, at
-            // http://openweathermap.org/API#forecast
             URL url = new URL("http://riberadeltajo.es/mediahub/public_access/scores/select_top_scores.php");
 
-            // Create the request to OpenWeatherMap, and open the connection
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
 
-            // Read the input stream into a String
             InputStream inputStream = urlConnection.getInputStream();
             StringBuffer buffer = new StringBuffer();
             if (inputStream == null) {
-                // Nothing to do.
                 return null;
             }
             reader = new BufferedReader(new InputStreamReader(inputStream));
 
             String line;
             while ((line = reader.readLine()) != null) {
-                // Since it's JSON, adding a newline isn't necessary (it won't affect parsing)
-                // But it does make debugging a *lot* easier if you print out the completed
-                // buffer for debugging.
                 buffer.append(line + "\n");
             }
 
             if (buffer.length() == 0) {
-                // Stream was empty.  No point in parsing.
                 return null;
             }
             json = buffer.toString();
@@ -63,8 +52,6 @@ public class Conexion extends AsyncTask<Void, Void, String> {
             return json;
         } catch (IOException e) {
             Log.e("PlaceholderFragment", "Error ", e);
-            // If the code didn't successfully get the weather data, there's no point in attemping
-            // to parse it.
             return null;
         } finally {
             if (urlConnection != null) {
@@ -81,7 +68,6 @@ public class Conexion extends AsyncTask<Void, Void, String> {
     }
     @Override
     protected void onPostExecute(String s) {
-        System.out.println(s);
         super.onPostExecute(s);
         Log.i("json", s);
     }
