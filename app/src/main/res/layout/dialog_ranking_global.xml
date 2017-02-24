@@ -12,51 +12,61 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.1" />
+        android:layout_weight="0.06" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"
+        android:layout_weight="0.9"
         android:weightSum="1">
 
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1" />
+            android:layout_weight="0.05" />
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.8"
-            android:weightSum="14">
+            android:layout_weight="0.9"
+            android:weightSum="14.5">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="2.5"
                 android:weightSum="10">
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/boton_1"
                     android:id="@+id/ima_pos1"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:background="@drawable/boton_1" />
 
                 <Space
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="0.3" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ima_pos1_1"
+                    android:layout_weight="2"
+                    android:background="@drawable/de" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" />
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7"
+                    android:layout_weight="5"
                     android:background="@drawable/backtexto"
                     android:weightSum="1"
                     android:gravity="center">
@@ -65,8 +75,72 @@
                         android:text="TextView"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:id="@+id/txt_punt1"
+                        android:layout_weight="0.4"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/tamano_texto_boton" />
+
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
                         android:id="@+id/txt_user1"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/tamano_text_normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:weightSum="10">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ima_pos2"
+                    android:layout_weight="2"
+                    android:background="@drawable/boton_2" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ima_pos2_2"
+                    android:layout_weight="2"
+                    android:background="@drawable/pl" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/backtexto"
+                    android:weightSum="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/txt_user2"
+                        android:layout_weight="0.4"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_text_normal" />
 
@@ -74,63 +148,10 @@
                         android:text="TextView"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:id="@+id/txt_punt1"
-                        android:layout_weight="0.5"
-                        android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:weightSum="10">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/boton_2"
-                    android:id="@+id/img_pos2"
-                    android:layout_weight="2" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="7"
-                    android:background="@drawable/backtexto"
-                    android:weightSum="1"
-                    android:gravity="center">
-                    <TextView
-                        android:text="TextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:id="@+id/txt_user2"
-                        android:layout_weight="0.5"
-                        android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
-
-                    <TextView
-                        android:text="TextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
                         android:id="@+id/txt_punt2"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_texto_boton" />
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -138,32 +159,42 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1" />
+                android:layout_weight="0.5" />
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="2.5"
                 android:weightSum="10">
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/boton_3"
-                    android:id="@+id/img_pos3"
-                    android:layout_weight="2" />
+                    android:id="@+id/ima_pos3"
+                    android:layout_weight="2"
+                    android:background="@drawable/boton_3" />
 
                 <Space
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="0.3" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ima_pos3_3"
+                    android:layout_weight="2"
+                    android:background="@drawable/fr" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" />
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7"
+                    android:layout_weight="5"
                     android:background="@drawable/backtexto"
                     android:weightSum="1"
                     android:gravity="center">
@@ -173,16 +204,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:id="@+id/txt_user3"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
+                        android:textSize="@dimen/tamano_text_normal" />
 
                     <TextView
                         android:text="TextView"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:id="@+id/txt_punt3"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_texto_boton" />
                 </LinearLayout>
@@ -192,32 +223,42 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1" />
+                android:layout_weight="0.5" />
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="2.5"
                 android:weightSum="10">
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/boton_num_4"
-                    android:id="@+id/img_pos4"
-                    android:layout_weight="2" />
+                    android:id="@+id/ima_pos4"
+                    android:layout_weight="2"
+                    android:background="@drawable/boton_4" />
 
                 <Space
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="0.3" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ima_pos4_4"
+                    android:layout_weight="2"
+                    android:background="@drawable/es" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" />
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7"
+                    android:layout_weight="5"
                     android:background="@drawable/backtexto"
                     android:weightSum="1"
                     android:gravity="center">
@@ -227,16 +268,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:id="@+id/txt_user4"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
+                        android:textSize="@dimen/tamano_text_normal" />
 
                     <TextView
                         android:text="TextView"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:id="@+id/txt_punt4"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_texto_boton" />
                 </LinearLayout>
@@ -246,32 +287,42 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1" />
+                android:layout_weight="0.5" />
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="2.5"
                 android:weightSum="10">
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/boton_5"
-                    android:id="@+id/img_pos5"
-                    android:layout_weight="2" />
+                    android:id="@+id/ima_pos5"
+                    android:layout_weight="2"
+                    android:background="@drawable/boton_5" />
 
                 <Space
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="0.3" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ima_pos5_5"
+                    android:layout_weight="2"
+                    android:background="@drawable/de" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" />
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7"
+                    android:layout_weight="5"
                     android:background="@drawable/backtexto"
                     android:weightSum="1"
                     android:gravity="center">
@@ -281,16 +332,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:id="@+id/txt_user5"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
+                        android:textSize="@dimen/tamano_text_normal" />
 
                     <TextView
                         android:text="TextView"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:id="@+id/txt_punt5"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.4"
                         android:textAlignment="center"
                         android:textSize="@dimen/tamano_texto_boton" />
                 </LinearLayout>
@@ -302,12 +353,12 @@
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.1" />
+            android:layout_weight="0.05" />
     </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.1" />
+        android:layout_weight="0.06" />
 </LinearLayout>
 
