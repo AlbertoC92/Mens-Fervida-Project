@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.alber.mens_fervida_videogame">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,21 +19,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.Niveles"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.Niveles"
+            android:screenOrientation="portrait" />
         <activity
             android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuNivelesActivity"
             android:screenOrientation="portrait" />
-
 
         <service
             android:name="dam.riberadeltajo.alber.mens_fervida_videogame.AudioService"
             android:enabled="true" />
 
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuArcades"></activity>
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuArcades" />
         <activity
             android:name="dam.riberadeltajo.alber.mens_fervida_videogame.ActivityPregunta"
             android:screenOrientation="portrait" />
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juego_cartas.MainActivityCartas" />
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juego_cartas.Main2Activity"></activity>
     </application>
 
 </manifest>
