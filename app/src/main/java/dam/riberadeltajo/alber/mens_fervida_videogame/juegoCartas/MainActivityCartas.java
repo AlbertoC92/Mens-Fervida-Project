@@ -1,4 +1,4 @@
-package dam.riberadeltajo.alber.mens_fervida_videogame.juego_cartas;
+package dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas;
 
 import android.content.Intent;
 import android.graphics.Point;

@@ -34,8 +34,8 @@
         <activity
             android:name="dam.riberadeltajo.alber.mens_fervida_videogame.ActivityPregunta"
             android:screenOrientation="portrait" />
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juego_cartas.MainActivityCartas" />
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juego_cartas.Main2Activity"></activity>
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas" />
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.Main2Activity"></activity>
     </application>
 
 </manifest>

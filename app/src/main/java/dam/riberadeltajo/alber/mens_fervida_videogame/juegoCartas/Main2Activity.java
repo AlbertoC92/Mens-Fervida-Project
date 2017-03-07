@@ -1,12 +1,10 @@
-package dam.riberadeltajo.alber.mens_fervida_videogame.juego_cartas;
+package dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-
-import com.example.alber.mens_fervida_videogame.R;
 
 public class Main2Activity extends AppCompatActivity {
 
