@@ -19,7 +19,7 @@ import java.util.List;
 
 public class GameView extends SurfaceView implements View.OnTouchListener{
     private static final int MAX_FALLOS = 10; // Número máximo de fallos (cada selección de 2 cartas)
-    private static int[] imagenes = {R.drawable.albaricoque, R.drawable.cereza,
+    private static int[] imagenes = {R.drawable.alb, R.drawable.cereza,
             R.drawable.fresa, R.drawable.kiwi, R.drawable.limon, R.drawable.manzana, R.drawable.melon,
             R.drawable.naranja, R.drawable.pina, R.drawable.platano, R.drawable.sandia, R.drawable.uvas};
     private Carta[] cartasEnJuego; // Array con las 12 cartas que se pintan
