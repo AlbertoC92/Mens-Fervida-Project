@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,10 +16,13 @@ import android.widget.Button;
 
 import com.example.alber.mens_fervida_videogame.R;
 
+import dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae.MainActivityComidaCae;
+
 public class DialogJuegoUno extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
     private Context mContext;
     private Activity activity;
     private Button btnSiguiente;
+    private Button btJugar; //CAMBIADO
 
     public DialogJuegoUno(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
@@ -43,14 +47,24 @@ public class DialogJuegoUno extends Dialog implements View.OnClickListener, Dial
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {        //EN ESTE DIALOG ESTÁ METIDO EL JUEGO DE ANGEL Y CARRION YA.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_juego1);
         btnSiguiente=(Button) findViewById(R.id.btn_juego1_siguiente);
         btnSiguiente.setOnClickListener(this);
         this.setOnKeyListener(this);
+        btJugar=(Button)findViewById(R.id.btn_jugar1);
+        btJugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pasarAljuego();
+            }
+        });
+    }
 
-
+    private void pasarAljuego(){
+        Intent inte=new Intent(activity,MainActivityComidaCae.class);
+        activity.startActivity(inte);
     }
 
     @Override

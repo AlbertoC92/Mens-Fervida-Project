@@ -100,7 +100,7 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/btn_juego_jugar"
+                    android:id="@+id/btn_jugar1"
                     android:layout_weight="7.5"
                     android:background="@drawable/boton"
                     android:text="Jugar" />

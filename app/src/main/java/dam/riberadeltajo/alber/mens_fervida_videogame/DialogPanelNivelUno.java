@@ -14,6 +14,8 @@ import android.widget.Button;
 
 import com.example.alber.mens_fervida_videogame.R;
 
+import dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae.MainActivityComidaCae;
+
 /**
  * Created by PedroMiguel on 01/02/2017.
  */
@@ -23,7 +25,6 @@ public class DialogPanelNivelUno extends Dialog implements View.OnClickListener 
     private Activity activity;
     public Button btnSiguiente, btn1, btn2, btn3,btn4,btn5;
 
-
     public DialogPanelNivelUno(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
         mContext=context;
@@ -31,6 +32,7 @@ public class DialogPanelNivelUno extends Dialog implements View.OnClickListener 
         quitarFondoRedimensionarEfectos();
 
     }
+
 
     public void quitarFondoRedimensionarEfectos(){
         this.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
@@ -63,8 +65,8 @@ public class DialogPanelNivelUno extends Dialog implements View.OnClickListener 
         btn5=(Button) findViewById(R.id.btn_nivel_5);
         btn5.setOnClickListener(this);
 
-
     }
+
     @Override
     public void onBackPressed() {
         this.dismiss();
