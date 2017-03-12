@@ -40,7 +40,7 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener, Dia
         int width = size.x;
         int height = size.y;
         getWindow().setLayout((int)(size.x*0.9), (int)(size.y*0.7));
-        getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;
+        //getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN );

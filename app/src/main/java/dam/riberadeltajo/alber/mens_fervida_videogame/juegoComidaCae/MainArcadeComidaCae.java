@@ -5,16 +5,20 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.alber.mens_fervida_videogame.*;
 
-public class MainArcadeComidaCae extends AppCompatActivity {
+public class MainArcadeComidaCae extends Activity{
 
     private MediaPlayer musica;
     private int puntos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(new GameViewComidaCae(this));
     }
