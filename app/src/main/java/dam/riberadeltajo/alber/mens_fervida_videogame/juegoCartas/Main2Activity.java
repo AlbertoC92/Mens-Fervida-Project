@@ -24,4 +24,11 @@ public class Main2Activity extends AppCompatActivity {
         setResult(RESULT_OK, intent);
         finish();
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        setResult(RESULT_CANCELED, intent);
+        finish();
+    }
 }

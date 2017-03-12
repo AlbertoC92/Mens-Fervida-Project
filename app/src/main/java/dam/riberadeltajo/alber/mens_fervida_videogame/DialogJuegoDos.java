@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,6 +17,10 @@ import android.widget.Button;
 
 import com.example.alber.mens_fervida_videogame.R;
 
+import dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas;
+
+import static android.app.Activity.RESULT_OK;
+
 /**
  * Created by Dani on 03/02/2017.
  */
@@ -23,6 +29,8 @@ public class DialogJuegoDos extends Dialog implements View.OnClickListener, Dial
     private Context mContext;
     private Activity activity;
     private Button btnSiguiente,btnAnterior;
+    private int puntuacion;
+    private Button boton;
 
     public DialogJuegoDos(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
@@ -54,9 +62,20 @@ public class DialogJuegoDos extends Dialog implements View.OnClickListener, Dial
         btnAnterior=(Button)findViewById(R.id.btn_juego2_anterior);
         btnAnterior.setOnClickListener(this);
         btnSiguiente.setOnClickListener(this);
+        boton = (Button)findViewById(R.id.btnJuegoCarta);
         this.setOnKeyListener(this);
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jugarCartas();
+            }
+        });
+        this.setOnKeyListener(this);
+    }
 
-
+    public void jugarCartas(){
+        Intent intent = new Intent(activity, MainActivityCartas.class);
+        activity.startActivity(intent);
     }
 
     @Override
@@ -73,8 +92,6 @@ public class DialogJuegoDos extends Dialog implements View.OnClickListener, Dial
                 this.dismiss();
         }
     }
-
-
 
     @Override
     public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {

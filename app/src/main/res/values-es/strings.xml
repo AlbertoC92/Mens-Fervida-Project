@@ -19,4 +19,9 @@
     <string name="text_salir">¿Estás seguro de que deseas salir? Si sales perderás todos los puntos de la sesión.</string>
     <string name="clasi_global">Global</string>
     <string name="text_win">Enhorabuena</string>
+
+    <string name="instrucciones_juego"> - Instrucciones - </string>
+    <string name="puntuacionCartas">Su mejor puntuación es:</string>
+    <string name="instCartas">Case imágenes iguales para obtener puntos en el menor número de intentos posible.
+                        Se le restarán puntos si se equivoca</string>
 </resources>

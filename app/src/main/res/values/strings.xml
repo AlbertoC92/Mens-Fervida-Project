@@ -19,5 +19,7 @@
     <string name="text_salir">Are you sure?</string>
     <string name="text_win">Congratulations</string>
 
-    <string name="instrucciones_juego"> - Instrucciones - </string>
+    <string name="instrucciones_juego"></string>
+    <string name="puntuacionCartas"></string>
+    <string name="instCartas"></string>
 </resources>

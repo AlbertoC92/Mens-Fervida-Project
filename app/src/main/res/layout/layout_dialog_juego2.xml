@@ -79,7 +79,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/imageView3"
                     android:layout_weight="1"
-                    android:background="@drawable/fondo_res" />
+                    android:background="@drawable/previewcartas" />
             </LinearLayout>
 
             <LinearLayout
@@ -100,7 +100,7 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/button15"
+                    android:id="@+id/btnJuegoCarta"
                     android:layout_weight="7.5"
                     android:background="@drawable/boton"
                     android:text="Jugar" />

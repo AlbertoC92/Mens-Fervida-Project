@@ -10,7 +10,8 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 
-import com.example.alber.mens_fervida_videogame.*;
+
+import com.example.alber.mens_fervida_videogame.R;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -316,8 +317,8 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
         Paint pincel=new Paint();
         pincel.setColor(Color.RED);
         pincel.setTextSize(150);
-        canv.drawText(String.format("%s",pasarSeg(MAX_FALLOS - fallos)), this.getWidth() / 9, this.getHeight() - 200, pincel);
-        canv.drawText(String.format("%s", puntuacion), this.getWidth() - 200, this.getHeight() - 200, pincel);
+        canv.drawText(String.format("%s",pasarSeg(MAX_FALLOS - fallos)), this.getWidth() / 9, this.getHeight() - 100, pincel);
+        canv.drawText(String.format("%s", puntuacion), this.getWidth() - 200, this.getHeight() - 100, pincel);
     }
 
     @Override
