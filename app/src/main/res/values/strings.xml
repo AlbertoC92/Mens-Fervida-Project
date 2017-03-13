@@ -22,4 +22,19 @@
     <string name="instrucciones_juego"></string>
     <string name="puntuacionCartas"></string>
     <string name="instCartas"></string>
+
+    <string name="jugar">jugar</string>
+    <string name="instrucciones">instrucciones</string>
+    <string name="record">record</string>
+    <string name="elrecord_es">El record es </string>
+    <string name="puntos">puntos</string>
+    <string name="puntuacion">Puntuación</string>
+    <string name="instrucciones1">Deberás juntar comida saludable para sumar puntos.</string>
+    <string name="instrucciones2">¡Pero cuidado!</string>
+    <string name="instrucciones3">Si juntas comida no saludable tus puntos bajarán.</string>
+    <string name="instrucciones4">Toca con el dedo para elegir cuál quieres unir con otro alimento del mismo tipo.</string>
+    <string name="instrucciones5">¡Suerte!</string>
+    <string name="popup">Has conseguido</string>
+
+
 </resources>
