@@ -63,8 +63,10 @@ public class DialogJuegoUno extends Dialog implements View.OnClickListener, Dial
     }
 
     private void pasarAljuego(){
-        Intent inte=new Intent(activity,MainActivityComidaCae.class);
-        activity.startActivity(inte);
+        if(((MenuArcades)mContext).puedeJugar()) {
+            Intent inte = new Intent(activity, MainActivityComidaCae.class);
+            activity.startActivity(inte);
+        }
     }
 
     @Override
