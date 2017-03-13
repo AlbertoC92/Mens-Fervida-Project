@@ -86,7 +86,7 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
             // Se dibujan los Sparkys
             for(int i = 0; i < baraja.length; i++){
                 for(int j = 0; j < baraja[i].length; j++){
-                    canv.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.sparky), (maxX/3) * j + 25, (maxY/5) * i + 25, null);
+                    canv.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.sparky), (maxX/3) * j + (int)((maxX * 2.315) / 100), (maxY/5) * i + (int)((maxY * 1.41) / 100), null);
                 }
             }
 
@@ -109,7 +109,7 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
             // Se dibujan los Sparkys
             for (int i = 0; i < baraja.length; i++) {
                 for (int j = 0; j < baraja[i].length; j++) {
-                    canv.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.sparky), (maxX / 3) * j + 25, (maxY / 5) * i + 25, null);
+                    canv.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.sparky), (maxX / 3) * j + (int)((maxX * 2.315) / 100), (maxY / 5) * i + (int)((maxY * 1.41) / 100), null);
                 }
             }
             // Se dibujan las cartas adivinadas
@@ -134,8 +134,6 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
                 // Si ya se han descubierto todas las cartas, se termina el juego
                 if (contadorCartasYaAdivinadas == 12) {
                     finalizar();
-
-                    // ---------------<<<<<<<<<<<<<<<<<--------- FALTA PONER MAS TIEMPO Y DEVOLVER LOS PUNTOS
                 }
             } else { // Si no coinciden, se restan puntos y suman fallos al usuario
                 fallos++;
@@ -148,7 +146,6 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
                 // Si se ha llegado al máximo de fallos, se termina el juego
                 if (fallos == MAX_FALLOS) {
                     finalizar();
-                    // ---------------<<<<<<<<<<<<<<<<<--------- FALTA PONER MAS TIEMPO Y DEVOLVER LOS PUNTOS
                 }
 
                 // restar puntos y notificar
@@ -222,7 +219,7 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
         int numCarta = 0;
         for(int i = 0; i < baraja.length; i++){
             for(int j = 0; j < baraja[i].length; j++){
-                cartasEnJuego[numCarta] = new Carta(BitmapFactory.decodeResource(getResources(), baraja[i][j]), (maxX/3) * j + 25, (maxY/5) * i + 25, baraja[i][j]);
+                cartasEnJuego[numCarta] = new Carta(BitmapFactory.decodeResource(getResources(), baraja[i][j]), (maxX/3) * j + (int)((maxX * 2.315) / 100), (maxY/5) * i + (int)((maxY * 1.41) / 100), baraja[i][j]);
                 numCarta++;
             }
         }
@@ -297,7 +294,7 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
     private void dibujarSparkys(Canvas canvas) {
         for(int i = 0; i < baraja.length; i++){
             for(int j = 0; j < baraja[i].length; j++){
-                canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.sparky), (maxX/3) * j + 25, (maxY/5) * i + 25, null);
+                canvas.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.sparky), (maxX/3) * j + (int)((maxX * 2.315) / 100), (maxY/5) * i + (int)((maxY * 1.41) / 100), null);
             }
         }
     }
