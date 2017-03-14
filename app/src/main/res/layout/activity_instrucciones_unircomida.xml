@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/fondo_unircomida"
-    tools:context="com.example.alber.mens_fervida_videogame.dam.example.alber.mens_fervida_videogame.InstruccionesUnirComida">
+    tools:context="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.InstruccionesUnirComida">
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,7 +19,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.04" />
+            android:layout_weight="0.02" />
 
         <TextView
             android:text="@string/instrucciones"
@@ -27,7 +27,7 @@
             android:layout_height="88dp"
             android:id="@+id/tvTituloInstrucciones"
             android:textAlignment="center"
-            android:textSize="36sp"
+            android:textSize="36dp"
             android:textColor="@android:color/holo_green_dark" />
 
         <LinearLayout
@@ -45,7 +45,7 @@
                 android:layout_width="217dp"
                 android:layout_height="match_parent"
                 android:id="@+id/tvResultadoInstrucciones"
-                android:textSize="18sp"
+                android:textSize="24dp"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:layout_weight="0.16" />
@@ -58,4 +58,6 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
 </RelativeLayout>

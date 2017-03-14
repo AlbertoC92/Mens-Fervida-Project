@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/fondo_unircomida"
-    tools:context="com.example.alber.mens_fervida_videogame.dam.example.alber.mens_fervida_videogame.RecordUnirComida">
+    tools:context="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.RecordUnirComida">
 
     <LinearLayout
         android:orientation="vertical"
@@ -27,9 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvTituloRecord"
-            android:layout_weight="0.11"
+            android:layout_weight="0.15"
             android:textAlignment="center"
-            android:textSize="36sp"
+            android:textSize="36dp"
             android:textColor="@android:color/holo_green_dark" />
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvResultadoRecord"
             android:layout_weight="0.11"
-            android:textSize="24sp"
+            android:textSize="24dp"
             android:textAlignment="center"
             android:textColor="@android:color/holo_green_dark" />
 
@@ -47,4 +47,5 @@
             android:layout_weight="0.22"/>
 
     </LinearLayout>
+
 </RelativeLayout>
