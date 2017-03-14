@@ -38,25 +38,45 @@
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2" />
+                        android:layout_weight="3" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="6"
+                        android:layout_weight="4"
                         android:weightSum="10">
 
                         <Space
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="2" />
+                            android:layout_weight="1.5" />
 
-                        <TextView
-                            android:text="@string/inst_comidaCae"
+                        <LinearLayout
+                            android:orientation="vertical"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:id="@+id/textView23"
-                            android:layout_weight="6" />
+                            android:layout_weight="6.5"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:text="@string/instrucciones_juego"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView19"
+                                android:layout_weight="2"
+                                android:textAlignment="center"
+                                android:textSize="24sp"
+                                android:fontFamily="sans-serif-smallcaps" />
+
+                            <TextView
+                                android:text="@string/inst_comidaCae"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView23"
+                                android:layout_weight="8"
+                                android:textAlignment="center"
+                                android:fontFamily="monospace" />
+                        </LinearLayout>
 
                         <Space
                             android:layout_width="wrap_content"
@@ -73,7 +93,7 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1"
+                        android:layout_weight="2"
                         android:weightSum="10">
 
                         <Space
@@ -86,13 +106,16 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:id="@+id/textView20"
-                            android:layout_weight="3" />
+                            android:layout_weight="3"
+                            android:textSize="18sp" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:id="@+id/txtComidaCaeRecord"
-                            android:layout_weight="3" />
+                            android:layout_weight="3"
+                            android:textSize="18sp"
+                            android:fontFamily="sans-serif" />
 
                         <Space
                             android:layout_width="0dp"
@@ -116,20 +139,20 @@
                     android:layout_weight="1.5" />
 
                 <Button
-                    android:text="Jugar"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btJugarComCae"
-                    android:layout_weight="3.5"
-                    android:background="@drawable/boton" />
-
-                <Button
-                    android:text="Salir"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/btSalirComidaCae"
                     android:layout_weight="3.5"
-                    android:background="@drawable/boton" />
+                    android:background="@drawable/boton_rojo_volver"
+                    android:layout_margin="10dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btJugarComCae"
+                    android:layout_weight="3.5"
+                    android:background="@drawable/btn_aceptar"
+                    android:layout_margin="10dp" />
 
                 <Space
                     android:layout_width="0dp"

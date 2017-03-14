@@ -432,9 +432,9 @@ public class GameViewComidaCae extends SurfaceView {
 
     private void finalizar(){
         loop.setRunning(false);
-        try{
+        /*try{
             Thread.sleep(1000);
-        }catch(InterruptedException ie){}
+        }catch(InterruptedException ie){}*/
         actividad.fin(puntos);
     }
 

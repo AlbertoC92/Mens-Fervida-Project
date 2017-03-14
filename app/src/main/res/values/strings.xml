@@ -24,6 +24,6 @@
     <string name="instCartas">Find the couples of cards to get points in the least number of tries. Points will be deducted if you make a mistake.</string>
 
     <string name="record">Record:</string>
-    <string name="inst_comidaCae">Debestocar solamente la comida que sea saludable, tienes 3 vidas
-                                    si coges una comida no saludable o se escapa una saludable ¡Perderas una vida!</string>
+    <string name="inst_comidaCae">You should only take healthy food. The speed will increases over time to make the game harder.
+                                    You have 3 lifes, if you take unhealthy food or a healthy food pass the line you will loose one life. !Good luck¡</string>
 </resources>
