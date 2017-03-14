@@ -2,6 +2,7 @@ package dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class MainActivityUnirComida extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_unircomida);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         face= Typeface.createFromAsset(getAssets(), "fonts/some_time_later.otf");
         btnJugar=(Button)findViewById(R.id.btnJugar);

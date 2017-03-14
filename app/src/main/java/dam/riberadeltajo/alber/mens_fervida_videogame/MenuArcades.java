@@ -14,7 +14,7 @@ import com.example.alber.mens_fervida_videogame.R;
 import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
 
 public class MenuArcades extends Activity implements View.OnClickListener{
-    Dialog juego1, juego2, juego3;
+    Dialog juego1, juego2, juego3, juego4;
     Button volver;
 
     @Override
@@ -32,6 +32,7 @@ public class MenuArcades extends Activity implements View.OnClickListener{
         juego1 = new DialogJuegoUno(this,R.style.AppTheme, this);
         juego2 = new DialogJuegoDos(this,R.style.AppTheme, this);
         juego3 = new DialogJuegoTres(this,R.style.AppTheme, this);
+        juego4=new DialogJuegoCuatro(this,R.style.AppTheme, this);
         juego1.show();
     }
 

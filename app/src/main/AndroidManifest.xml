@@ -37,7 +37,11 @@
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas" />
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.Main2Activity" />
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae.MainActivityComidaCae" />
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae.MainArcadeComidaCae"></activity>
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae.MainArcadeComidaCae" />
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.MainActivityUnirComida"></activity>
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.PartidaUnirComida"></activity>
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.InstruccionesUnirComida"></activity>
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.RecordUnirComida"></activity>
     </application>
 
 </manifest>

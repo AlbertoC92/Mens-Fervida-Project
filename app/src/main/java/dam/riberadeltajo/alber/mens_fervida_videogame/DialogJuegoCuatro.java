@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,16 +16,16 @@ import android.widget.Button;
 
 import com.example.alber.mens_fervida_videogame.R;
 
-/**
- * Created by Dani on 03/02/2017.
- */
+import dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas;
+import dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.MainActivityUnirComida;
 
-public class DialogJuegoTres extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener{
+public class DialogJuegoCuatro extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
+
     private Context mContext;
     private Activity activity;
-    private Button btnSiguiente,btnAnterior;
+    private Button btnAnterior, btnJugar4;
 
-    public DialogJuegoTres(Context context, int themeResId, Activity activity) {
+    public DialogJuegoCuatro(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
         mContext=context;
         this.activity=activity;
@@ -49,11 +50,17 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener, Dia
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_dialog_juego3);
+        setContentView(R.layout.activity_dialog_juego_cuatro);
         btnAnterior=(Button) findViewById(R.id.btn_juego3_anterior);
         btnAnterior.setOnClickListener(this);
-        btnSiguiente=(Button)findViewById(R.id.btn_juego3_siguiente);
-        btnSiguiente.setOnClickListener(this);
+        btnJugar4=(Button) findViewById(R.id.btnJugar4);
+        btnJugar4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jugarUnir();
+            }
+        });
+
         this.setOnKeyListener(this);
 
 
@@ -62,15 +69,11 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener, Dia
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btn_juego3_siguiente:
-                //getWindow().getAttributes().windowAnimations = R.style.PanelNivelUno;     //Esto está aqui por el tema de las animaciones, estaba haciendo pruebas
-                ((MenuArcades)activity).juego4.show();
+            case R.id.btn_juego3_anterior:
+                ((MenuArcades)activity).juego3.show();
                 this.dismiss();
                 break;
-            case R.id.btn_juego3_anterior:
-                //getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;    //Pero hace cosas raras, no funciona bien
-                ((MenuArcades)activity).juego2.show();
-                this.dismiss();
+
         }
     }
 
@@ -83,5 +86,10 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener, Dia
             }*/
         }
         return true;
+    }
+
+    public void jugarUnir(){
+        Intent intent = new Intent(activity, MainActivityUnirComida.class);
+        activity.startActivity(intent);
     }
 }
