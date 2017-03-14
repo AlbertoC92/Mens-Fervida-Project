@@ -37,11 +37,23 @@ public class MainActivityComidaCae extends Activity {
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode==1){
-            Bundle bundle = data.getExtras();
-            int puntuacion = bundle.getInt("puntuacion");
-            String mensaje=String.format("Has obtenido %d puntos",puntuacion);
-            Toast.makeText(this,mensaje,Toast.LENGTH_LONG).show();
-            finish();
+            if(resultCode == RESULT_OK){
+                Bundle bundle = data.getExtras();
+                int puntuacion = bundle.getInt("puntuacion");
+                String mensaje=String.format("Has obtenido %d puntos",puntuacion);
+                Toast.makeText(this,mensaje,Toast.LENGTH_LONG).show();
+                finish();
+            }
+
+            /*if(resultCode == RESULT_CANCELED){
+                Toast.makeText(this,"Has vuelto",Toast.LENGTH_LONG).show();
+                finish();
+            }*/
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

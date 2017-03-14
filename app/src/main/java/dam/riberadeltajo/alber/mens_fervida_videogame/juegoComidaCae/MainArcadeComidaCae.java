@@ -39,6 +39,7 @@ public class MainArcadeComidaCae extends Activity{
         this.onDestroy();
     }
 
+    /*
     public void onDestroy(){
         super.onDestroy();
         android.os.Process.killProcess(android.os.Process.myPid());
@@ -46,13 +47,20 @@ public class MainArcadeComidaCae extends Activity{
 
     public void onStop(){
         super.onStop();
-    }
+    }*/
 
     public void fin(int puntos){
         //super.onDestroy();
         Intent intVuelta=new Intent();
         intVuelta.putExtra("puntuacion",puntos);
         setResult(Activity.RESULT_OK,intVuelta);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        setResult(Activity.RESULT_CANCELED, intent);
         finish();
     }
 }
