@@ -131,7 +131,7 @@
                                 android:id="@+id/textView20"
                                 android:layout_weight="3.5"
                                 android:textSize="@dimen/tamano_text_normal"
-                                android:textAlignment="viewEnd" />
+                                android:gravity="right" />
 
                             <TextView
                                 android:layout_width="0dp"
