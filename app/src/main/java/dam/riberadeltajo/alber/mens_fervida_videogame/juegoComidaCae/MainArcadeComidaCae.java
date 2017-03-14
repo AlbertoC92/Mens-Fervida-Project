@@ -2,6 +2,7 @@ package dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,16 +12,18 @@ import android.view.WindowManager;
 import com.example.alber.mens_fervida_videogame.*;
 
 public class MainArcadeComidaCae extends Activity{
-
+    private GameViewComidaCae gameView;
     private MediaPlayer musica;
     private int puntos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(new GameViewComidaCae(this));
+        gameView=new GameViewComidaCae(this);
     }
 
     public void onResume(){
@@ -39,10 +42,11 @@ public class MainArcadeComidaCae extends Activity{
         this.onDestroy();
     }
 
-    /*
-    public void onDestroy(){
+    //public onSurfaceDestroyed
+
+    /*public void onDestroy(){
         super.onDestroy();
-        android.os.Process.killProcess(android.os.Process.myPid());
+        //android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     public void onStop(){

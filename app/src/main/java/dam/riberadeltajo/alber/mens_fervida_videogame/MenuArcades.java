@@ -51,6 +51,15 @@ public class MenuArcades extends Activity implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_atras_juegos:
+                if(juego1.isShowing()){
+                    juego1.dismiss();
+                }
+                if(juego2.isShowing()){
+                    juego2.dismiss();
+                }
+                if(juego3.isShowing()){
+                    juego3.dismiss();
+                }
                 finish();
                 break;
         }
