@@ -40,8 +40,6 @@ public class MainActivityCartas extends AppCompatActivity {
         prefe = getSharedPreferences("datosCartas", Context.MODE_PRIVATE);
         puntuacion = Integer.parseInt(prefe.getString("puntos", "0"));
         mostrarPuntos.setText(String.valueOf(puntuacion));
-
-
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -26,7 +26,7 @@
         android:background="@drawable/background">
 
         <TextView
-            android:text="@string/instrucciones_juego"
+            android:text="@string/instCartas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView9"
@@ -35,7 +35,7 @@
             android:gravity="center_vertical|center_horizontal" />
 
         <TextView
-            android:text="@string/instrucciones_juego"
+            android:text="@string/puntuacionCartas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView9"
@@ -68,7 +68,8 @@
                 android:layout_height="68dp"
                 android:id="@+id/button10"
                 tools:background="@drawable/boton_atras"
-                android:layout_gravity="center_vertical|center_horizontal" />
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:onClick="salir" />
 
         </LinearLayout>
 
@@ -87,9 +88,10 @@
             <Button
                 android:layout_width="105dp"
                 android:layout_height="68dp"
-                android:id="@+id/button11"
+                android:id="@+id/btnJug"
                 tools:background="@drawable/boton_siguiente"
-                android:layout_gravity="center_vertical|center_horizontal" />
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:onClick="juguemos" />
 
         </LinearLayout>
     </LinearLayout>

@@ -79,7 +79,7 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
      */
     private void rellenarSparkys(Carta carta) {
         canv = holder.lockCanvas();
-        canv.drawColor(Color.WHITE);
+        canv.drawColor(Color.CYAN);
 
         // Si no hay ninguna carta descubierta, entra en el if y se procede a descubrirla
         if(contadorCartaDescubierta == 0){
@@ -120,42 +120,41 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
             }
             // Se dibuja la carta descubierta antes
             canv.drawBitmap(cartaDescubierta.getBmp(), cartaDescubierta.getLeft(), cartaDescubierta.getTop(), null);
-            // Se dibuja la carta seleccionada
-            canv.drawBitmap(carta.getBmp(), carta.getLeft(), carta.getTop(), null);
+            if(carta.getId() != cartaDescubierta.getId()){
+                // Se dibuja la carta seleccionada
+                canv.drawBitmap(carta.getBmp(), carta.getLeft(), carta.getTop(), null);
 
-            // Si coinciden se suman puntos y se agrega al array auxiliar de cartas adivinadas
-            if (carta.getIndiceCarta() == cartaDescubierta.getIndiceCarta()) {
-                cartasYaAdivinadas[contadorCartasYaAdivinadas] = carta;
-                contadorCartasYaAdivinadas++;
-                cartasYaAdivinadas[contadorCartasYaAdivinadas] = cartaDescubierta;
-                contadorCartasYaAdivinadas++;
-                puntuacion += 5;
+                // Si coinciden se suman puntos y se agrega al array auxiliar de cartas adivinadas
+                if (carta.getIndiceCarta() == cartaDescubierta.getIndiceCarta()) {
+                    cartasYaAdivinadas[contadorCartasYaAdivinadas] = carta;
+                    contadorCartasYaAdivinadas++;
+                    cartasYaAdivinadas[contadorCartasYaAdivinadas] = cartaDescubierta;
+                    contadorCartasYaAdivinadas++;
+                    puntuacion += 5;
 
-                // Si ya se han descubierto todas las cartas, se termina el juego
-                if (contadorCartasYaAdivinadas == 12) {
-                    finalizar();
+                    // Si ya se han descubierto todas las cartas, se termina el juego
+                    if (contadorCartasYaAdivinadas == 12) {
+                        finalizar();
+                    }
+                } else { // Si no coinciden, se restan puntos y suman fallos al usuario
+                    fallos++;
+                    if (puntuacion == 1) {
+                        puntuacion = 0;
+                    } else if (puntuacion > 1) {
+                        puntuacion -= 2;
+                    }
+
+                    // Si se ha llegado al máximo de fallos, se termina el juego
+                    if (fallos == MAX_FALLOS) {
+                        finalizar();
+                    }
                 }
-            } else { // Si no coinciden, se restan puntos y suman fallos al usuario
-                fallos++;
-                if (puntuacion == 1) {
-                    puntuacion = 0;
-                } else if (puntuacion > 1) {
-                    puntuacion -= 2;
-                }
-
-                // Si se ha llegado al máximo de fallos, se termina el juego
-                if (fallos == MAX_FALLOS) {
-                    finalizar();
-                }
-
-                // restar puntos y notificar
-                //canv.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.sparky), carta.getLeft(), carta.getTop(), null);
-                //canv.drawBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.sparky), cartaDescubierta.getLeft(), cartaDescubierta.getTop(), null);
+                contarFallos();
+                cartaDescubierta = null;
+                // Se reinicia el contador.
+                contadorCartaDescubierta = 0;
             }
             contarFallos();
-            cartaDescubierta = null;
-            // Se reinicia el contador.
-            contadorCartaDescubierta = 0;
         }
         holder.unlockCanvasAndPost(canv);
     }
@@ -219,7 +218,7 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
         int numCarta = 0;
         for(int i = 0; i < baraja.length; i++){
             for(int j = 0; j < baraja[i].length; j++){
-                cartasEnJuego[numCarta] = new Carta(BitmapFactory.decodeResource(getResources(), baraja[i][j]), (maxX/3) * j + (int)((maxX * 2.315) / 100), (maxY/5) * i + (int)((maxY * 1.41) / 100), baraja[i][j]);
+                cartasEnJuego[numCarta] = new Carta(BitmapFactory.decodeResource(getResources(), baraja[i][j]), (maxX/3) * j + (int)((maxX * 2.315) / 100), (maxY/5) * i + (int)((maxY * 1.41) / 100), baraja[i][j], numCarta);
                 numCarta++;
             }
         }
@@ -268,7 +267,7 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
 
     private void finalizar(){
 
-        actividad.finalizar(puntuacion);
+        actividad.finalizar((MAX_FALLOS - fallos) * puntuacion);
 
     }
 
@@ -302,7 +301,7 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
     @Override
     public void draw(Canvas canvas) {
         this.canv = canvas;
-        canvas.drawColor(Color.WHITE);
+        canvas.drawColor(Color.CYAN);
         for(int i = 0; i < cartasEnJuego.length; i++){
             canvas.drawBitmap(cartasEnJuego[i].getBmp(), cartasEnJuego[i].getLeft(), cartasEnJuego[i].getTop(), null);
         }
