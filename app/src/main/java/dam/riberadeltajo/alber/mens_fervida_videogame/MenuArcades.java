@@ -38,7 +38,7 @@ public class MenuArcades extends Activity implements View.OnClickListener{
 
     public boolean puedeJugar(){
         if(Jugador.getInstance().getEstrellas()<0.5){
-            Toast.makeText(this, "No tiene suficiente crédito", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "No tiene suficiente crédito", Toast.LENGTH_SHORT).show();
             return false;
         }
         else{
