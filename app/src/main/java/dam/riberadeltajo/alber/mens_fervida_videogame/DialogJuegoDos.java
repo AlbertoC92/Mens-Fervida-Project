@@ -74,8 +74,10 @@ public class DialogJuegoDos extends Dialog implements View.OnClickListener, Dial
     }
 
     public void jugarCartas(){
-        Intent intent = new Intent(activity, MainActivityCartas.class);
-        activity.startActivity(intent);
+        if(((MenuArcades)mContext).puedeJugar()) {
+            Intent intent = new Intent(activity, MainActivityCartas.class);
+            activity.startActivity(intent);
+        }
     }
 
     @Override
