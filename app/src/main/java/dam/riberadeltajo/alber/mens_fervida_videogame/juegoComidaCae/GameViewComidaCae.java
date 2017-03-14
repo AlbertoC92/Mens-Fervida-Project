@@ -198,12 +198,6 @@ public class GameViewComidaCae extends SurfaceView {
         long actual;
         actual=System.currentTimeMillis();
         if(!fin){
-            //--Para pintar el panel de abajo
-            Paint pincel=new Paint();
-            pincel.setColor(Color.GREEN);
-            //canvas.drawRect(0,getWidth(),(float) (getHeight() * 0.65),getHeight(),pincel);
-            canvas.drawRect(50,80,60,50,pincel);
-
             Paint paint = new Paint();
             canvas.drawBitmap(Bitmap.createScaledBitmap(fondo, getWidth(), getHeight(), false), 0, 0, null);
             //-------------------   CENTRO -------------------------//
@@ -321,6 +315,12 @@ public class GameViewComidaCae extends SurfaceView {
             canvas.drawLine(0, (float)(getHeight()*0.65), canvas.getWidth(), (float)(getHeight()*0.65), paint);
             //canvas.drawBitmap(panel, (float) (getWidth() * 0.02), (float) (getHeight() * 0.655), null); //PINTA EL PANEL
             canvas.drawBitmap(panel,0,(float) (getHeight() * 0.65), null);                  //ESTA ES LA FORMA PROVISIONAL
+
+            //--Para pintar el panel de abajo
+            /*Paint pincel=new Paint();
+            pincel.setColor(Color.GREEN);
+            canvas.drawRect(0,getWidth(),(float) (getHeight() * 0.65),getHeight(),pincel);*/
+
             canvas.drawBitmap(marcador, (float) (getWidth() * 0.29), (float) (getHeight() * 0.72), null);
             paint.setTextSize((float) (getWidth() * 0.07));
             canvas.drawText(String.format("%02d", puntos), (float) (getWidth() * 0.45), (float) (getHeight() * 0.785), paint);
@@ -432,9 +432,9 @@ public class GameViewComidaCae extends SurfaceView {
 
     private void finalizar(){
         loop.setRunning(false);
-        try{
+        /*try{
             Thread.sleep(1000);
-        }catch(InterruptedException ie){}
+        }catch(InterruptedException ie){}*/
         actividad.fin(puntos);
     }
 

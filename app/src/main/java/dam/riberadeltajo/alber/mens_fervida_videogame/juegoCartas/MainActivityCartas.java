@@ -35,12 +35,11 @@ public class MainActivityCartas extends AppCompatActivity {
         miDisp.getSize(dispSize);
         maxX = dispSize.x;
         maxY = dispSize.y;
+        System.out.println("Max X: " + maxX + " /// Max Y: " + maxY);
         mostrarPuntos = (TextView)findViewById(R.id.txtPCartas);
         prefe = getSharedPreferences("datosCartas", Context.MODE_PRIVATE);
         puntuacion = Integer.parseInt(prefe.getString("puntos", "0"));
         mostrarPuntos.setText(String.valueOf(puntuacion));
-
-
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

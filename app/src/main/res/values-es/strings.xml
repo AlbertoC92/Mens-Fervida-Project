@@ -24,4 +24,7 @@
     <string name="puntuacionCartas">Su mejor puntuación es:</string>
     <string name="instCartas">Case imágenes iguales para obtener puntos en el menor número de intentos posible.
                         Se le restarán puntos si se equivoca</string>
+
+    <string name="inst_comidaCae">Debes tocar solamente la comida que sea saludable, tienes 3 vidas
+                                    si coges una comida no saludable o se escapa una saludable ¡Perderas una vida!</string>
 </resources>

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.alber.mens_fervida_videogame.R;
 
@@ -36,10 +37,30 @@ public class MenuArcades extends Activity implements View.OnClickListener{
         juego1.show();
     }
 
+    public boolean puedeJugar(){
+        if(Jugador.getInstance().getEstrellas()<0.5){
+            Toast.makeText(this, "No tiene suficiente crédito", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        else{
+            Jugador.getInstance().setEstrellas((float) (Jugador.getInstance().getEstrellas()-0.5));
+            Jugador.getInstance().guardarSharedPreferences();
+            return true;
+        }
+    }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_atras_juegos:
+                if(juego1.isShowing()){
+                    juego1.dismiss();
+                }
+                if(juego2.isShowing()){
+                    juego2.dismiss();
+                }
+                if(juego3.isShowing()){
+                    juego3.dismiss();
+                }
                 finish();
                 break;
         }

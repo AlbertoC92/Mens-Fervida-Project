@@ -42,7 +42,7 @@ public class Jugador {
     private Jugador(){
         setPuntuacion(0);
         setMusicaPlaying(true);
-        //cargarSharedPreferences();
+        cargarSharedPreferences();
 
     }
     private Jugador(Activity activity){

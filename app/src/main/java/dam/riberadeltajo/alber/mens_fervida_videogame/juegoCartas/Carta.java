@@ -8,15 +8,24 @@ public class Carta {
     private int alto;
     private int left, top;
     private int indiceCarta;
+    private int id;
 
-    public Carta(Bitmap bmp, int left, int top, int indice){
+    public Carta(Bitmap bmp, int left, int top, int indice, int indice2){
         setBmp(bmp);
         setAlto(bmp.getHeight());
         setAncho(bmp.getWidth());
         setLeft(left);
         setTop(top);
         setIndiceCarta(indice);
+        setId(indice2);
+    }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getIndiceCarta() {
