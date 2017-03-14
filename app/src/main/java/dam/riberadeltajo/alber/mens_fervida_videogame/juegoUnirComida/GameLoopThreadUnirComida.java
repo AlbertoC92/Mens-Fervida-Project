@@ -13,7 +13,7 @@ public class GameLoopThreadUnirComida extends Thread{
         setGameView(gameView);
         setRunning(false);
     }
-    //
+    ///
     public void setGameView(GameViewUnirComida gameView) {
         this.gameView = gameView;
     }
