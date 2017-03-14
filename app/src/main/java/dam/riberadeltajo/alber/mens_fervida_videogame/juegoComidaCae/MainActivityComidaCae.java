@@ -45,10 +45,10 @@ public class MainActivityComidaCae extends Activity {
                 finish();
             }
 
-            if(resultCode == RESULT_CANCELED){
+            /*if(resultCode == RESULT_CANCELED){
                 Toast.makeText(this,"Has vuelto",Toast.LENGTH_LONG).show();
                 finish();
-            }
+            }*/
         }
     }
 
