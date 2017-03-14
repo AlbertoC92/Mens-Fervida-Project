@@ -19,7 +19,7 @@
     <string name="text_salir">Are you sure?</string>
     <string name="text_win">Congratulations</string>
 
-    <string name="instrucciones_juego"></string>
-    <string name="puntuacionCartas"></string>
-    <string name="instCartas"></string>
+    <string name="instrucciones_juego"> - Instructions - </string>
+    <string name="puntuacionCartas">Best score: </string>
+    <string name="instCartas">Find the couples of cards to get points in the least number of tries. Points will be deducted if you make a mistake.</string>
 </resources>
