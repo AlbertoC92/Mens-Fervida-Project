@@ -14,7 +14,7 @@ import com.example.alber.mens_fervida_videogame.*;
 public class MainArcadeComidaCae extends Activity{
     private GameViewComidaCae gameView;
     private MediaPlayer musica;
-    private int puntos;
+    //private int puntos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,16 +42,14 @@ public class MainArcadeComidaCae extends Activity{
         this.onDestroy();
     }
 
-    //public onSurfaceDestroyed
-
-    /*public void onDestroy(){
+    public void onDestroy(){
         super.onDestroy();
         //android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     public void onStop(){
         super.onStop();
-    }*/
+    }
 
     public void fin(int puntos){
         //super.onDestroy();

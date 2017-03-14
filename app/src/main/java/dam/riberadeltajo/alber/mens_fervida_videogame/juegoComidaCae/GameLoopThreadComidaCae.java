@@ -43,7 +43,10 @@ public class GameLoopThreadComidaCae extends Thread{
             try{
                 canvas=getGameView().getHolder().lockCanvas();
                 synchronized(getGameView()){
-                    getGameView().draw(canvas);
+                    if(canvas!=null){
+                        getGameView().draw(canvas);
+                    }
+                    //getGameView().draw(canvas);
                 }
             }finally{
                 if(canvas!=null){
