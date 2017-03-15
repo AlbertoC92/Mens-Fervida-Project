@@ -14,16 +14,18 @@ import android.widget.Button;
 
 import com.example.alber.mens_fervida_videogame.R;
 
+import dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.ActividadPrincipal;
+
 /**
- * Created by Dani on 03/02/2017.
+ * Created by alber on 15/03/2017.
  */
 
-public class DialogJuegoTres extends Dialog implements View.OnClickListener{
+public class DialogJuego5 extends Dialog implements View.OnClickListener {
     private Context mContext;
     private Activity activity;
-    private Button btnSiguiente,btnAnterior, boton;
+    private Button btnAnterior,btnJugar;
 
-    public DialogJuegoTres(Context context, int themeResId, Activity activity) {
+    public DialogJuego5(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
         mContext=context;
         this.activity=activity;
@@ -48,25 +50,23 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_dialog_juego3);
+        setContentView(R.layout.layout_dialog_juego5);
         btnAnterior=(Button) findViewById(R.id.btn_juego3_anterior);
         btnAnterior.setOnClickListener(this);
-        btnSiguiente=(Button)findViewById(R.id.btn_juego3_siguiente);
-        btnSiguiente.setOnClickListener(this);
-        boton = (Button)findViewById(R.id.btnNave);
-        boton.setOnClickListener(new View.OnClickListener() {
+        btnJugar = (Button)findViewById(R.id.btnExplorador);
+        btnJugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                jugarNaves();
+                jugarExplorador();
             }
         });
 
 
     }
 
-    private void jugarNaves() {
+    public void jugarExplorador(){
         if(((MenuArcades)mContext).puedeJugar()) {
-            Intent intent = new Intent(activity, dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves.MenuPrincipal.class);
+            Intent intent = new Intent(activity, ActividadPrincipal.class);
             activity.startActivity(intent);
         }
     }
@@ -74,11 +74,6 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btn_juego3_siguiente:
-                //getWindow().getAttributes().windowAnimations = R.style.PanelNivelUno;     //Esto está aqui por el tema de las animaciones, estaba haciendo pruebas
-                ((MenuArcades)activity).juego4.show();
-                this.dismiss();
-                break;
             case R.id.btn_juego3_anterior:
                 //getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;    //Pero hace cosas raras, no funciona bien
                 ((MenuArcades)activity).juego2.show();
