@@ -86,6 +86,6 @@ public class MenuArcades extends Activity implements View.OnClickListener{
             i.putExtra("action", AudioService.START);
             startService(i);
         }
-        estrellas.setText(String.format("%.2f", Jugador.getInstance().getEstrellas()));
+        estrellas.setText(String.format("%.1f", Jugador.getInstance().getEstrellas()));
     }
 }

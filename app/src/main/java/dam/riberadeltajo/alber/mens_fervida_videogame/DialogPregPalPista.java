@@ -168,7 +168,7 @@ public class DialogPregPalPista extends Dialog implements View.OnClickListener, 
     }
 
     public void comprobarPregunta(){
-        if(respuesta.getText().toString().equals("") || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getWord())){
+        if(respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getWord())){
             ((ActivityPregunta)mContext).preguntaAcertada();
             this.dismiss();
         }

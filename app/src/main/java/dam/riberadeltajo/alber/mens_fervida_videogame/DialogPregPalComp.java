@@ -65,7 +65,7 @@ public class DialogPregPalComp extends Dialog implements View.OnClickListener, D
 
     }
     public void comprobarPregunta(){
-        if(respuesta.getText().toString().equals("") || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getTl1()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getTl2()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getTl3())){
+        if(respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getTl1()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getTl2()) || respuesta.getText().toString().trim().toUpperCase().equals(((ActivityPregunta)mContext).pregunta.getTl3())){
             ((ActivityPregunta)mContext).preguntaAcertada();
             this.dismiss();
         }

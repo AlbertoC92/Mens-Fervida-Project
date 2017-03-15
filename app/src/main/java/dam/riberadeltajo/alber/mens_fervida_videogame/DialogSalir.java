@@ -64,6 +64,7 @@ public class DialogSalir extends Dialog implements View.OnClickListener{
     @Override
     public void onBackPressed() {
         this.dismiss();
+        ((MenuNivelesActivity)mContext).onResume();
     }
 
     @Override
