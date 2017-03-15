@@ -23,7 +23,6 @@ public class RecordUnirComida extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record_unircomida);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         prefe=getSharedPreferences("puntos",Context.MODE_PRIVATE);

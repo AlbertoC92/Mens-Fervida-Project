@@ -20,7 +20,6 @@ public class InstruccionesUnirComida extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instrucciones_unircomida);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         face= Typeface.createFromAsset(getAssets(), "fonts/some_time_later.otf");

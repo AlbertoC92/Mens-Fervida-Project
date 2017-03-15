@@ -46,7 +46,6 @@ public class PartidaUnirComida extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partida_unircomida);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         display = getWindowManager().getDefaultDisplay();
