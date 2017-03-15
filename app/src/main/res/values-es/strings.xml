@@ -31,7 +31,7 @@
     <!--  Cadenas de UnirComida(HealthLink)  -->
     <string name="jugar">jugar</string>
     <string name="instrucciones">instrucciones</string>
-    <string name="record">record</string>
+    <string name="recordUnirComida">record</string>
     <string name="elrecord_es">El record es </string>
     <string name="puntos">puntos</string>
     <string name="puntuacion">PuntuaciÃ³n</string>

@@ -125,7 +125,7 @@
                                 android:layout_width="0dp" />
 
                             <TextView
-                                android:text="@string/record"
+                                android:text="@string/recordUnirComida"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:id="@+id/textView20"

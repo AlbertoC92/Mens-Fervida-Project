@@ -102,7 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:onClick="abrirRecord"
-                android:text="@string/record"
+                android:text="@string/recordUnirComida"
                 android:textColor="@android:color/white"
                 android:textSize="24dp" />
 
