@@ -59,7 +59,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/imageView3"
                     android:layout_weight="1"
-                    android:background="@drawable/fondo_res" />
+                    android:background="@drawable/imagen_juego_naves" />
             </LinearLayout>
 
             <LinearLayout
