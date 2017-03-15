@@ -77,6 +77,7 @@ public class MenuArcades extends Activity implements View.OnClickListener{
     @Override
     protected void onResume() {
         super.onResume();
+        Jugador.getInstance(this).cargarSharedPreferences();
         if(Jugador.getInstance().isMusicaPlaying()){
             Intent i = new Intent(this, AudioService.class);
             i.putExtra("action", AudioService.START);
