@@ -34,12 +34,12 @@
     <string name="recordUnirComida">record</string>
     <string name="elrecord_es">El record es </string>
     <string name="puntos">puntos</string>
-    <string name="puntuacion">PuntuaciÃ³n</string>
-    <string name="instrucciones1">DeberÃ¡s juntar comida saludable para sumar puntos.</string>
-    <string name="instrucciones2">Â¡Pero cuidado!</string>
-    <string name="instrucciones3">Si juntas comida no saludable tus puntos bajarÃ¡n.</string>
+    <string name="puntuacion">Puntuacion</string>
+    <string name="instrucciones1">Deberas juntar comida saludable para sumar puntos.</string>
+    <string name="instrucciones2">¡Pero cuidado!</string>
+    <string name="instrucciones3">Si juntas comida no saludable tus puntos bajaran!</string>
     <string name="instrucciones4">Toca con el dedo para elegir cuÃ¡l quieres unir con otro alimento del mismo tipo.</string>
-    <string name="instrucciones5">Â¡Suerte!</string>
+    <string name="instrucciones5">¡Suerte!</string>
     <string name="popup">Has conseguido</string>
 
 
