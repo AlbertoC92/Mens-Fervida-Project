@@ -44,6 +44,8 @@
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.PartidaUnirComida"></activity>
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.InstruccionesUnirComida"></activity>
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.RecordUnirComida"></activity>
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves.ActividadJuego"></activity>
+        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves.MenuPrincipal"></activity>
     </application>
 
 </manifest>

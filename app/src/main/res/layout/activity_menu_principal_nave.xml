@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_inicio"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="8"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MenuPrincipal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgNube"
+            android:src="@drawable/nube"
+            android:visibility="invisible"
+            android:paddingBottom="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        tools:targetApi="ice_cream_sandwich"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/backtexto">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/background_light"
+            android:id="@+id/instrucciones"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:text="@string/instrucciones"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="normal|bold" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        tools:targetApi="ice_cream_sandwich" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgNaveDer"
+            android:visibility="invisible"
+            android:src="@drawable/nave_der"
+            android:layout_above="@+id/btn_comenzar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:targetApi="ice_cream_sandwich" />
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:weightSum="12">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:targetApi="ice_cream_sandwich"
+                android:layout_weight="2"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Comenzar"
+                android:paddingBottom="7dp"
+                android:textColor="@android:color/background_light"
+                android:id="@+id/btn_comenzar"
+                android:background="@drawable/boton_comienzo"
+                android:layout_weight="8" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            tools:targetApi="ice_cream_sandwich" />
+
+    </LinearLayout>
+
+</LinearLayout>

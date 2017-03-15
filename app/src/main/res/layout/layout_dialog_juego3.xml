@@ -74,7 +74,7 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/button15"
+                    android:id="@+id/btn_jugar_nave"
                     android:layout_weight="7.5"
                     android:background="@drawable/boton"
                     android:text="Jugar"

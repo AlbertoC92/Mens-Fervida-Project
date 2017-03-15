@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,6 +16,9 @@ import android.widget.Button;
 
 import com.example.alber.mens_fervida_videogame.R;
 
+import dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas;
+import dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves.*;
+
 /**
  * Created by Dani on 03/02/2017.
  */
@@ -22,7 +26,7 @@ import com.example.alber.mens_fervida_videogame.R;
 public class DialogJuegoTres extends Dialog implements View.OnClickListener{
     private Context mContext;
     private Activity activity;
-    private Button btnSiguiente,btnAnterior;
+    private Button btnSiguiente,btnAnterior, boton;
 
     public DialogJuegoTres(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
@@ -54,8 +58,22 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener{
         btnAnterior.setOnClickListener(this);
         btnSiguiente=(Button)findViewById(R.id.btn_juego3_siguiente);
         btnSiguiente.setOnClickListener(this);
+        boton = (Button)findViewById(R.id.btn_jugar_nave);
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jugarNaves();
+            }
+        });
 
 
+    }
+
+    private void jugarNaves() {
+        if(((MenuArcades)mContext).puedeJugar()) {
+            Intent intent = new Intent(activity, dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves.MenuPrincipal.class);
+            activity.startActivity(intent);
+        }
     }
 
     @Override
