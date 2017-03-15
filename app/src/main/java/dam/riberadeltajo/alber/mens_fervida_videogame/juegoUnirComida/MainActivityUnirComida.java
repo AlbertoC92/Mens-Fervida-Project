@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import com.example.alber.mens_fervida_videogame.*;
 
@@ -25,6 +26,7 @@ public class MainActivityUnirComida extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_unircomida);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         face= Typeface.createFromAsset(getAssets(), "fonts/some_time_later.otf");
         btnJugar=(Button)findViewById(R.id.btnJugar);

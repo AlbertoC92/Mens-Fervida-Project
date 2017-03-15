@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import com.example.alber.mens_fervida_videogame.*;
 
@@ -21,6 +23,8 @@ public class RecordUnirComida extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record_unircomida);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         prefe=getSharedPreferences("puntos",Context.MODE_PRIVATE);
         face=Typeface.createFromAsset(getAssets(), "fonts/some_time_later.otf");

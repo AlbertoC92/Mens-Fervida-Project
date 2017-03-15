@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import com.example.alber.mens_fervida_videogame.*;
 
@@ -18,6 +20,8 @@ public class InstruccionesUnirComida extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instrucciones_unircomida);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         face= Typeface.createFromAsset(getAssets(), "fonts/some_time_later.otf");
         tvTituloInstrucciones=(TextView)findViewById(R.id.tvTituloInstrucciones);

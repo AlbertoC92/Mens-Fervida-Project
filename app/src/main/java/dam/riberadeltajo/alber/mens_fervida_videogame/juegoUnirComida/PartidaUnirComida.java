@@ -11,6 +11,8 @@ import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.view.Display;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
@@ -44,6 +46,8 @@ public class PartidaUnirComida extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_partida_unircomida);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//Línea para ocultar el titulo
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         display = getWindowManager().getDefaultDisplay();
         ancho=display.getWidth();
