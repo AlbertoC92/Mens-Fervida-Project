@@ -68,7 +68,7 @@ public class MainActivityComidaCae extends Activity {
                     guardar();
                     txtRecord.setText(String.valueOf(puntuacion));
                 }
-                String mensaje=String.format("Has obtenido %d puntos",puntuacion);
+                String mensaje=String.format("Has obtenido %d puntos",puntos);
 
                 Toast.makeText(this,mensaje,Toast.LENGTH_LONG).show();
             }
