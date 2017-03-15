@@ -23,7 +23,8 @@ public class GameViewComidaCae extends SurfaceView {
     private MainArcadeComidaCae actividad;
     private SurfaceHolder holder;
     private Bitmap cereza,zanahoria,naranja,platano,ciruela,melocoton,uva,limon,pera,palote,paloteDer,tarta,tartaIzq,gelatina,gelatinaIzq,fondo,panel,cruz1,cruz2,cruz3,marcador;
-    private Bitmap panelTapado1, panelTapado2, panelTapado3, panelTapado4;
+    private Bitmap cereza_escalada,zanahoria_escalada,naranja_escalada,palote_escalada,tarta_escalada,pera_escalada,platano_escalada,
+            melocoton_escalada,gelatinaIzq_escalada,tartaIzq_escalada,limon_escalada,ciruela_escalada,uva_escalada,paloteDer_escalada,gelatina_escalada ;
     private ArrayList<SpriteComidaCae> listaFrutasCentro= new ArrayList<SpriteComidaCae>();
     private ArrayList<SpriteComidaCae> listaFrutasIzq= new ArrayList<SpriteComidaCae>();
     private ArrayList<SpriteComidaCae> listaFrutasDer= new ArrayList<SpriteComidaCae>();
@@ -34,15 +35,15 @@ public class GameViewComidaCae extends SurfaceView {
     private int vidas=3;
     private int puntos=0;
     private boolean fin=false;
-    private long crono;         //CAMBIADO
-    private long inicio;        //CAMBIADO
+    private long crono;
+    private long inicio;
 
 
     public GameViewComidaCae(Context context){
         super(context);
         loop=new GameLoopThreadComidaCae(this);
         actividad=(MainArcadeComidaCae)context;
-        this.inicio=System.currentTimeMillis();  //CAMBIADO
+        this.inicio=System.currentTimeMillis();
         frutas_minuto=20;
         holder=getHolder();
         holder.addCallback(new SurfaceHolder.Callback() {
@@ -80,11 +81,6 @@ public class GameViewComidaCae extends SurfaceView {
         cruz3=BitmapFactory.decodeResource(getResources(),R.drawable.cc_cruz);
         marcador=BitmapFactory.decodeResource(getResources(),R.drawable.cc_marcador);
 
-        //panelTapado1=BitmapFactory.decodeResource(getResources(),R.drawable.panel);
-        //panelTapado2=BitmapFactory.decodeResource(getResources(),R.drawable.panel);
-        //panelTapado3=BitmapFactory.decodeResource(getResources(),R.drawable.panel);
-        //panelTapado4=BitmapFactory.decodeResource(getResources(),R.drawable.panel);
-
     }
 
     public int getVidas() {
@@ -102,85 +98,113 @@ public class GameViewComidaCae extends SurfaceView {
     private void cargaSpriteCentro(){//metodo para cargar las imagenes (creo que habra que poner un metodo de carga por cada columna)
         frames_para_nueva_fruta_Centro=loop.FPS*10/frutas_minuto;// tiempo que va a tardar en salir al inicio, al decrementar el valor numérico, antes aparece
         cereza= BitmapFactory.decodeResource(getResources(),R.drawable.cc_cereza);
+        cereza_escalada=cereza.createScaledBitmap(cereza,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         zanahoria=BitmapFactory.decodeResource(getResources(),R.drawable.cc_zanahoria);
+        zanahoria_escalada=zanahoria.createScaledBitmap(zanahoria,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         naranja=BitmapFactory.decodeResource(getResources(),R.drawable.cc_naranja);
+        naranja_escalada=naranja.createScaledBitmap(naranja,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         palote=BitmapFactory.decodeResource(getResources(),R.drawable.cc_palote);
+        palote_escalada=palote.createScaledBitmap(palote,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         tarta=BitmapFactory.decodeResource(getResources(),R.drawable.cc_tarta);
+        tarta_escalada=tarta.createScaledBitmap(tarta,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
     }
 
     private void cargaSpriteIzq(){
         frames_para_nueva_fruta_Izq=loop.FPS*10/frutas_minuto;
         pera=BitmapFactory.decodeResource(getResources(),R.drawable.cc_pera);
+        pera_escalada=pera.createScaledBitmap(pera,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         platano=BitmapFactory.decodeResource(getResources(),R.drawable.cc_platano);
+        platano_escalada=platano.createScaledBitmap(platano,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         melocoton=BitmapFactory.decodeResource(getResources(),R.drawable.cc_melocoton);
+        melocoton_escalada=melocoton.createScaledBitmap(melocoton,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         gelatinaIzq=BitmapFactory.decodeResource(getResources(),R.drawable.cc_gelatina);
+        gelatinaIzq_escalada=gelatinaIzq.createScaledBitmap(gelatinaIzq,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         tartaIzq=BitmapFactory.decodeResource(getResources(),R.drawable.cc_tarta);
+        tartaIzq_escalada=tartaIzq.createScaledBitmap(tartaIzq,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
     }
 
     private void cargaSpriteDer(){
         frames_para_nueva_fruta_Der=loop.FPS*10/frutas_minuto;
         limon=BitmapFactory.decodeResource(getResources(),R.drawable.cc_limon);
+        limon_escalada=limon.createScaledBitmap(limon,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         ciruela=BitmapFactory.decodeResource(getResources(),R.drawable.cc_ciruela);
+        ciruela_escalada=ciruela.createScaledBitmap(ciruela,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         uva=BitmapFactory.decodeResource(getResources(),R.drawable.cc_uva);
+        uva_escalada=uva.createScaledBitmap(uva,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         paloteDer=BitmapFactory.decodeResource(getResources(),R.drawable.cc_palote);
+        paloteDer_escalada=paloteDer.createScaledBitmap(paloteDer,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
         gelatina=BitmapFactory.decodeResource(getResources(),R.drawable.cc_gelatina);
+        gelatina_escalada=gelatina.createScaledBitmap(gelatina,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
+
     }
 
     private void crearNuevaFrutaCentro(){// Método  que crea e ingresa elementos en el arraylist, dependiendo del numero que salga en el random crea un elemento u otro(habra que hacer un metodo de estos por cada columna).
 
         int randomImg = (int)(Math.random()*5)+1;// a mayor numero elementos menor posibilidad de que salga cada uno
         if(randomImg==1) {
-            listaFrutasCentro.add(new SpriteComidaCae(this, cereza,"bueno",(float)(getWidth()*0.40)));
+            listaFrutasCentro.add(new SpriteComidaCae(this, cereza_escalada,"bueno",(float)(getWidth()*0.40)));
         }
         if(randomImg==2){
-            listaFrutasCentro.add(new SpriteComidaCae(this,tarta,"malo",(float)(getWidth()*0.40)));
+            listaFrutasCentro.add(new SpriteComidaCae(this,tarta_escalada,"malo",(float)(getWidth()*0.40)));
         }
         if(randomImg==3){
-            listaFrutasCentro.add(new SpriteComidaCae(this,naranja,"bueno",(float)(getWidth()*0.40)));
+            listaFrutasCentro.add(new SpriteComidaCae(this,naranja_escalada,"bueno",(float)(getWidth()*0.40)));
         }
         if(randomImg==4){
-            listaFrutasCentro.add(new SpriteComidaCae(this,palote,"malo",(float)(getWidth()*0.40)));
+            listaFrutasCentro.add(new SpriteComidaCae(this,palote_escalada,"malo",(float)(getWidth()*0.40)));
         }
         if(randomImg==5){
-            listaFrutasCentro.add(new SpriteComidaCae(this,zanahoria,"bueno",(float)(getWidth()*0.40)));
+            listaFrutasCentro.add(new SpriteComidaCae(this,zanahoria_escalada,"bueno",(float)(getWidth()*0.40)));
         }
     }
 
     private void crearNuevaFrutaIzq(){
         int randomImg = (int)(Math.random()*5)+1;
         if(randomImg==1){
-            listaFrutasIzq.add(new SpriteComidaCae(this, pera,"bueno",(float)(getWidth()*0.75)));
+            listaFrutasIzq.add(new SpriteComidaCae(this, pera_escalada,"bueno",(float)(getWidth()*0.75)));
         }
         if(randomImg==2){
-            listaFrutasIzq.add(new SpriteComidaCae(this,tartaIzq,"malo",(float)(getWidth()*0.75)));
+            listaFrutasIzq.add(new SpriteComidaCae(this,tartaIzq_escalada,"malo",(float)(getWidth()*0.75)));
         }
         if(randomImg==3){
-            listaFrutasIzq.add(new SpriteComidaCae(this,platano,"bueno",(float)(getWidth()*0.75)));
+            listaFrutasIzq.add(new SpriteComidaCae(this,platano_escalada,"bueno",(float)(getWidth()*0.75)));
         }
         if(randomImg==4){
-            listaFrutasIzq.add(new SpriteComidaCae(this,gelatinaIzq,"malo",(float)(getWidth()*0.75)));
+            listaFrutasIzq.add(new SpriteComidaCae(this,gelatinaIzq_escalada,"malo",(float)(getWidth()*0.75)));
         }
         if(randomImg==5){
-            listaFrutasIzq.add(new SpriteComidaCae(this,melocoton,"bueno",(float)(getWidth()*0.75)));
+            listaFrutasIzq.add(new SpriteComidaCae(this,melocoton_escalada,"bueno",(float)(getWidth()*0.75)));
         }
     }
 
     private void crearNuevaFrutaDer(){
         int randomImg = (int)(Math.random()*5)+1;
         if(randomImg==1){
-            listaFrutasDer.add(new SpriteComidaCae(this, limon,"bueno",(float)(getWidth()*0.10)));
+            listaFrutasDer.add(new SpriteComidaCae(this, limon_escalada,"bueno",(float)(getWidth()*0.10)));
         }
         if(randomImg==2){
-            listaFrutasDer.add(new SpriteComidaCae(this,paloteDer,"malo",(float)(getWidth()*0.10)));
+            listaFrutasDer.add(new SpriteComidaCae(this,paloteDer_escalada,"malo",(float)(getWidth()*0.10)));
         }
         if(randomImg==3){
-            listaFrutasDer.add(new SpriteComidaCae(this,ciruela,"bueno",(float)(getWidth()*0.10)));
+            listaFrutasDer.add(new SpriteComidaCae(this,ciruela_escalada,"bueno",(float)(getWidth()*0.10)));
         }
         if(randomImg==4){
-            listaFrutasDer.add(new SpriteComidaCae(this,gelatina,"malo",(float)(getWidth()*0.10)));
+            listaFrutasDer.add(new SpriteComidaCae(this,gelatina_escalada,"malo",(float)(getWidth()*0.10)));
         }
         if(randomImg==5){
-            listaFrutasDer.add(new SpriteComidaCae(this,uva,"bueno",(float)(getWidth()*0.10)));
+            listaFrutasDer.add(new SpriteComidaCae(this,uva_escalada,"bueno",(float)(getWidth()*0.10)));
         }
 
     }
@@ -250,7 +274,6 @@ public class GameViewComidaCae extends SurfaceView {
             paint.setColor(Color.RED);
             paint.setStrokeWidth(4);
             paint.setTextSize((float) (getWidth() * 0.07));
-            canvas.drawText(String.format("%s",crono),(float)(getWidth()*0.1),(float)(getHeight()*0.5),paint);
             if(crono>20){
                 for(int i=0;i<listaFrutasCentro.size();i++){
                     listaFrutasCentro.get(i).setySpeed(15);
@@ -308,32 +331,25 @@ public class GameViewComidaCae extends SurfaceView {
                 frutas_minuto=40;
             }
             //---------------------- PANEL ,MARCADOR, PUNTUACIÓN Y VIDA -----------------------------------//
-            paint.setColor(Color.RED);
+
 
             paint.setStrokeWidth(4);
             canvas.drawLine(0, (float)(getHeight()*0.55), canvas.getWidth(), (float)(getHeight()*0.55), paint);
             canvas.drawLine(0, (float)(getHeight()*0.65), canvas.getWidth(), (float)(getHeight()*0.65), paint);
-            //canvas.drawBitmap(panel, (float) (getWidth() * 0.02), (float) (getHeight() * 0.655), null); //PINTA EL PANEL
-            canvas.drawBitmap(panel,0,(float) (getHeight() * 0.65), null);                  //ESTA ES LA FORMA PROVISIONAL
-
-            //--Para pintar el panel de abajo
-            /*Paint pincel=new Paint();
-            pincel.setColor(Color.GREEN);
-            canvas.drawRect(0,getWidth(),(float) (getHeight() * 0.65),getHeight(),pincel);*/
-
-            canvas.drawBitmap(marcador, (float) (getWidth() * 0.29), (float) (getHeight() * 0.72), null);
+            canvas.drawBitmap(Bitmap.createScaledBitmap(panel,getWidth(),getHeight(),true), 0, (float) (getHeight() * 0.65), null);
+            canvas.drawText(String.format("%s",crono),(float)(getWidth()*0.1),(float)(getHeight()*0.75),paint);
+            canvas.drawBitmap(Bitmap.createScaledBitmap(marcador,(int)(getWidth()*0.35),(int)(getHeight()*0.1),true), (float) (getWidth() * 0.29), (float) (getHeight() * 0.72), null);
             paint.setTextSize((float) (getWidth() * 0.07));
             canvas.drawText(String.format("%02d", puntos), (float) (getWidth() * 0.45), (float) (getHeight() * 0.785), paint);
-            //canvas.drawText(String.format("%02d",vidas),(float)(getWidth()*0.60),(float)(getHeight()*0.09),paint);
             //------------------------------ Se dibujan las vidas, si no han sido recicladas(eliminadas) se vuelven a dibujar ----- //
             if (!cruz1.isRecycled()) {
-                canvas.drawBitmap(cruz1, (float) (getWidth() * 0.30), (float) (getHeight() * 0.87), null);
+                canvas.drawBitmap(Bitmap.createScaledBitmap(cruz1,(int)(getWidth()*0.1),(int)(getHeight()*0.08),true),(float) (getWidth() * 0.30), (float) (getHeight() * 0.87), null);
             }
             if (!cruz2.isRecycled()) {
-                canvas.drawBitmap(cruz2, (float) (getWidth() * 0.45), (float) (getHeight() * 0.87), null);
+                canvas.drawBitmap(Bitmap.createScaledBitmap(cruz2,(int)(getWidth()*0.1),(int)(getHeight()*0.08),true),(float) (getWidth() * 0.45), (float) (getHeight() * 0.87), null);
             }
             if (!cruz3.isRecycled()) {
-                canvas.drawBitmap(cruz3, (float) (getWidth() * 0.60), (float) (getHeight() * 0.87), null);
+                canvas.drawBitmap(Bitmap.createScaledBitmap(cruz3,(int)(getWidth()*0.1),(int)(getHeight()*0.08),true),(float) (getWidth() * 0.60), (float) (getHeight() * 0.87), null);
             }
 
             // -------------------- Comrpobación de vidas ----------------------//
@@ -432,9 +448,9 @@ public class GameViewComidaCae extends SurfaceView {
 
     private void finalizar(){
         loop.setRunning(false);
-        /*try{
+        try{
             Thread.sleep(1000);
-        }catch(InterruptedException ie){}*/
+        }catch(InterruptedException ie){}
         actividad.fin(puntos);
     }
 
