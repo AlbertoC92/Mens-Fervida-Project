@@ -41,6 +41,9 @@
     <string name="instrucciones4">Toca con el dedo para elegir cuÃ¡l quieres unir con otro alimento del mismo tipo.</string>
     <string name="instrucciones5">¡Suerte!</string>
     <string name="popup">Has conseguido</string>
+    <string name="explicacion1">Dispara a la comida basura. Cuando la hayas eliminado toda, cambiaras de nivel</string>
+    <string name="explicacion2">Presiona los botones de direccion para moverte y presiona A para disparar</string>
+    <string name="maximaScore">Tu maxima puntuacion es de:</string>
 
 
 </resources>

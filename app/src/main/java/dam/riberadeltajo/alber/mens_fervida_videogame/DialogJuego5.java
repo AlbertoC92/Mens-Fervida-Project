@@ -14,15 +14,18 @@ import android.widget.Button;
 
 import com.example.alber.mens_fervida_videogame.R;
 
-import dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.MainActivityUnirComida;
+import dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.ActividadPrincipal;
 
-public class DialogJuegoCuatro extends Dialog implements View.OnClickListener{
+/**
+ * Created by alber on 15/03/2017.
+ */
 
+public class DialogJuego5 extends Dialog implements View.OnClickListener {
     private Context mContext;
     private Activity activity;
-    private Button btnAnterior,btnSiguiente, btnJugar4;
+    private Button btnAnterior,btnJugar;
 
-    public DialogJuegoCuatro(Context context, int themeResId, Activity activity) {
+    public DialogJuego5(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
         mContext=context;
         this.activity=activity;
@@ -47,52 +50,43 @@ public class DialogJuegoCuatro extends Dialog implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dialog_juego_cuatro);
+        setContentView(R.layout.layout_dialog_juego5);
         btnAnterior=(Button) findViewById(R.id.btn_juego3_anterior);
         btnAnterior.setOnClickListener(this);
-        btnJugar4=(Button) findViewById(R.id.btnJugar4);
-        btnJugar4.setOnClickListener(new View.OnClickListener() {
+        btnJugar = (Button)findViewById(R.id.btnExplorador);
+        btnJugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                jugarUnir();
+                jugarExplorador();
             }
         });
-        btnSiguiente=(Button)findViewById(R.id.btn_juego4_siguiente);
-        btnSiguiente.setOnClickListener(this);
 
 
+    }
+
+    public void jugarExplorador(){
+        if(((MenuArcades)mContext).puedeJugar()) {
+            Intent intent = new Intent(activity, ActividadPrincipal.class);
+            activity.startActivity(intent);
+        }
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_juego3_anterior:
-                ((MenuArcades)activity).juego3.show();
-                this.dismiss();
-                break;
-            case R.id.btn_juego4_siguiente:
                 //getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;    //Pero hace cosas raras, no funciona bien
-                ((MenuArcades)activity).juego5.show();
+                ((MenuArcades)activity).juego2.show();
                 this.dismiss();
         }
-
-        }
-
+    }
 
     @Override
     public void onBackPressed() {
         if(this.isShowing()) {
 
             this.dismiss();
-            ((MenuArcades)activity).juego3.show();
-        }
-
-    }
-
-    public void jugarUnir(){
-        if(((MenuArcades)mContext).puedeJugar()) {
-            Intent intent = new Intent(activity, MainActivityUnirComida.class);
-            activity.startActivity(intent);
+            ((MenuArcades)activity).juego2.show();
         }
 
     }

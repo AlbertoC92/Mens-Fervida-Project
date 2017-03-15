@@ -59,7 +59,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/imageView3"
                     android:layout_weight="1"
-                    android:background="@drawable/imagen_juego_naves" />
+                    android:background="@drawable/fondoinicial" />
             </LinearLayout>
 
             <LinearLayout
@@ -74,7 +74,7 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/btnNave"
+                    android:id="@+id/btnExplorador"
                     android:layout_weight="7.5"
                     android:background="@drawable/boton"
                     android:text="Jugar"
@@ -100,13 +100,6 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2" />
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn_juego3_siguiente"
-                    android:layout_weight="4"
-                    android:background="@drawable/boton_siguiente" />
 
             </LinearLayout>
         </LinearLayout>
