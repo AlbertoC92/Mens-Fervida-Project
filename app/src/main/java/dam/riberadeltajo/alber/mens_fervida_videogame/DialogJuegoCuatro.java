@@ -89,7 +89,10 @@ public class DialogJuegoCuatro extends Dialog implements View.OnClickListener, D
     }
 
     public void jugarUnir(){
-        Intent intent = new Intent(activity, MainActivityUnirComida.class);
-        activity.startActivity(intent);
+        if(((MenuArcades)mContext).puedeJugar()) {
+            Intent intent = new Intent(activity, MainActivityUnirComida.class);
+            activity.startActivity(intent);
+        }
+
     }
 }
