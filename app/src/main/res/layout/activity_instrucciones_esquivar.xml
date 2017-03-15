@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:background="@drawable/fondo" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="332dp"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.44" />
+
+            <TextView
+                android:layout_width="217dp"
+                android:layout_height="match_parent"
+                android:id="@+id/tvResultadoInstrucciones"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:textColor="?android:attr/colorActivatedHighlight"
+                android:layout_weight="0.16" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.24" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

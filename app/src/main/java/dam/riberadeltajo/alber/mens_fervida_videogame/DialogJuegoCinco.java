@@ -3,29 +3,27 @@ package dam.riberadeltajo.alber.mens_fervida_videogame;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.alber.mens_fervida_videogame.R;
 
-import dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas;
+import dam.riberadeltajo.alber.mens_fervida_videogame.juegoEsquivar.MainActivity;
 import dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.MainActivityUnirComida;
 
-public class DialogJuegoCuatro extends Dialog implements View.OnClickListener{
+public class DialogJuegoCinco extends Dialog implements View.OnClickListener{
 
     private Context mContext;
     private Activity activity;
-    private Button btnAnterior,btnSiguiente, btnJugar4;
+    private Button btnAnterior, btnJugar4;
 
-    public DialogJuegoCuatro(Context context, int themeResId, Activity activity) {
+    public DialogJuegoCinco(Context context, int themeResId, Activity activity) {
         super(context, themeResId);
         mContext=context;
         this.activity=activity;
@@ -50,16 +48,14 @@ public class DialogJuegoCuatro extends Dialog implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dialog_juego_cuatro);
-        btnAnterior=(Button) findViewById(R.id.btn_juego4_anterior);
+        setContentView(R.layout.layout_dialog_juego5);
+        btnAnterior=(Button) findViewById(R.id.btn_juego3_anterior);
         btnAnterior.setOnClickListener(this);
-        btnSiguiente=(Button) findViewById(R.id.btn_juego4_siguiente);
-        btnSiguiente.setOnClickListener(this);
-        btnJugar4=(Button) findViewById(R.id.btnJugar4);
+        btnJugar4=(Button) findViewById(R.id.btn_jugar_esquivar);
         btnJugar4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                jugarUnir();
+                jugarEsquivar();
             }
         });
 
@@ -70,14 +66,10 @@ public class DialogJuegoCuatro extends Dialog implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btn_juego4_anterior:
-                ((MenuArcades)activity).juego3.show();
+            case R.id.btn_juego3_anterior:
+                ((MenuArcades)activity).juego4.show();
                 this.dismiss();
                 break;
-            case R.id.btn_juego4_siguiente:
-                //getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;    //Pero hace cosas raras, no funciona bien
-                ((MenuArcades)activity).juego5.show();
-                this.dismiss();
 
         }
     }
@@ -87,14 +79,14 @@ public class DialogJuegoCuatro extends Dialog implements View.OnClickListener{
         if(this.isShowing()) {
 
             this.dismiss();
-            ((MenuArcades)activity).juego3.show();
+            ((MenuArcades)activity).juego4.show();
         }
 
     }
 
-    public void jugarUnir(){
+    public void jugarEsquivar(){
         if(((MenuArcades)mContext).puedeJugar()) {
-            Intent intent = new Intent(activity, MainActivityUnirComida.class);
+            Intent intent = new Intent(activity, MainActivity.class);
             activity.startActivity(intent);
         }
 

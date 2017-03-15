@@ -59,7 +59,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/imageView3"
                     android:layout_weight="1"
-                    android:background="@drawable/preview_juegounircomida" />
+                    android:background="@drawable/imagen_juego_naves" />
             </LinearLayout>
 
             <LinearLayout
@@ -74,12 +74,12 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/btnJugar4"
+                    android:id="@+id/btn_jugar_esquivar"
                     android:layout_weight="7.5"
                     android:background="@drawable/boton"
                     android:text="Jugar"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="@dimen/tamano_texto_titulos" />
+                    android:textSize="@dimen/tamano_texto_titulos"
+                    android:textColor="@android:color/background_light" />
             </LinearLayout>
 
             <LinearLayout
@@ -92,20 +92,14 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/btn_juego4_anterior"
+                    android:id="@+id/btn_juego3_anterior"
                     android:layout_weight="4"
                     android:background="@drawable/boton_previo" />
 
                 <Space
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="2" />
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn_juego4_siguiente"
-                    android:layout_weight="4"
-                    android:background="@drawable/boton_siguiente" />
 
             </LinearLayout>
         </LinearLayout>
