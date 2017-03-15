@@ -52,6 +52,7 @@ public class MainActivityComidaCae extends Activity {
         });
     }
 
+
     private void pasarAljuego(){
         Intent inte=new Intent(this,MainArcadeComidaCae.class);
         startActivityForResult(inte,1);

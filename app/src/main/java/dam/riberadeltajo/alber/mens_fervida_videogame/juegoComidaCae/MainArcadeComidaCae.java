@@ -42,14 +42,16 @@ public class MainArcadeComidaCae extends Activity{
         this.onDestroy();
     }
 
-    public void onDestroy(){
+    //public onSurfaceDestroyed
+
+    /*public void onDestroy(){
         super.onDestroy();
         //android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     public void onStop(){
         super.onStop();
-    }
+    }*/
 
     public void fin(int puntos){
         //super.onDestroy();

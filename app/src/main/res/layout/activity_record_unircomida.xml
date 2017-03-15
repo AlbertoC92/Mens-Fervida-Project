@@ -47,5 +47,4 @@
             android:layout_weight="0.22"/>
 
     </LinearLayout>
-
 </RelativeLayout>

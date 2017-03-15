@@ -27,4 +27,20 @@
 
     <string name="inst_comidaCae">Debes tocar solamente la comida que sea saludable, tienes 3 vidas
                                     si coges una comida no saludable o se escapa una saludable ¡Perderas una vida!</string>
+
+    <!--  Cadenas de UnirComida(HealthLink)  -->
+    <string name="jugar">jugar</string>
+    <string name="instrucciones">instrucciones</string>
+    <string name="record">record</string>
+    <string name="elrecord_es">El record es </string>
+    <string name="puntos">puntos</string>
+    <string name="puntuacion">PuntuaciÃ³n</string>
+    <string name="instrucciones1">DeberÃ¡s juntar comida saludable para sumar puntos.</string>
+    <string name="instrucciones2">Â¡Pero cuidado!</string>
+    <string name="instrucciones3">Si juntas comida no saludable tus puntos bajarÃ¡n.</string>
+    <string name="instrucciones4">Toca con el dedo para elegir cuÃ¡l quieres unir con otro alimento del mismo tipo.</string>
+    <string name="instrucciones5">Â¡Suerte!</string>
+    <string name="popup">Has conseguido</string>
+
+
 </resources>

@@ -123,6 +123,8 @@ public class GameView extends SurfaceView implements View.OnTouchListener{
             if(carta.getId() != cartaDescubierta.getId()){
                 // Se dibuja la carta seleccionada
                 canv.drawBitmap(carta.getBmp(), carta.getLeft(), carta.getTop(), null);
+                // Se dibuja la carta seleccionada
+                canv.drawBitmap(carta.getBmp(), carta.getLeft(), carta.getTop(), null);
 
                 // Si coinciden se suman puntos y se agrega al array auxiliar de cartas adivinadas
                 if (carta.getIndiceCarta() == cartaDescubierta.getIndiceCarta()) {

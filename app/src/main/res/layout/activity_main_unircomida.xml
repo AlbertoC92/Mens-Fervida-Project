@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/fondoprincipal_unircomida"
-    tools:context="com.example.alber.mens_fervida_videogame.dam.example.alber.mens_fervida_videogame.MainActivityUnirComida">
+    tools:context="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.MainActivityUnirComida">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="38dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
+        >
 
         <LinearLayout
             android:orientation="horizontal"
@@ -40,11 +40,11 @@
                 android:id="@+id/btnJugar"
                 android:background="@mipmap/botonunircomida"
                 android:onClick="abrirJugar"
-                android:text="@string/jugar"
                 android:textAlignment="center"
                 android:textSize="24dp"
                 android:textColor="@android:color/white"
-                android:layout_weight="0.25" />
+                android:layout_weight="0.25"
+                android:text="@string/jugar" />
 
             <Space
                 android:layout_width="89dp"
@@ -113,6 +113,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 </RelativeLayout>
