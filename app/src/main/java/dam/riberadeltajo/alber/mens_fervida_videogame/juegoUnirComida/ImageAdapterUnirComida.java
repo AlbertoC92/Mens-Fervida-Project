@@ -88,22 +88,29 @@ public class ImageAdapterUnirComida extends BaseAdapter {
     }
 
     public int borrarElemento(int position){
-
         if(position-8>=0 && getItem(position)==getItem(position-8)){
             enlaces++;
             imagenesIniciales.remove(position-8);
+            if(position>0)
+                position--;
         }
         if(position-1>=0 && getItem(position)==getItem(position-1)){
             enlaces++;
             imagenesIniciales.remove(position-1);
+            if(position>0)
+                position--;
         }
         if(position+1<=imagenesIniciales.size()-1 && getItem(position)==getItem(position+1)){
             enlaces++;
             imagenesIniciales.remove(position+1);
+            if(position>0)
+                position--;
         }
         if(position+8<=imagenesIniciales.size()-1 && getItem(position)==getItem(position+8)){
             enlaces++;
             imagenesIniciales.remove(position+8);
+            if(position>0)
+                position--;
         }
 
         imagenesIniciales.remove(position);

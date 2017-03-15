@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.alber.mens_fervida_videogame.R;
@@ -17,6 +18,7 @@ import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
 public class MenuArcades extends Activity implements View.OnClickListener{
     Dialog juego1, juego2, juego3, juego4;
     Button volver;
+    TextView estrellas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MenuArcades extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_arcades);
         volver=(Button)findViewById(R.id.btn_atras_juegos);
         volver.setOnClickListener(this);
+        estrellas= (TextView) findViewById(R.id.txt_estrellas_arcade);
         cargarPaneles();
     }
 
@@ -83,5 +86,6 @@ public class MenuArcades extends Activity implements View.OnClickListener{
             i.putExtra("action", AudioService.START);
             startService(i);
         }
+        estrellas.setText(String.format("%.2f", Jugador.getInstance().getEstrellas()));
     }
 }

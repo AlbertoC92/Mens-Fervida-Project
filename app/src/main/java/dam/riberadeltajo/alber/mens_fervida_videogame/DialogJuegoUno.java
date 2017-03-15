@@ -18,7 +18,7 @@ import com.example.alber.mens_fervida_videogame.R;
 
 import dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae.MainActivityComidaCae;
 
-public class DialogJuegoUno extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
+public class DialogJuegoUno extends Dialog implements View.OnClickListener{
     private Context mContext;
     private Activity activity;
     private Button btnSiguiente;
@@ -40,7 +40,7 @@ public class DialogJuegoUno extends Dialog implements View.OnClickListener, Dial
         int width = size.x;
         int height = size.y;
         getWindow().setLayout((int)(size.x*0.9), (int)(size.y*0.7));
-        //getWindow().getAttributes().windowAnimations = R.style.PanelNivelUno;
+        getWindow().getAttributes().windowAnimations = R.style.PanelPregunta;
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN );
@@ -52,7 +52,6 @@ public class DialogJuegoUno extends Dialog implements View.OnClickListener, Dial
         setContentView(R.layout.layout_dialog_juego1);
         btnSiguiente=(Button) findViewById(R.id.btn_juego1_siguiente);
         btnSiguiente.setOnClickListener(this);
-        this.setOnKeyListener(this);
         btJugar=(Button)findViewById(R.id.btn_jugar1);
         btJugar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,14 +83,14 @@ public class DialogJuegoUno extends Dialog implements View.OnClickListener, Dial
 
 
 
+
     @Override
-    public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {
-        if (i == KeyEvent.KEYCODE_BACK) {
-            /*if(this.isShowing()) {
-                activity.finish();
-                this.dismiss();
-            }*/
+    public void onBackPressed() {
+        if(this.isShowing()) {
+
+            this.dismiss();
+            activity.finish();
         }
-        return true;
+
     }
 }

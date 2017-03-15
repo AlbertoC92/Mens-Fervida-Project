@@ -19,7 +19,7 @@ import com.example.alber.mens_fervida_videogame.R;
 import dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas;
 import dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.MainActivityUnirComida;
 
-public class DialogJuegoCuatro extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
+public class DialogJuegoCuatro extends Dialog implements View.OnClickListener{
 
     private Context mContext;
     private Activity activity;
@@ -41,7 +41,7 @@ public class DialogJuegoCuatro extends Dialog implements View.OnClickListener, D
         int width = size.x;
         int height = size.y;
         getWindow().setLayout((int)(size.x*0.9), (int)(size.y*0.7));
-        //getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;
+        getWindow().getAttributes().windowAnimations = R.style.PanelPregunta;
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN );
@@ -61,7 +61,6 @@ public class DialogJuegoCuatro extends Dialog implements View.OnClickListener, D
             }
         });
 
-        this.setOnKeyListener(this);
 
 
     }
@@ -78,14 +77,13 @@ public class DialogJuegoCuatro extends Dialog implements View.OnClickListener, D
     }
 
     @Override
-    public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {
-        if (i == KeyEvent.KEYCODE_BACK) {
-            /*if(this.isShowing()) {
-                activity.finish();
-                this.dismiss();
-            }*/
+    public void onBackPressed() {
+        if(this.isShowing()) {
+
+            this.dismiss();
+            ((MenuArcades)activity).juego3.show();
         }
-        return true;
+
     }
 
     public void jugarUnir(){

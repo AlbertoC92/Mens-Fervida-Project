@@ -25,7 +25,7 @@ import static android.app.Activity.RESULT_OK;
  * Created by Dani on 03/02/2017.
  */
 
-public class DialogJuegoDos extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
+public class DialogJuegoDos extends Dialog implements View.OnClickListener{
     private Context mContext;
     private Activity activity;
     private Button btnSiguiente,btnAnterior;
@@ -43,6 +43,7 @@ public class DialogJuegoDos extends Dialog implements View.OnClickListener, Dial
     public void quitarFondoRedimensionarEfectos(){
         this.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         Display display = activity.getWindowManager().getDefaultDisplay();
+        getWindow().getAttributes().windowAnimations = R.style.PanelPregunta;
         Point size = new Point();
         display.getSize(size);
         int width = size.x;
@@ -63,14 +64,12 @@ public class DialogJuegoDos extends Dialog implements View.OnClickListener, Dial
         btnAnterior.setOnClickListener(this);
         btnSiguiente.setOnClickListener(this);
         boton = (Button)findViewById(R.id.btnJuegoCarta);
-        this.setOnKeyListener(this);
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 jugarCartas();
             }
         });
-        this.setOnKeyListener(this);
     }
 
     public void jugarCartas(){
@@ -96,13 +95,12 @@ public class DialogJuegoDos extends Dialog implements View.OnClickListener, Dial
     }
 
     @Override
-    public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {
-        if (i == KeyEvent.KEYCODE_BACK) {
-            /*if(this.isShowing()) {
-                activity.finish();
-                this.dismiss();
-            }*/
+    public void onBackPressed() {
+        if(this.isShowing()) {
+
+            this.dismiss();
+            ((MenuArcades)activity).juego1.show();
         }
-        return true;
+
     }
 }

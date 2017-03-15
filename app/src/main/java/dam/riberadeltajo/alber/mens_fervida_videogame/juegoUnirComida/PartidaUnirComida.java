@@ -8,7 +8,6 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AlertDialog;
 import android.view.Display;
 import android.view.View;
 import android.view.Window;
@@ -106,7 +105,7 @@ public class PartidaUnirComida extends Activity {
     private void finalizar(View view) {
         int puntuacion;
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        /*AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("\t"+getResources().getString(R.string.popup)+" "+String.valueOf(puntos)
                 +" "+getResources().getString(R.string.puntos))
                 .setTitle("RESULTADO")
@@ -118,7 +117,7 @@ public class PartidaUnirComida extends Activity {
                             }
                         });
         AlertDialog alert = builder.create();
-        alert.show();
+        alert.show();*/
 
         SharedPreferences preferencias=getSharedPreferences("puntos",Context.MODE_PRIVATE);
         Editor editor=preferencias.edit();

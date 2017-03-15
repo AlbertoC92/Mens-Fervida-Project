@@ -33,26 +33,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2" />
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/panel_dolar"
-                android:layout_weight="6"
-                android:weightSum="10">
-
-                <TextView
-                    android:text="500"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView17"
-                    android:layout_weight="10"
-                    android:textAlignment="center"
-                    android:textSize="@dimen/tamano_texto_titulos"
-                    android:padding="10dp" />
-
-            </LinearLayout>
-
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -88,14 +68,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:weightSum="10"
-                android:padding="5dp">
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/btn_juego_score"
-                    android:layout_weight="2.5"
-                    android:background="@drawable/boton_podio" />
+                android:padding="5dp"
+                android:gravity="center_horizontal">
 
                 <Button
                     android:layout_width="0dp"
@@ -103,7 +77,9 @@
                     android:id="@+id/btn_jugar1"
                     android:layout_weight="7.5"
                     android:background="@drawable/boton"
-                    android:text="Jugar" />
+                    android:text="Jugar"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="@dimen/tamano_texto_titulos" />
             </LinearLayout>
 
             <LinearLayout
@@ -114,15 +90,15 @@
                 android:weightSum="10">
 
                 <Space
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="9.9" />
+                    android:layout_weight="6" />
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:id="@+id/btn_juego1_siguiente"
-                    android:layout_weight="0.1"
+                    android:layout_weight="4"
                     android:background="@drawable/boton_siguiente" />
 
             </LinearLayout>

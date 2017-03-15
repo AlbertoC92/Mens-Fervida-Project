@@ -19,7 +19,7 @@ import com.example.alber.mens_fervida_videogame.R;
  * Created by Dani on 03/02/2017.
  */
 
-public class DialogJuegoTres extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener{
+public class DialogJuegoTres extends Dialog implements View.OnClickListener{
     private Context mContext;
     private Activity activity;
     private Button btnSiguiente,btnAnterior;
@@ -40,7 +40,7 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener, Dia
         int width = size.x;
         int height = size.y;
         getWindow().setLayout((int)(size.x*0.9), (int)(size.y*0.7));
-        //getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;
+        getWindow().getAttributes().windowAnimations = R.style.PanelPregunta;
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN );
@@ -54,7 +54,6 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener, Dia
         btnAnterior.setOnClickListener(this);
         btnSiguiente=(Button)findViewById(R.id.btn_juego3_siguiente);
         btnSiguiente.setOnClickListener(this);
-        this.setOnKeyListener(this);
 
 
     }
@@ -75,13 +74,12 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener, Dia
     }
 
     @Override
-    public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {
-        if (i == KeyEvent.KEYCODE_BACK) {
-            /*if(this.isShowing()) {
-                activity.finish();
-                this.dismiss();
-            }*/
+    public void onBackPressed() {
+        if(this.isShowing()) {
+
+            this.dismiss();
+            ((MenuArcades)activity).juego2.show();
         }
-        return true;
+
     }
 }
