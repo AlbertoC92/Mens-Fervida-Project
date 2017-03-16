@@ -15,7 +15,6 @@ import android.widget.Button;
 import com.example.alber.mens_fervida_videogame.R;
 
 import dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.ActividadPrincipal;
-import dam.riberadeltajo.alber.mens_fervida_videogame.juegoEsquivar.MainActivity;
 
 /**
  * Created by alber on 15/03/2017.
@@ -54,7 +53,7 @@ public class DialogJuego5 extends Dialog implements View.OnClickListener {
         setContentView(R.layout.layout_dialog_juego5);
         btnAnterior=(Button) findViewById(R.id.btn_juego3_anterior);
         btnAnterior.setOnClickListener(this);
-        btnJugar = (Button)findViewById(R.id.btn_jugar_esquivar);
+        btnJugar = (Button)findViewById(R.id.btnExplorador);
         btnJugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,8 +65,8 @@ public class DialogJuego5 extends Dialog implements View.OnClickListener {
     }
 
     public void jugarExplorador(){
-        if(((MenuArcades)mContext).puedeJugar()) {
-            Intent intent = new Intent(activity, MainActivity.class);
+       if(((MenuArcades)mContext).puedeJugar()) {
+            Intent intent = new Intent(activity, ActividadPrincipal.class);
             activity.startActivity(intent);
         }
     }
@@ -77,7 +76,7 @@ public class DialogJuego5 extends Dialog implements View.OnClickListener {
         switch (view.getId()){
             case R.id.btn_juego3_anterior:
                 //getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;    //Pero hace cosas raras, no funciona bien
-                ((MenuArcades)activity).juego4.show();
+                ((MenuArcades)activity).juego2.show();
                 this.dismiss();
         }
     }

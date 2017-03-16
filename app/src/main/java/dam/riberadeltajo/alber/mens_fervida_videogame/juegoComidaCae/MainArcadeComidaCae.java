@@ -13,7 +13,7 @@ import com.example.alber.mens_fervida_videogame.*;
 
 public class MainArcadeComidaCae extends Activity{
     private GameViewComidaCae gameView;
-    private MediaPlayer musica;
+   // private MediaPlayer musica;
     //private int puntos;
 
     @Override
@@ -28,17 +28,17 @@ public class MainArcadeComidaCae extends Activity{
 
     public void onResume(){
         super.onResume();
-        musica=MediaPlayer.create(this,R.raw.cc_caketown);
+        /*musica=MediaPlayer.create(this,R.raw.cc_caketown);
         musica.setLooping(true);
-        musica.start();
+        musica.start();*/
     }
 
     public void onPause(){
         super.onPause();
-        if(musica!=null){
+      /*  if(musica!=null){
             musica.stop();
             musica.release();
-        }
+        }*/
         this.onDestroy();
     }
 

@@ -19,8 +19,8 @@ public class Explosion {
 
     public Explosion(List<Explosion> temps, Juego juego, float x, float y, Bitmap bmp){
         life=10;
-        this.width = bmp.getWidth()/3;
-        this.height = bmp.getHeight()/3;
+        this.width = bmp.getWidth();
+        this.height = bmp.getHeight();
         this.temps=temps;
         this.bmp=bmp;
         this.corx= Math.min(Math.max(x-bmp.getWidth()/2,0),juego.getWidth()-bmp.getWidth());

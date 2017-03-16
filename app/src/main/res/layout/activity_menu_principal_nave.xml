@@ -53,7 +53,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:gravity="center"
-            android:text="@string/instrucciones"
+            android:text="¡Destruye la comida basura disparandola antes de que acaben contigo!"
             android:fontFamily="sans-serif-smallcaps"
             android:textStyle="normal|bold" />
 

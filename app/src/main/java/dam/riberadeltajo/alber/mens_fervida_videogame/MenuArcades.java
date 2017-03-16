@@ -37,7 +37,7 @@ public class MenuArcades extends Activity implements View.OnClickListener{
         juego2 = new DialogJuegoDos(this,R.style.AppTheme, this);
         juego3 = new DialogJuegoTres(this,R.style.AppTheme, this);
         juego4=new DialogJuegoCuatro(this,R.style.AppTheme, this);
-        juego5=new DialogJuegoCinco(this,R.style.AppTheme, this);
+        juego5=new DialogJuego5(this,R.style.AppTheme, this);
         juego1.show();
     }
 

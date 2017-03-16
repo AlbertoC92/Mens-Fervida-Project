@@ -16,20 +16,23 @@ public class Control {
 
     public boolean pulsado=false; //indica si el control está pulsado o no
     public float coordenada_x, coordenada_y; //coordenadas donde se dibuja el control
-    private Bitmap imagen; //imagen del control
+    private Bitmap imagen,imagenescalada; //imagen del control
     private Context mContexto;
     public String nombre;
-
+    private Juego juego;
 
     public Control(Context c, float x, float y){
         coordenada_x=x;
         coordenada_y=y;
         mContexto=c;
+
     }
 
     //carga su bitmap
     public void Cargar(int recurso){
         imagen= BitmapFactory.decodeResource(mContexto.getResources(), recurso);
+        //imagenescalada = imagen.createScaledBitmap(imagen,(int)(juego.getWidth()*0.15),(int)(getHeight()*0.1),true);
+
     }
 
     //se dibuja en un canvas con un pincel (incluso transparente)
