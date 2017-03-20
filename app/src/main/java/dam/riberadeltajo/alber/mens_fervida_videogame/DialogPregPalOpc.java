@@ -3,6 +3,7 @@ package dam.riberadeltajo.alber.mens_fervida_videogame;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
@@ -24,7 +25,7 @@ import java.util.Random;
 
 public class DialogPregPalOpc extends Dialog implements View.OnClickListener {
     private Context mContext;
-    private TextView word;
+    private TextView word,tittle;
     private EditText respuesta;
     private Button btnAceptarRes, opc1, opc2, opc3, opc4;
 
@@ -57,10 +58,17 @@ public class DialogPregPalOpc extends Dialog implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_pregunta_opc);
         word=(TextView) findViewById(R.id.text_word);
+        word.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        tittle=(TextView)findViewById(R.id.txtTittle);
+        tittle.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         opc1=(Button) findViewById(R.id.btn_opc1);
         opc2=(Button) findViewById(R.id.btn_opc2);
         opc3=(Button) findViewById(R.id.btn_opc3);
         opc4=(Button) findViewById(R.id.btn_opc4);
+        opc1.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        opc2.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        opc3.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        opc4.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         word.setText(((ActivityPregunta)mContext).pregunta.getWord());
         opc1.setOnClickListener(this);
         opc2.setOnClickListener(this);

@@ -20,10 +20,10 @@
         android:weightSum="0">
 
         <TextView
-            android:text="Adivina la imagen"
+            android:text="@string/txtTittleTranslate"
             android:layout_width="match_parent"
             android:layout_height="37dp"
-            android:id="@+id/textView5"
+            android:id="@+id/txtTittle"
             android:textAlignment="center"
             android:paddingTop="15dp"
             android:fontFamily="sans-serif-condensed"

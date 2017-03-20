@@ -14,12 +14,12 @@ public class MenuJuego extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         j=new Juego(this);
-       // hideSystemUI();
+        hideSystemUI();
         setContentView(j);
 
     }
 
-   /* private void hideSystemUI() {
+    private void hideSystemUI() {
         if(Build.VERSION.SDK_INT > Build.VERSION_CODES.HONEYCOMB) {
             //A partir de kitkat
             j.setSystemUiVisibility(
@@ -47,7 +47,7 @@ public class MenuJuego extends AppCompatActivity {
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-    }*/
+    }
 
     @Override
     protected void onDestroy() {

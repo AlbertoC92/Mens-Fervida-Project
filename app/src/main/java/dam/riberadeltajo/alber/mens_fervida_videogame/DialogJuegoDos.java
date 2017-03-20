@@ -3,14 +3,12 @@ package dam.riberadeltajo.alber.mens_fervida_videogame;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -18,8 +16,6 @@ import android.widget.Button;
 import com.example.alber.mens_fervida_videogame.R;
 
 import dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas;
-
-import static android.app.Activity.RESULT_OK;
 
 /**
  * Created by Dani on 03/02/2017.
@@ -64,6 +60,7 @@ public class DialogJuegoDos extends Dialog implements View.OnClickListener{
         btnAnterior.setOnClickListener(this);
         btnSiguiente.setOnClickListener(this);
         boton = (Button)findViewById(R.id.btnJuegoCarta);
+        boton.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

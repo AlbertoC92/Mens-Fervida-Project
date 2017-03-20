@@ -3,6 +3,7 @@ package dam.riberadeltajo.alber.mens_fervida_videogame;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -12,7 +13,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Imagen;
-import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Pregunta;
 
 /**
  * Created by PedroMiguel on 01/02/2017.
@@ -31,6 +30,7 @@ import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Pregunta;
 public class DialogPregPalOpcIma extends Dialog implements View.OnClickListener {
     private Context mContext;
     private ImageView imagen;
+    private TextView tittle;
     private EditText respuesta;
     private Button btnAceptarRes, opc1, opc2, opc3, opc4;
 
@@ -63,10 +63,16 @@ public class DialogPregPalOpcIma extends Dialog implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_pregunta_opc_ima);
         imagen=(ImageView) findViewById(R.id.img_latouy_dialog_opc);
+        tittle=(TextView)findViewById(R.id.txtTittle);
+        tittle.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         opc1=(Button) findViewById(R.id.btn_opc1);
         opc2=(Button) findViewById(R.id.btn_opc2);
         opc3=(Button) findViewById(R.id.btn_opc3);
         opc4=(Button) findViewById(R.id.btn_opc4);
+        opc1.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        opc2.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        opc3.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        opc4.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         Drawable image=mContext.getDrawable(Imagen.obtenerImagen(((ActivityPregunta)mContext).pregunta.getWord()));
         imagen.setImageDrawable(image);
         opc1.setOnClickListener(this);

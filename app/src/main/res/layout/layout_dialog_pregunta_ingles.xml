@@ -20,10 +20,10 @@
         android:weightSum="0">
 
         <TextView
-            android:text="Adivina la imagen"
+            android:text="@string/txtTittleImageQuestion"
             android:layout_width="match_parent"
             android:layout_height="37dp"
-            android:id="@+id/textView5"
+            android:id="@+id/txtTittle"
             android:textAlignment="center"
             android:paddingTop="15dp"
             android:fontFamily="sans-serif-condensed"
@@ -59,7 +59,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/textView7"
+                android:id="@+id/txtQuestion"
                 android:layout_weight="0.8"
                 android:textAlignment="center"
                 android:textSize="@dimen/tamano_text_normal"

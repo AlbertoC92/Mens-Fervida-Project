@@ -39,7 +39,6 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
     //BOLAS
     private Bitmap bolaG;
     private Bitmap bolaE;
-    private Bitmap bolaGescalada,bolaEeescalada;
     private Bitmap ensalada;
     private ArrayList<Bola> numBolas;
     private ArrayList<Bola> numBolasDivididas;
@@ -85,7 +84,6 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
     //DISPAROS
     private ArrayList<Disparo> lista_disparos = new ArrayList<Disparo>();
     Bitmap disparo;
-    Bitmap disparoescalado;
     private int frames_para_nuevo_disparo = 0;
     private final int MAX_FRAMES_ENTRE_DISPARO = 15;
     private boolean nuevo_disparo = false;
@@ -93,13 +91,11 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
     //EXPLOSION
     private ArrayList<Explosion> explosiones;
     private Bitmap explosion;
-    private Bitmap explosionEscalado;
 
 
     //PROTAGONISTA
     private Protagonista prota;
     private Bitmap protagonista;
-    private Bitmap protagonistaescalado;
     private Bitmap protagonista2;
     private int xProtagonista;
     private int yProtagonista;
@@ -135,15 +131,10 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
 
         //CREO AL PROTAGONISTA
         protagonista = BitmapFactory.decodeResource(getResources(), R.drawable.protagonista1);
-        //protagonistaescalado = protagonista.createScaledBitmap(protagonista,(int)(AnchoPantalla*0.6),(int)(AltoPantalla*0.5),true);
-       // protagonista2 = BitmapFactory.decodeResource(getResources(), R.drawable.protagonista2);
         xProtagonista = AnchoPantalla / 2 - protagonista.getWidth() / 2;
         yProtagonista = AltoPantalla / 5 * 4;
         VELOCIDAD_HORIZONTAL = AnchoPantalla * 10 / 1080; //VELOCIDAD_HORIZONTAL adaptada
-        //protaWidth = protagonista.getWidth()/BMP_COLUMNS;
-        //protaHeight = protagonista.getHeight()/BMP_ROWS;
-        // src=null;
-        //dst=null;
+
         prota = new Protagonista(this, protagonista, xProtagonista, yProtagonista, VELOCIDAD_HORIZONTAL);
         //INICIALIZO LOS ARRAY DE BOLAS
         numBolas = new ArrayList<Bola>();
@@ -153,13 +144,11 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
         inicializarBolas();
         //CREO LOS DISPAROS
         disparo = BitmapFactory.decodeResource(getResources(), R.drawable.shoot);
-       // disparoescalado = disparo.createScaledBitmap(disparo,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
-        //suelo = BitmapFactory.decodeResource(getResources(), R.drawable.suelo);
+        suelo = BitmapFactory.decodeResource(getResources(), R.drawable.suelo);
 
         //INICIALIZAR EXPLOSION
         explosiones = new ArrayList<Explosion>();
         explosion = BitmapFactory.decodeResource(getResources(), R.drawable.explosionbola);
-        //explosionEscalado = explosion.createScaledBitmap(explosion,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
         setOnTouchListener(this);
 
     }
@@ -192,8 +181,6 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
         frames_para_nuevo_enemigo = bucle.MAX_FPS * 20 / enemigos_minuto;
         bolaG = BitmapFactory.decodeResource(getResources(), fotos[((int) (Math.random() * 3))]);
         bolaE = BitmapFactory.decodeResource(getResources(), fotos[(int) (Math.random() * 3)]);
-       // bolaEeescalada=bolaE.createScaledBitmap(bolaE,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
-       //bolaGescalada = bolaG.createScaledBitmap(bolaG,(int)(getWidth()*0.15),(int)(getHeight()*0.1),true);
     }
 
     //METODO QUE CREA LAS BOLAS QUE SE VAN A REPRODUCIR EN CADA NIVEL
@@ -240,8 +227,7 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
         controles[IZQUIERDA].Cargar(R.drawable.btn_izquierda);
         controles[IZQUIERDA].nombre = "IZQUIERDA";
         //flecha_derecha
-        controles[DERECHA] = new Control(getContext(),
-                controles[0].Ancho() + controles[0].coordenada_x + 5, controles[0].coordenada_y);
+        controles[DERECHA] = new Control(getContext(),controles[0].Ancho() + controles[0].coordenada_x + 3, controles[0].coordenada_y);
         controles[DERECHA].Cargar(R.drawable.btn_derecha);
         controles[DERECHA].nombre = "DERECHA";
 
@@ -539,6 +525,7 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
             //SI NO SE HA DADO UNA DERROTA, ENTONCES PINTAR TODOS LOS COMPONENTES DEL JUEGO
             if (!derrota)
                 //DIBUJAR PROTAGONISTA
+                //prota.draw(canvas,myPaint);
                 canvas.drawBitmap(protagonista, xProtagonista, yProtagonista, null);
 
             //dibuja los enemigos

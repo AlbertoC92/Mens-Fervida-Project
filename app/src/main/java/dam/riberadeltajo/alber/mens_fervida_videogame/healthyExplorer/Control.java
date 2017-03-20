@@ -31,7 +31,7 @@ public class Control {
     //carga su bitmap
     public void Cargar(int recurso){
         imagen= BitmapFactory.decodeResource(mContexto.getResources(), recurso);
-        //imagenescalada = imagen.createScaledBitmap(imagen,(int)(juego.getWidth()*0.15),(int)(getHeight()*0.1),true);
+
 
     }
 

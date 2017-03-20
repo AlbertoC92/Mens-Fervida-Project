@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
@@ -26,7 +27,7 @@ import java.util.Random;
 
 public class DialogPregPalPista extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
     private Context mContext;
-    private TextView tl1, titulo;
+    private TextView tl1, titulo,tittle;
     private EditText respuesta;
     private Button btnAceptarRes;
 
@@ -59,9 +60,13 @@ public class DialogPregPalPista extends Dialog implements View.OnClickListener, 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_pregunta_pista);
         tl1=(TextView) findViewById(R.id.text_word_pista);
+        tl1.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         respuesta=(EditText)findViewById(R.id.et_respuesta_pista);
         titulo=(TextView) findViewById(R.id.txt_titulo_preg_pista);
         titulo.setText(String.format("%s %s",getContext().getString(R.string.txt_preg_pista), ((ActivityPregunta)mContext).pregunta.getTl1()));
+        tittle=(TextView)findViewById(R.id.txtTittle);
+        tittle.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        titulo.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         respuesta.setBackgroundResource(R.drawable.campo_texto);
         cargarTextoPista();
         btnAceptarRes=(Button) findViewById(R.id.btn_aceptar_pregunta);
@@ -69,6 +74,8 @@ public class DialogPregPalPista extends Dialog implements View.OnClickListener, 
         this.setOnKeyListener(this);
 
     }
+
+
 
     private void cargarTextoPista() {
         boolean todoPuesto=false;
@@ -205,4 +212,6 @@ public class DialogPregPalPista extends Dialog implements View.OnClickListener, 
         }
         return true;
     }
+
+
 }

@@ -77,7 +77,7 @@
                     android:id="@+id/btnJuegoCarta"
                     android:layout_weight="7.5"
                     android:background="@drawable/boton"
-                    android:text="Jugar"
+                    android:text="@string/bt_jugar"
                     android:textSize="@dimen/tamano_texto_titulos"
                     android:textColor="@android:color/background_light" />
             </LinearLayout>

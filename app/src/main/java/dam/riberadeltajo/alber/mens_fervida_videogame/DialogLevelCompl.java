@@ -21,7 +21,7 @@ import com.example.alber.mens_fervida_videogame.R;
 public class DialogLevelCompl extends Dialog implements View.OnClickListener{
     private Context mContext;
     private LinearLayout estrellas, panel;
-    private TextView puntuacion;
+    private TextView puntuacion,levelcomplete;
 
 
     public DialogLevelCompl(Context context, int themeResId) {
@@ -54,6 +54,8 @@ public class DialogLevelCompl extends Dialog implements View.OnClickListener{
         puntuacion=(TextView)findViewById(R.id.txt_punt_dia_lv_comp);
         puntuacion.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         puntuacion.setText(String.format("%d", ((ActivityPregunta)mContext).puntuacionNivel));
+        levelcomplete=(TextView)findViewById(R.id.txtLevelComplete);
+        levelcomplete.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         ((ActivityPregunta)mContext).marcador.setVisibility(View.INVISIBLE);
         cargarEstrellas();
     }

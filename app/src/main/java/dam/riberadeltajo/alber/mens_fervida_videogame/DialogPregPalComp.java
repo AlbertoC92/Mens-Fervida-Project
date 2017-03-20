@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
@@ -23,7 +24,7 @@ import com.example.alber.mens_fervida_videogame.R;
 
 public class DialogPregPalComp extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
     private Context mContext;
-    private TextView word;
+    private TextView word,question,tittle;
     private EditText respuesta;
     private Button btnAceptarRes;
 
@@ -56,6 +57,11 @@ public class DialogPregPalComp extends Dialog implements View.OnClickListener, D
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_pregunta_normal);
         word=(TextView) findViewById(R.id.text_word);
+        word.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        question=(TextView)findViewById(R.id.txtQuestion);
+        question.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        tittle=(TextView)findViewById(R.id.txtTittle);
+        tittle.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         respuesta=(EditText)findViewById(R.id.et_respuesta);
         respuesta.setBackgroundResource(R.drawable.campo_texto);
         word.setText(((ActivityPregunta)mContext).pregunta.getWord());

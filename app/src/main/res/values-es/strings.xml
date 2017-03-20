@@ -38,12 +38,19 @@
     <string name="instrucciones1">Deberas juntar comida saludable para sumar puntos.</string>
     <string name="instrucciones2">¡Pero cuidado!</string>
     <string name="instrucciones3">Si juntas comida no saludable tus puntos bajaran!</string>
-    <string name="instrucciones4">Toca con el dedo para elegir cuÃ¡l quieres unir con otro alimento del mismo tipo.</string>
+    <string name="instrucciones4">Toca con el dedo para elegir cual quieres unir con otro alimento del mismo tipo.</string>
     <string name="instrucciones5">¡Suerte!</string>
     <string name="popup">Has conseguido</string>
     <string name="explicacion1">Dispara a la comida basura. Cuando la hayas eliminado toda, cambiaras de nivel</string>
     <string name="explicacion2">Presiona los botones de direccion para moverte y presiona A para disparar</string>
     <string name="maximaScore">Tu maxima puntuacion es de:</string>
+    <string name="record">Record:</string>
+    <string name="txtTittleChooseAnswer">Selecciona la correcta</string>
+    <string name="txtTittleImageQuestion">Adivina la imagen</string>
+    <string name="txtTittleNormalQuestion">Adivina la palabra</string>
+    <string name="txtTittleTranslate">Traduce la palabra</string>
+    <string name="txtStarts">Strellas</string>
+    <string name="txtMax">Max Puntuacion</string>
 
 
 </resources>

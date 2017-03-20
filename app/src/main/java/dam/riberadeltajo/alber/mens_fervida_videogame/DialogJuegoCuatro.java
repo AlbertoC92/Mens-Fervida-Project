@@ -3,20 +3,18 @@ package dam.riberadeltajo.alber.mens_fervida_videogame;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.alber.mens_fervida_videogame.R;
 
-import dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas;
 import dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.MainActivityUnirComida;
 
 public class DialogJuegoCuatro extends Dialog implements View.OnClickListener{
@@ -56,6 +54,7 @@ public class DialogJuegoCuatro extends Dialog implements View.OnClickListener{
         btnSiguiente=(Button) findViewById(R.id.btn_juego4_siguiente);
         btnSiguiente.setOnClickListener(this);
         btnJugar4=(Button) findViewById(R.id.btnJugar4);
+        btnJugar4.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         btnJugar4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

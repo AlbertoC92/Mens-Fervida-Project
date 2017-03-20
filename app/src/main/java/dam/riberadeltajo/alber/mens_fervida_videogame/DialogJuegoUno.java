@@ -3,13 +3,12 @@ package dam.riberadeltajo.alber.mens_fervida_videogame;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -53,6 +52,7 @@ public class DialogJuegoUno extends Dialog implements View.OnClickListener{
         btnSiguiente=(Button) findViewById(R.id.btn_juego1_siguiente);
         btnSiguiente.setOnClickListener(this);
         btJugar=(Button)findViewById(R.id.btn_jugar1);
+        btJugar.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         btJugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

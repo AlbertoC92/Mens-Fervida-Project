@@ -3,12 +3,14 @@ package dam.riberadeltajo.alber.mens_fervida_videogame;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.alber.mens_fervida_videogame.R;
 
@@ -19,6 +21,7 @@ import com.example.alber.mens_fervida_videogame.R;
 public class DialogSalir extends Dialog implements View.OnClickListener{
     private Context mContext;
     private Button btnOk, btnCancel;
+    private TextView tittle;
 
 
     public DialogSalir(Context context, int themeResId) {
@@ -48,6 +51,8 @@ public class DialogSalir extends Dialog implements View.OnClickListener{
         btnOk.setOnClickListener(this);
         btnCancel=(Button)findViewById(R.id.btn_salir_cancelar);
         btnCancel.setOnClickListener(this);
+        tittle=(TextView)findViewById(R.id.txtTittle);
+        tittle.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
 
     }
 

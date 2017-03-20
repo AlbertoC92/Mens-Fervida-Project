@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
@@ -23,7 +24,7 @@ import com.example.alber.mens_fervida_videogame.R;
 
 public class DialogPregPalCompIng extends Dialog implements View.OnClickListener, DialogInterface.OnKeyListener {
     private Context mContext;
-    private TextView word;
+    private TextView word,question,tittle;
     private EditText respuesta;
     private Button btnAceptarRes;
 
@@ -56,8 +57,13 @@ public class DialogPregPalCompIng extends Dialog implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_dialog_pregunta_ingles);
         word=(TextView) findViewById(R.id.text_word_ingles);
+        word.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         respuesta=(EditText)findViewById(R.id.et_respuesta_ingles);
         respuesta.setBackgroundResource(R.drawable.campo_texto);
+        question=(TextView)findViewById(R.id.txtQuestion);
+        question.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
+        tittle=(TextView)findViewById(R.id.txtTittle);
+        tittle.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         word.setText(((ActivityPregunta)mContext).pregunta.getTl1());
         btnAceptarRes=(Button) findViewById(R.id.btn_aceptar_pregunta_ingles);
         btnAceptarRes.setOnClickListener(this);

@@ -26,8 +26,8 @@ public class Protagonista {
 
 
     public Protagonista(Juego juego, Bitmap bmp,int x , int y,int speed ){
-        this.width=bmp.getWidth();
-        this.height=bmp.getHeight();
+        this.width=bmp.getWidth()*2;
+        this.height=bmp.getHeight()*2;
         this.juego=juego;
         this.bmp=bmp;
         currentFrame=0;

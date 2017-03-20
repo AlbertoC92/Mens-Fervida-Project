@@ -84,7 +84,7 @@
                         android:text="LV1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView"
+                        android:id="@+id/txtLevel"
                         android:textAppearance="@style/TextAppearance.AppCompat"
                         android:textAlignment="center"
                         android:textSize="34sp"

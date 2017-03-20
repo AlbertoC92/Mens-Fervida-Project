@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Display;
@@ -54,6 +55,7 @@ public class DialogJuegoTres extends Dialog implements View.OnClickListener{
         btnSiguiente=(Button)findViewById(R.id.btn_juego3_siguiente);
         btnSiguiente.setOnClickListener(this);
         boton = (Button)findViewById(R.id.btnNave);
+        boton.setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/chewy.ttf"));
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

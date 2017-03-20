@@ -28,21 +28,21 @@ public class Bola {
         this.juego=juego;
         this.bmp=bmp;
         this.puntos=puntos;
-        xSpeed=10;
-        ySpeed=10;
+        xSpeed=5;
+        ySpeed=5;
        // corx=(int)(Math.random()* (juego.AnchoPantalla-juego.getBolaE().getWidth()));
         //cory = (int) (Math.random()*juego.AltoPantalla/5);
         corx=(int)(Math.random()*(juego.AnchoPantalla-bmp.getHeight())-xSpeed);
         cory=(int)(Math.random()*((juego.AltoPantalla/5)+bmp.getWidth()+ySpeed));
         if(tipo == 0){
             tipoBola=BOLA_GRANDE;
-            this.width=bmp.getWidth()/2;
-            this.height=bmp.getHeight()/2;
+            this.width=bmp.getWidth();
+            this.height=bmp.getHeight();
 
         }else {
             tipoBola = BOLA_PEQUENA;
-            this.width=bmp.getWidth()/4;
-            this.height=bmp.getHeight()/4;
+            this.width=bmp.getWidth()/2;
+            this.height=bmp.getHeight()/2;
 
         }
         setPuntos(puntos);
