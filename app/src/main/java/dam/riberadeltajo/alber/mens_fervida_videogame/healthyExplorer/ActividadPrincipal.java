@@ -157,7 +157,9 @@ public class ActividadPrincipal extends AppCompatActivity {
     }
 
     public void onPause(){
+
         super.onPause();
+
     }
 
     public void onStop(){

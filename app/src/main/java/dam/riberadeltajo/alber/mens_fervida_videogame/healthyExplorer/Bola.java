@@ -126,7 +126,7 @@ public class Bola {
         else {
             corx += xSpeed;
         }
-        if(cory>=juego.AltoPantalla/6*5+juego.getProta().getHeight()-height-ySpeed || cory+ySpeed<=0 ){
+        if(cory>=juego.AltoPantalla/6*4+juego.getProta().getHeight()-height-ySpeed || cory+ySpeed<=0 ){
             ySpeed=-ySpeed;
 
         }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas"
     android:orientation="vertical"
-    android:background="@drawable/cc_fondo_res"
+    android:background="@drawable/bg2"
     android:weightSum="10">
 
     <Space

@@ -51,6 +51,7 @@
     <string name="txtTittleTranslate">Traduce la palabra</string>
     <string name="txtStarts">Strellas</string>
     <string name="txtMax">Max Puntuacion</string>
+    <string name="txtJuegoNave">Destruye toda la comida basura antes de que esta te destruya a ti</string>
 
 
 </resources>

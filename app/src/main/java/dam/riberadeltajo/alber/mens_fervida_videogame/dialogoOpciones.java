@@ -43,7 +43,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
     private GridView gridview;
     private ImageView avatares;
     private Context context;
-    private Button volver,aceptar,volumen;
+    private Button volver,aceptar;
     private Activity activity;
     private AvataresAdapter adaptador;
     private GridView listaPersonajes;
@@ -95,7 +95,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
         aceptar=(Button)findViewById(R.id.btn_aceptar_dialog_opc);
         musica=(ToggleButton) findViewById(R.id.btnmusica);
 
-        volumen=(Button)findViewById(R.id.btnsonido);
+
         audio = new Intent(context,AudioService.class);
         context.startService(audio);
         if(Jugador.getInstance().getNombre()!=null){
@@ -104,6 +104,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
         aceptar.setOnClickListener(this);
         musica.setOnClickListener(this);
+
         if(Jugador.getInstance().isMusicaPlaying()){
             musica.setChecked(true);
         }
@@ -235,6 +236,7 @@ public class dialogoOpciones extends Dialog implements View.OnClickListener{
 
                 quitarMusica();
                 break;
+
         }
     }
 }

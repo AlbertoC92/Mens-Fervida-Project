@@ -4,16 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.example.alber.mens_fervida_videogame.*;
+import com.example.alber.mens_fervida_videogame.R;
 
 public class MainArcadeComidaCae extends Activity{
     private GameViewComidaCae gameView;
-   // private MediaPlayer musica;
+    private MediaPlayer musica;
     //private int puntos;
 
     @Override
@@ -24,34 +23,25 @@ public class MainArcadeComidaCae extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(new GameViewComidaCae(this));
         gameView=new GameViewComidaCae(this);
+        musica=MediaPlayer.create(this, R.raw.cc_caketown);
+        //musica.setLooping(true);
+        musica.start();
+
     }
 
     public void onResume(){
         super.onResume();
-        /*musica=MediaPlayer.create(this,R.raw.cc_caketown);
-        musica.setLooping(true);
-        musica.start();*/
+
     }
 
     public void onPause(){
         super.onPause();
-      /*  if(musica!=null){
-            musica.stop();
-            musica.release();
-        }*/
+        musica.stop();
+        musica.release();
         this.onDestroy();
     }
 
-    //public onSurfaceDestroyed
 
-    /*public void onDestroy(){
-        super.onDestroy();
-        //android.os.Process.killProcess(android.os.Process.myPid());
-    }
-
-    public void onStop(){
-        super.onStop();
-    }*/
 
     public void fin(int puntos){
         //super.onDestroy();
@@ -65,6 +55,8 @@ public class MainArcadeComidaCae extends Activity{
     public void onBackPressed() {
         Intent intent = new Intent();
         setResult(Activity.RESULT_CANCELED, intent);
+        musica.stop();
+        musica.release();
         finish();
     }
 }

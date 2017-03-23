@@ -77,7 +77,7 @@ public class DialogJuego5 extends Dialog implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_juego3_anterior:
-                //getWindow().getAttributes().windowAnimations = R.style.PanelNivelDos;    //Pero hace cosas raras, no funciona bien
+
                 ((MenuArcades)activity).juego2.show();
                 this.dismiss();
         }

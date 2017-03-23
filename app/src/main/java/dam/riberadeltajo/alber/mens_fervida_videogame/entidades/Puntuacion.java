@@ -2,7 +2,6 @@ package dam.riberadeltajo.alber.mens_fervida_videogame.entidades;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.concurrent.ExecutionException;
 
@@ -13,6 +12,7 @@ import dam.riberadeltajo.alber.mens_fervida_videogame.Conexion;
  */
 
 public class Puntuacion {
+    private Jugador j;
     public Object[][] conseguirPuntuacion(){
         String json = null;
         String[][] devolver=null;
@@ -45,4 +45,12 @@ public class Puntuacion {
 
         return devolver;
     }
+    public String httpParametro(String variable,String valor){
+        String lineEnd = "\r\n";
+        String twoHyphens = "--";
+        String boundary = "*****";
+
+        return twoHyphens+boundary+lineEnd+"Content-Disposition: form-data; name=\""+variable+"\""+ lineEnd+lineEnd+valor+lineEnd+twoHyphens + boundary + twoHyphens + lineEnd;
+    }
+
 }

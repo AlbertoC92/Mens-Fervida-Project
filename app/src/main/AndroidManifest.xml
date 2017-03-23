@@ -20,9 +20,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.Niveles"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuNivelesActivity"
             android:screenOrientation="portrait" />
 

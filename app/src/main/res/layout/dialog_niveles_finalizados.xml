@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_niveles"
+    android:background="@drawable/creditos"
     android:id="@+id/linear_niveles_finalizados">
 
     <Space
@@ -20,82 +20,26 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.5"/>
+            android:layout_weight="10"/>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="7"
-            android:weightSum="3">
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:weightSum="8"
+            android:gravity="bottom|right">
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:weightSum="5"
-                android:gravity="center">
-
-                <TextView
-                    android:text="Congratulations"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtFelicidades"
-                    android:layout_weight="1"
-                    android:textSize="@dimen/tamano_texto_titulos"
-                    android:textStyle="normal|bold"
-                    android:fontFamily="@string/text_win"
-                    android:textColor="@android:color/holo_red_light" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:weightSum="5"
-                android:gravity="center">
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/txtPuntos"
-                    android:layout_weight="1"
-                    android:background="@drawable/panel_dolar"
-                    android:textAlignment="center" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:weightSum="5"
-                android:gravity="center">
-
-                <EditText
-                    android:layout_width="220dp"
-                    android:layout_height="77dp"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/txtEstrellas"
-                    android:background="@drawable/panel_estrellas"
-                    android:textAlignment="center" />
-            </LinearLayout>
-
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnback"
+                android:background="@drawable/boton_atras" />
         </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.5"/>
     </LinearLayout>
 
     <Space
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1.7"/>
+        android:layout_weight="0.5"/>
 </LinearLayout>

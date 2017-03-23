@@ -31,6 +31,8 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
     private SurfaceHolder holder;
     public BucleJuego bucle;
     private Activity actividad;
+    private long timePerdido=0;
+    private long timeWait;
 
     //DIMENSIONES PANTALLA
     public int AltoPantalla;
@@ -374,8 +376,24 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
             }
 
 
+        }else{
+            if(getTimePerdido() ==0){
+                setTimePerdido(System.currentTimeMillis());
+            }
+            else{
+                actualizarReloj();
+            }
+            if(getTimeWait() >5){
+
+            }
         }
     }
+
+    public void actualizarReloj(){
+        long actual=System.currentTimeMillis();
+        setTimeWait((actual- getTimePerdido())/1000);
+    }
+
 
     public boolean comprobarFinalNivel() {
         if (nivelAnterior == nivel) {
@@ -493,7 +511,7 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
         bola.setWidth(bolaE.getWidth() / 4);
         bola.setHeight(bolaE.getHeight() / 4);
         bola.setPuntos(10);
-        bola.setCorx(bola.getCorx() + bola.getxSpeed() * 2);
+        bola.setCorx(bola.getCorx() + bola.getxSpeed() + 4);
         bola.setCory(bola.getCory() + 2);
         bola.setxSpeed(bola.getxSpeed() + bola.getxSpeed());
         bola.setCorx(bola.getCorx() + bola.getxSpeed());
@@ -684,6 +702,22 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
         bolaE.recycle();
         disparo.recycle();
         actividad.finish();
+    }
+
+    public long getTimeWait() {
+        return timeWait;
+    }
+
+    public void setTimeWait(long timeWait) {
+        this.timeWait = timeWait;
+    }
+
+    public long getTimePerdido() {
+        return timePerdido;
+    }
+
+    public void setTimePerdido(long timePerdido) {
+        this.timePerdido = timePerdido;
     }
 
     public int getNivel() {

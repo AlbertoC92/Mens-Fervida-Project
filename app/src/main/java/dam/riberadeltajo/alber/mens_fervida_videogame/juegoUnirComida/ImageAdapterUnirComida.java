@@ -8,8 +8,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import com.example.alber.mens_fervida_videogame.R;
+
 import java.util.ArrayList;
-import com.example.alber.mens_fervida_videogame.*;
 
 
 public class ImageAdapterUnirComida extends BaseAdapter {
@@ -128,7 +130,67 @@ public class ImageAdapterUnirComida extends BaseAdapter {
         return bmpDisponibles;
     }
 
+    public boolean noMasPlatano(){
+        boolean acabado=false;
+
+        for(int i=0;i<imagenesIniciales.size();i++){
+            if(imagenesIniciales.get(i) != getBmpDisponibles().get(3) ){
+                acabado = true;
+            }else{
+                acabado = false;
+            }
+        }
+        return acabado;
+    }
+
+    public boolean noMasTomate(){
+        boolean acabado=false;
+
+        for(int i=0;i<imagenesIniciales.size();i++){
+            if(imagenesIniciales.get(i) != getBmpDisponibles().get(4) ){
+                acabado = true;
+            }else{
+                acabado = false;
+            }
+        }
+        return acabado;
+    }
+
+    public boolean noMasUvas(){
+        boolean acabado=false;
+
+        for(int i=0;i<imagenesIniciales.size();i++){
+            if(imagenesIniciales.get(i) != getBmpDisponibles().get(5) ){
+                acabado = true;
+            }else{
+                acabado = false;
+            }
+        }
+        return acabado;
+    }
+    public boolean noMasZanahorias(){
+        boolean acabado=false;
+
+        for(int i=0;i<imagenesIniciales.size();i++){
+            if(imagenesIniciales.get(i) != getBmpDisponibles().get(6) ){
+                acabado = true;
+            }else{
+                acabado = false;
+            }
+        }
+        return acabado;
+    }
+
+    public boolean noMasComidaSana(){
+        boolean acabado=false;
 
 
+            if(noMasPlatano() && noMasTomate() && noMasUvas() && noMasZanahorias() ){
+                acabado = true;
+            }else{
+                acabado = false;
+            }
 
+        return acabado;
+    }
 }

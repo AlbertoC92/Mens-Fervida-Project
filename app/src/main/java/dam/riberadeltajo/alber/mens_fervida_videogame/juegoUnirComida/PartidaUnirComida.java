@@ -1,6 +1,7 @@
 package dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -10,13 +11,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Display;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
-import com.example.alber.mens_fervida_videogame.*;
-import static android.content.SharedPreferences.*;
+
+import com.example.alber.mens_fervida_videogame.R;
+
+import static android.content.SharedPreferences.Editor;
 
 
 public class PartidaUnirComida extends Activity {
@@ -94,7 +96,7 @@ public class PartidaUnirComida extends Activity {
                 }
                 tvPuntos.setText(String.valueOf(puntos));
                 adaptador.notifyDataSetChanged();
-                if(adaptador.getCount()==0){
+                if(adaptador.noMasComidaSana()){
                     finalizar(v);
                 }
             }
@@ -105,7 +107,7 @@ public class PartidaUnirComida extends Activity {
     private void finalizar(View view) {
         int puntuacion;
 
-        /*AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("\t"+getResources().getString(R.string.popup)+" "+String.valueOf(puntos)
                 +" "+getResources().getString(R.string.puntos))
                 .setTitle("RESULTADO")
@@ -117,7 +119,7 @@ public class PartidaUnirComida extends Activity {
                             }
                         });
         AlertDialog alert = builder.create();
-        alert.show();*/
+        alert.show();
 
         SharedPreferences preferencias=getSharedPreferences("puntos",Context.MODE_PRIVATE);
         Editor editor=preferencias.edit();

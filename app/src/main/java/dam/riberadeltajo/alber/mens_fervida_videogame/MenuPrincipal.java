@@ -8,7 +8,6 @@ import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -17,15 +16,13 @@ import android.widget.LinearLayout;
 
 import com.example.alber.mens_fervida_videogame.R;
 
+import java.util.Locale;
+
 import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
-import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Puntuacion;
 import dam.riberadeltajo.alber.mens_fervida_videogame.sqlite.IdiomasSQLiteOpenHelper;
 
-import java.util.Locale;
-import java.util.concurrent.ExecutionException;
-
 public class MenuPrincipal extends Activity {
-    private Button buttonPlay,buttonOptions,buttonArcade,buttonExit;
+    private Button buttonPlay,buttonOptions,buttonArcade,buttonExit,creditos;
     LinearLayout relativeLayout;
     private Dialog dialogCompartir, dialogOpciones, dialogRank;
 
@@ -45,6 +42,7 @@ public class MenuPrincipal extends Activity {
         buttonExit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         buttonArcade.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/chewy.ttf"));
         relativeLayout=(LinearLayout) findViewById(R.id.activity_main);
+        creditos = (Button)findViewById(R.id.btncreditos);
         IdiomasSQLiteOpenHelper.getInstance(this);
         Jugador.getInstance(this);
 
@@ -88,6 +86,10 @@ public class MenuPrincipal extends Activity {
     public void compartir(View view){
 
         dialogoCompartir();
+    }
+
+    public void creditos(View vista){
+        new DialogFinalNiveles(this,R.style.AppTheme).show();
     }
 
     private void abrirOpciones() {

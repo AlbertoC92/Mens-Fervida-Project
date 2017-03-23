@@ -187,20 +187,6 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnsonido"
-            android:layout_weight="2"
-            android:layout_gravity="left"
-            android:gravity="left"
-            android:background="@drawable/btn_volumne_verde" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:id="@+id/btn_volver_opc"
             android:layout_weight="2"
             android:background="@drawable/btn_volver_azul"
