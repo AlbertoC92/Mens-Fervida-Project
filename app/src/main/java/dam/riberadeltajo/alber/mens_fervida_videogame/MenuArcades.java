@@ -42,12 +42,12 @@ public class MenuArcades extends Activity implements View.OnClickListener{
     }
 
     public boolean puedeJugar(){
-        if(Jugador.getInstance().getEstrellas()<0.5){
+        if(Jugador.getInstance().getEstrellas()<1.5){
             Toast.makeText(this, "No tiene suficiente crédito", Toast.LENGTH_SHORT).show();
             return false;
         }
         else{
-            Jugador.getInstance().setEstrellas((float) (Jugador.getInstance().getEstrellas()-0.5));
+            Jugador.getInstance().setEstrellas((float) (Jugador.getInstance().getEstrellas()-1.5));
             Jugador.getInstance().guardarSharedPreferences();
             return true;
         }
