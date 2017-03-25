@@ -115,15 +115,15 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         //pregunta Facil
         else{
             switch (new Random().nextInt(2)){
-                case 0:
+                case 0://pregunta con pista
                     diaPregunta=new DialogPregPalPista(this, R.style.AppTheme);
                     break;
                 case 1:
-                    if(Math.random()<0.25){
+                    if(Math.random()<0.25){ //imagenes
                         pregunta=new Pregunta(Jugador.NO_LANGUAGE,nivel);
                         diaPregunta=new DialogPregPalOpcIma(this, R.style.AppTheme);
                     }
-                    else{
+                    else{ //respuesta con cuatro opciones
                         diaPregunta=new DialogPregPalOpc(this, R.style.AppTheme);
                     }
 
