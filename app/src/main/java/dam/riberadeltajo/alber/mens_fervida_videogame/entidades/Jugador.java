@@ -9,8 +9,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.alber.mens_fervida_videogame.R;
-
 import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -97,7 +95,7 @@ public class Jugador {
         boolean musicaSP=preferences.getBoolean(CAMPO_MUSICA, true);
         int idiomaSP=preferences.getInt(CAMPO_IDIOMA, SPANISH);
         int avatarSP=preferences.getInt(CAMPO_AVATAR, 0);
-        float estrellasSP=preferences.getFloat(CAMPO_ESTRELLAS, 0);
+        float estrellasSP=preferences.getFloat(CAMPO_ESTRELLAS, 100);
         setPuntuacionMax(puntuacionMaxSP);
         if(!nombreSP.isEmpty()){
             setNombre(nombreSP);

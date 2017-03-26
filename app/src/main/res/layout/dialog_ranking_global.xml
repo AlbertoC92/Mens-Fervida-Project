@@ -78,7 +78,7 @@
                         android:id="@+id/txt_punt1"
                         android:layout_weight="0.4"
                         android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
+                        android:textSize="24sp" />
 
                     <TextView
                         android:text="TextView"
@@ -151,7 +151,7 @@
                         android:id="@+id/txt_punt2"
                         android:layout_weight="0.4"
                         android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
+                        android:textSize="24sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -215,7 +215,7 @@
                         android:id="@+id/txt_punt3"
                         android:layout_weight="0.4"
                         android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
+                        android:textSize="24sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -279,7 +279,7 @@
                         android:id="@+id/txt_punt4"
                         android:layout_weight="0.4"
                         android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
+                        android:textSize="24sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -343,7 +343,7 @@
                         android:id="@+id/txt_punt5"
                         android:layout_weight="0.4"
                         android:textAlignment="center"
-                        android:textSize="@dimen/tamano_texto_boton" />
+                        android:textSize="24sp" />
                 </LinearLayout>
 
             </LinearLayout>

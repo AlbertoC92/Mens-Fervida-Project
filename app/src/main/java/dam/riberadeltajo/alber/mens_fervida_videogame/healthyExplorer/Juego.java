@@ -352,13 +352,8 @@ public class Juego extends SurfaceView implements SurfaceHolder.Callback, Surfac
                 }
 
                 //CREACION DE LOS ENEMIGOS SEGUN LA CANTIDAD DE ESTOS EN PANTALLA Y DEL MAXIMO PERMITIDO
-                //if (frames_para_nuevo_enemigo == 0) {
-                    crearBolas();
-                    //nuevo ciclo de enemigos
-                   // frames_para_nuevo_enemigo = bucle.MAX_FPS * 10 / enemigos_minuto;
-                //}
-                //frames_para_nuevo_enemigo--;
 
+                    crearBolas();
 
                 //COMPRUEBO LAS COLISIONES CON LAS BOLAS Y CON EL JUGADOR
                 compruebaFinJuego();
