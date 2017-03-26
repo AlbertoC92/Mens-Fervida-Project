@@ -89,7 +89,7 @@ public class MenuPrincipal extends Activity {
     }
 
     public void creditos(View vista){
-        new DialogFinalNiveles(this,R.style.AppTheme).show();
+        new DialogoCreditos(this,R.style.AppTheme).show();
     }
 
     private void abrirOpciones() {

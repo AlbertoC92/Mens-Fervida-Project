@@ -18,14 +18,14 @@ import com.example.alber.mens_fervida_videogame.R;
  * Created by alber on 15/02/2017.
  */
 
-public class DialogFinalNiveles extends Dialog implements View.OnClickListener{
+public class DialogoCreditos extends Dialog implements View.OnClickListener{
 
 
     private Context mContext;
-    private Button volver;
+    private Button volver,siguiente;
 
 
-    public DialogFinalNiveles(Activity context, int themeResId) {
+    public DialogoCreditos(Activity context, int themeResId) {
         super(context, themeResId);
         mContext=context;
         quitarFondoRedimensionarEfectos();
@@ -46,9 +46,11 @@ public class DialogFinalNiveles extends Dialog implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dialog_niveles_finalizados);
+        setContentView(R.layout.dialog_creditos1);
         volver = (Button)findViewById(R.id.btnback);
         volver.setOnClickListener(this);
+        siguiente =(Button)findViewById(R.id.btnadelante);
+        siguiente.setOnClickListener(this);
 
     }
 
@@ -71,6 +73,9 @@ public class DialogFinalNiveles extends Dialog implements View.OnClickListener{
        switch(view.getId()){
            case R.id.btnback:
                this.dismiss();
+               break;
+           case R.id.btnadelante:
+            new DialogoCreditos2((Activity) mContext,R.style.AppTheme).show();
                break;
        }
     }
