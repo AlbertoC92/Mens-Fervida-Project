@@ -2,11 +2,10 @@ package dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves;
 
 import android.content.Intent;
 import android.graphics.Point;
-import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Build;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
@@ -19,7 +18,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 import com.example.alber.mens_fervida_videogame.R;
 
 
@@ -27,7 +26,7 @@ import com.example.alber.mens_fervida_videogame.R;
 public class MenuPrincipal extends ActionBarActivity {
     int AltoPantalla;
     int AnchoPantalla;
-    TextView instrucciones;
+
     Button botonJuego;
     MediaPlayer mediaPlayer;
 
@@ -38,7 +37,7 @@ public class MenuPrincipal extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal_nave);
         botonJuego = (Button) findViewById(R.id.btn_comenzar);
-        instrucciones =(TextView)findViewById(R.id.instrucciones);
+
 
 
 

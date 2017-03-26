@@ -95,7 +95,7 @@ public class Jugador {
         boolean musicaSP=preferences.getBoolean(CAMPO_MUSICA, true);
         int idiomaSP=preferences.getInt(CAMPO_IDIOMA, SPANISH);
         int avatarSP=preferences.getInt(CAMPO_AVATAR, 0);
-        float estrellasSP=preferences.getFloat(CAMPO_ESTRELLAS, 100);
+        float estrellasSP=preferences.getFloat(CAMPO_ESTRELLAS, 0);
         setPuntuacionMax(puntuacionMaxSP);
         if(!nombreSP.isEmpty()){
             setNombre(nombreSP);

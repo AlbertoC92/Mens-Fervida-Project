@@ -36,8 +36,8 @@ public class MainArcadeComidaCae extends Activity{
 
     public void onPause(){
         super.onPause();
-        musica.stop();
-        musica.release();
+        //musica.stop();
+        //musica.release();
         this.onDestroy();
     }
 
