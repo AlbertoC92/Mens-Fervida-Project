@@ -121,10 +121,7 @@ public class Jugador {
         editor.commit();
     }
 
-    public static String getDate(){
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
-        return sdf.format(new Date());
-    }
+
 
     public String httpParametro(String variable,String valor){
         String lineEnd = "\r\n";
@@ -136,7 +133,12 @@ public class Jugador {
 
     private class HighScores extends AsyncTask<Void, Integer, String> {
 
-
+        public String getFecha(){
+            String f;
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            f=sdf.format(new Date());
+            return f;
+        }
         public void uploadHighScore(){
 
             int serverResponseCode = 0;
@@ -181,7 +183,7 @@ public class Jugador {
                 dos.writeBytes(httpParametro("user",nombre));
                 dos.writeBytes(httpParametro("score",String.valueOf(getPuntuacionMax())));
                 dos.writeBytes(httpParametro("country",String.valueOf(getIdioma())));
-                dos.writeBytes(httpParametro("date",getDate()));
+                dos.writeBytes(httpParametro("date",getFecha()));
                 dos.writeBytes(httpParametro("enviar","Enviar"));
                 /*--------------------------*/
                 /*AQUÍ SE ENVIA LA IMAGEN  -*/

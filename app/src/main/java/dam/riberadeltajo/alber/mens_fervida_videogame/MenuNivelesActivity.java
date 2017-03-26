@@ -152,6 +152,7 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
                             ((DialogPanelNivelDos)panel2).btn10.setBackground(ContextCompat.getDrawable(this.getApplicationContext(),R.drawable.btn_aceptar));
                             break;
                     }
+                    Jugador.getInstance().setNivelMaximoAlcanzado(siguienteNivel);
 
                 }
                 break;
