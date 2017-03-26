@@ -177,6 +177,7 @@ public class MenuPrincipal extends Activity {
                     res4.updateConfiguration(config4, res4.getDisplayMetrics());
                 }
 
+
                 break;
         }
     }

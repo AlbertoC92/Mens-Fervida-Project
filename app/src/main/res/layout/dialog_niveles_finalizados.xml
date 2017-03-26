@@ -5,11 +5,6 @@
     android:background="@drawable/creditos"
     android:id="@+id/linear_niveles_finalizados">
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1.7"/>
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="0dp"
@@ -30,11 +25,17 @@
             android:weightSum="8"
             android:gravity="bottom|right">
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.7"/>
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnback"
                 android:background="@drawable/boton_atras" />
+
         </LinearLayout>
     </LinearLayout>
 

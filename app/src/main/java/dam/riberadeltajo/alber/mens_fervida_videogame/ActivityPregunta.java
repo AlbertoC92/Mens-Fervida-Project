@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.alber.mens_fervida_videogame.R;
 
@@ -195,28 +196,24 @@ public class ActivityPregunta extends Activity implements View.OnClickListener{
         }
     }
     public void finalizaNivelOk(){
-        if(nivel<10){
-            Jugador.getInstance().setPuntuacion(Jugador.getInstance().getPuntuacion()+puntuacionNivel);
-            estrellasSesion=estrellasSesion+((float)vidas/2);
-            Intent intent= new Intent();
-            intent.putExtra("nivelFinalizado",nivel);
-            intent.putExtra("estrellasConseguidas",(float)vidas/2);
-            setResult(RESULT_OK, intent);
-            diaPregunta.dismiss();
-            new DialogLevelCompl(this, R.style.AppTheme).show();
+        Jugador.getInstance().setPuntuacion(Jugador.getInstance().getPuntuacion()+puntuacionNivel);
+        estrellasSesion=estrellasSesion+((float)vidas/2);
+        Intent intent= new Intent();
+        intent.putExtra("nivelFinalizado",nivel);
+        intent.putExtra("estrellasConseguidas",(float)vidas/2);
+        setResult(RESULT_OK, intent);
+        diaPregunta.dismiss();
+        if(Jugador.getInstance().getPuntuacionMax()<Jugador.getInstance().getPuntuacion()){
+            Jugador.getInstance().setPuntuacionMax(Jugador.getInstance().getPuntuacion());
 
-            }else{
-            Jugador.getInstance().setPuntuacion(Jugador.getInstance().getPuntuacion()+puntuacionNivel);
-            Intent intent= new Intent();
-            intent.putExtra("nivelFinalizado",nivel);
-            intent.putExtra("estrellasConseguidas",(float)vidas/2);
-            setResult(RESULT_OK, intent);
-            diaPregunta.dismiss();
-
-            if(Jugador.getInstance().getPuntuacionMax()<Jugador.getInstance().getPuntuacion()){
-                Jugador.getInstance().setPuntuacionMax(Jugador.getInstance().getPuntuacion());
-            }
+            Jugador.getInstance().newHighScore();
         }
+        if(nivel<10){
+            new DialogLevelCompl(this, R.style.AppTheme).show();
+        }
+        else
+            Toast.makeText(this.getApplicationContext(),"Congratulations! " +
+                    "You have completed the videogame!",Toast.LENGTH_LONG).show();
 
     }
 

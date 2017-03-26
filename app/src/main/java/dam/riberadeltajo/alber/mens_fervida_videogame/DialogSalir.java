@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.example.alber.mens_fervida_videogame.R;
 
+import dam.riberadeltajo.alber.mens_fervida_videogame.entidades.Jugador;
+
 /**
  * Created by PedroMiguel on 01/02/2017.
  */
@@ -64,7 +66,9 @@ public class DialogSalir extends Dialog implements View.OnClickListener{
 
     }
 
-
+    public void GuardaPuntuacion(){
+        Jugador.getInstance().guardarSharedPreferences();
+    }
 
     @Override
     public void onBackPressed() {
@@ -76,6 +80,7 @@ public class DialogSalir extends Dialog implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_salir_aceptar:
+                GuardaPuntuacion();
                 ((MenuNivelesActivity)mContext).finish();
                 this.dismiss();
 

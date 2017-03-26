@@ -16,22 +16,21 @@
     <string name="level_completed">Level Completed*</string>
     <string name="txt_preg_pista">Translate into English: </string>
     <string name="titulo_pregunta_english">Write in ENGLISH the next word:</string>
-    <string name="text_salir">Are you sure? You will lose all your session score</string>
+    <string name="text_salir">Are you sure? Your points will be saved</string>
     <string name="text_win">Congratulations</string>
     <string name="txtTittleNormalQuestion">Guess the word</string>
     <string name="txtTittleImageQuestion">Guess the image</string>
-    <string name="txtTittleChooseAnswer">Choose the rigth answer</string>
+    <string name="txtTittleChooseAnswer">Choose the right answer</string>
     <string name="txtTittleTranslate">Translate the word</string>
     <string name="txtMax">Max Score</string>
     <string name="txtStarts">Stars</string>
     <string name="instrucciones_juego"> - Instructions - </string>
     <string name="puntuacionCartas">Best score: </string>
-    <string name="instCartas">Find the couples of cards to get points in the least number of tries. Points will be deducted if you make a mistake.</string>
-    <string name="txtJuegoNave">Destroy the fast food shooting it before it destroy you</string>
+    <string name="instCartas">Find couples of cards to get points in the least number of tries. Points will be taken away if you make a mistake.</string>
+    <string name="txtJuegoNave">Destroy the fast food shooting it before it destroys you</string>
     <string name="record">Record:</string>
-    <string name="inst_comidaCae">You should only take healthy food. The speed will increases over time to make the game harder.
-                                    You have 3 lifes, if you take unhealthy food or a healthy food pass the line you will loose one life. !Good luck¡</string>
-    <string name="maximaScore">Your Higer score is:</string>
+    <string name="inst_comidaCae">You should only take healthy food. The speed will increase over time to make the game harder.\n                                    You have 3 lives, if you take unhealthy food or a healthy food pass the line you will loose one life. Good luck!</string>
+    <string name="maximaScore">Your High score is:</string>
     <string name="jugar">play</string>
     <string name="instrucciones">instructions</string>
     <string name="recordUnirComida">record</string>
@@ -42,10 +41,10 @@
     <string name="instrucciones2">But carefull!</string>
     <string name="instrucciones3">If you join unhealthy food your points will go down.</string>
     <string name="instrucciones4">Touch with your finger to choose which one you want to join with another food of the same type.</string>
-    <string name="instrucciones5">Â¡Good luck!</string>
+    <string name="instrucciones5">Good luck!</string>
 
     <string name="popup">you have got:</string>
-    <string name="explicacion1">Shoot the fast food to destroy it and get the next level</string>
+    <string name="explicacion1">Shoot the fast food to destroy it and get to the next level</string>
     <string name="explicacion2">Press the direction buttons to move the character and press A to shoot</string>
 
 </resources>

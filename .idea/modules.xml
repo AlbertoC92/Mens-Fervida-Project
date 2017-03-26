@@ -3,15 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Project.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Project10.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Project10.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Project13.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Project13.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Project3.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Project3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Project4.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Project4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Project5.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Project5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Project8.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Project8.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Project9.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Project9.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Project_2.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Project_2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Mens-Fervida-Videogame.iml" filepath="$PROJECT_DIR$/Mens-Fervida-Videogame.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

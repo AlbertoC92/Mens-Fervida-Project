@@ -33,7 +33,7 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//Línea para ocultar la barra de información de la batería,etc...
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_niveles2);
-        Jugador.getInstance().setPuntuacion(0);
+        //Jugador.getInstance().setPuntuacion(0);
 
         salir=(Button) findViewById(R.id.btn_atras_ac_niv);
         salir.setOnClickListener(this);
@@ -47,9 +47,35 @@ public class MenuNivelesActivity extends Activity implements View.OnClickListene
     private void cargarPaneles() {
         panel1 = new DialogPanelNivelUno(this,R.style.AppTheme, this);
         panel2 = new DialogPanelNivelDos(this,R.style.AppTheme, this);
-        panel1.show();
+        abrirNiveles();
     }
 
+    private void abrirNiveles(){
+
+        int n=Jugador.getInstance().getNivelMaximoAlcanzado();
+        if(n<6){
+            panel1.show();
+        }
+        else{
+            panel1.show(); //para que se cree tmb
+            panel2.show();
+        }
+
+        //ILM: se abren los niveles según los hayas alcanzado anteriormente
+        Button[] arraybotones={((DialogPanelNivelUno)panel1).btn1,((DialogPanelNivelUno)panel1).btn2,((DialogPanelNivelUno)panel1).btn3,
+                ((DialogPanelNivelUno)panel1).btn4,((DialogPanelNivelUno)panel1).btn5,((DialogPanelNivelDos)panel2).btn6,
+                ((DialogPanelNivelDos)panel2).btn7,((DialogPanelNivelDos)panel2).btn8,((DialogPanelNivelDos)panel2).btn9,
+                ((DialogPanelNivelDos)panel2).btn10};
+
+        for(int i=0;i<n-1;i++){
+            arraybotones[i].setEnabled(true);
+            arraybotones[i].setBackground(getDrawable(R.drawable.btn_aceptar));
+        }
+        arraybotones[n-1].setEnabled(true);
+
+        siguienteNivel=n;
+
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bundle bundle=null;

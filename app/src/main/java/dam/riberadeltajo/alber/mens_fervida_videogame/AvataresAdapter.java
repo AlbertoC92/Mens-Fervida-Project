@@ -53,8 +53,11 @@ public class AvataresAdapter extends BaseAdapter {
 
     public AvataresAdapter(Context c) {
         mContext = c;
+    }
+    public AvataresAdapter() {
 
     }
+
     @Override
     public int getCount() {
         return caracteres.length;

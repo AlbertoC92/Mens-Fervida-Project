@@ -43,8 +43,6 @@
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.RecordUnirComida"></activity>
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves.ActividadJuego"></activity>
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves.MenuPrincipal"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoEsquivar.MainActivity"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoEsquivar.Juego"></activity>
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.ActividadPrincipal"></activity>
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.Instrucciones"></activity>
         <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.MenuJuego"></activity>
