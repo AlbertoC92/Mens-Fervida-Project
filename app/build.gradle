@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.example.alber.mens_fervida_videogame"
+        applicationId "es.riberadeltajo.mens_fervida_videogame"
         minSdkVersion 17
         targetSdkVersion 25
         versionCode 1

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_unircomida"
-    tools:context="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.InstruccionesUnirComida"
+    tools:context="es.riberadeltajo.mens_fervida_videogame.juegoUnirComida.InstruccionesUnirComida"
     android:padding="16dp">
 
     <LinearLayout

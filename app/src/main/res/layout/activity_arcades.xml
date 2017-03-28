@@ -4,7 +4,7 @@
     android:id="@+id/activity_menu_juegos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="dam.riberadeltajo.alber.mens_fervida_videogame.MenuArcades"
+    tools:context="es.riberadeltajo.mens_fervida_videogame.MenuArcades"
     android:background="@drawable/fondo_res"
     android:orientation="vertical"
     android:layout_weight="10"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondopartidamarcador_unircomida"
-    tools:context="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.PartidaUnirComida"
+    tools:context="es.riberadeltajo.mens_fervida_videogame.juegoUnirComida.PartidaUnirComida"
     android:padding="16dp">
 
     <LinearLayout

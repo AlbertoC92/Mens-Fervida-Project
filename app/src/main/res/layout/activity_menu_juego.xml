@@ -12,7 +12,7 @@
     android:padding="10dp"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context="dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.MenuJuego"
+    tools:context="es.riberadeltajo.mens_fervida_videogame.healthyExplorer.MenuJuego"
     android:background="@drawable/fondoinicial">
 
     <ImageView

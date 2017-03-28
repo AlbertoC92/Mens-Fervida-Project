@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.alber.mens_fervida_videogame">
+    package="es.riberadeltajo.mens_fervida_videogame">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuPrincipal"
+            android:name=".MenuPrincipal"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,32 +20,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuNivelesActivity"
+            android:name=".MenuNivelesActivity"
             android:screenOrientation="portrait" />
 
         <service
-            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.AudioService"
+            android:name=".AudioService"
             android:enabled="true" />
 
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.MenuArcades" />
+        <activity android:name=".MenuArcades" />
         <activity
-            android:name="dam.riberadeltajo.alber.mens_fervida_videogame.ActivityPregunta"
+            android:name=".ActivityPregunta"
             android:screenOrientation="portrait" />
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.MainActivityCartas"
+        <activity android:name=".juegoCartas.MainActivityCartas"
             android:screenOrientation="portrait"/>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoCartas.Main2Activity"
+        <activity android:name=".juegoCartas.Main2Activity"
             android:screenOrientation="portrait"/>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae.MainActivityComidaCae" />
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae.MainArcadeComidaCae" />
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.MainActivityUnirComida"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.PartidaUnirComida"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.InstruccionesUnirComida"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegoUnirComida.RecordUnirComida"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves.ActividadJuego"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.juegonaves.MenuPrincipal"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.ActividadPrincipal"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.Instrucciones"></activity>
-        <activity android:name="dam.riberadeltajo.alber.mens_fervida_videogame.healthyExplorer.MenuJuego"></activity>
+        <activity android:name=".juegoComidaCae.MainActivityComidaCae" />
+        <activity android:name=".juegoComidaCae.MainArcadeComidaCae" />
+        <activity android:name=".juegoUnirComida.MainActivityUnirComida"></activity>
+        <activity android:name=".juegoUnirComida.PartidaUnirComida"></activity>
+        <activity android:name=".juegoUnirComida.InstruccionesUnirComida"></activity>
+        <activity android:name=".juegoUnirComida.RecordUnirComida"></activity>
+        <activity android:name=".juegonaves.ActividadJuego"></activity>
+        <activity android:name=".juegonaves.MenuPrincipal"></activity>
+        <activity android:name=".healthyExplorer.ActividadPrincipal"></activity>
+        <activity android:name=".healthyExplorer.Instrucciones"></activity>
+        <activity android:name=".healthyExplorer.MenuJuego"></activity>
     </application>
 
 </manifest>

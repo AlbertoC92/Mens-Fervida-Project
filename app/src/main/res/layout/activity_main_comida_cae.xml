@@ -4,7 +4,7 @@
     android:id="@+id/activity_main_comida_cae"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="dam.riberadeltajo.alber.mens_fervida_videogame.juegoComidaCae.MainActivityComidaCae"
+    tools:context="es.riberadeltajo.mens_fervida_videogame.juegoComidaCae.MainActivityComidaCae"
     android:orientation="vertical"
     android:background="@drawable/cc_fondo_res"
     android:weightSum="10">
