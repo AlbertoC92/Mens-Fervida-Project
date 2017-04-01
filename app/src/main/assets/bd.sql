@@ -307,325 +307,327 @@ CREATE TABLE "POLISH" (
 	`NIVEL`	INTEGER NOT NULL,
 	`TIPO`	TEXT NOT NULL
 );
-INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('anchovies','anszua','','',1,'FOOD'),
- ('caviar','kawior','','',1,'FOOD'),
- ('crayfish','langusta’,’rak’,’’,1,’FOOD'),
- ('homar','homar','','',1,'FOOD'),
- ('octopus','ośmiornica','','',1,'FOOD'),
- ('squid','kałamarnica','','',1,'FOOD'),
- ('amino acid','aminokwas','','',1,'FOOD'),
- ('carbohydrates','węglowodany','','',1,'FOOD'),
- ('vitamins','witaminy','','',1,'FOOD'),
- ('calorie','kaloria','','',1,'FOOD'),
- ('cholesterol','cholesterol','','',1,'FOOD'),
- ('powdered milk','mleko w proszku','','',1,'FOOD'),
- ('almond','migdał','','',1,'FOOD'),
- ('brazil nut','orzech brazylijski','','',1,'FOOD'),
- ('cashew','orzech nerkowca','','',1,'FOOD'),
- ('raisin','rodzynka’,’rodzynek’,’’,1,’FOOD’),
- ('coconut','kokos','orzech kokosowy','',2,'FOOD'),
- ('ammonia','amoniak','','',1,'FOOD'),
- ('baking powder','proszek do pieczenia','','',1,'FOOD'),
- ('yeast','drożdże','','',1,'FOOD'),
- ('breadcrumbs','bułka tarta','','',1,'FOOD'),
- ('powdered sugar','cukier puder','','',1,'FOOD'),
- ('aniseed','anyż','anyżek','',1,'FOOD'),
- ('basil','bazylia','','',1,'FOOD'),
- ('chamomile','rumianek','rumiankowy','',2,'FOOD'),
- ('chive','szczypiorek','','',1,'FOOD'),
- ('coriander','kolendra','','',1,'FOOD'),
- ('cress','rzeżucha','','',1,'FOOD'),
- ('dill','koper','koperek','',2,'FOOD'),
- ('appetite','apetyt','łaknienie','',1,'FOOD'),
- ('appetizing','apetyczny','smakowity','smaczny',1,'FOOD'),
- ('aroma','zapach','aromat','aromatyczny',3,'FOOD'),
- ('aromatic','aromatyczny','','',1,'FOOD'),
- ('jelly','galareta','galaretka','',1,'FOOD'),
- ('bag lunch','drugie śniadanie','kanapki','lunch na wynos',3,'FOOD'),
- ('box lunch','lunch w pudełku','drugie śniadanie','lunch na wynos',3,'FOOD'),
- ('packed lunch','zapakowany lunch','drugie śniadanie','lunch na wynos',3,'FOOD'),
- ('bite','gryźć’,’ugryżć’,’’,1,’FOOD'),
- ('bon apetit','smacznego','','',1,'FOOD'),
- ('bone','kość','obierać mięso z kości','',2,'FOOD'),
- ('fishbone','ość','obierać rybę z ości','',2,'FOOD'),
- ('breaded','panierowany','','',1,'FOOD'),
- ('caffeine','kofeina','','',1,'FOOD'),
- ('creamy','kremowy','gęsty','śmietankowy',3,'FOOD'),
- ('crisps','czipsy','chipsy’,’frytki’,1,’fOOD'),
- ('crispy','kruche','chrupiące’,’chrupiący’,2,’fOOD'),
- ('delicious','pyszne’,’smakowite’,’smaczne’,’wyśmienite’,1,’FOOD'),
- ('spoon','łyżka','','',1,'FOOD'),
- ('yummy','pyszne’,’dobre’,’smaczne’,1,’FOOD'),
- ('fork','widelec','','',3,'FOOD'),
- ('apricot','morela','','',1,'FOOD'),
- ('blackcurrant','czarna porzeczka','','',1,'FOOD'),
- ('artichoke','karczoch','','',1,'FOOD'),
- ('asparagus','szparagi','','',1,'FOOD'),
- ('baked beans','fasolka w sosie pomidorowym','fasolka po bretońsku’,’pieczona fasola’,2,’FOOD'),
- ('baked potato','ziemniak w mundurku','pieczony ziemniak','',2,'FOOD'),
- ('oven','piekarnik','','',2,'FOOD'),
- ('green bean','zielona fasolka','fasolka szparagowa','',2,'FOOD'),
- ('soya’,’soja','','',1,'FOOD'),
- ('broad bean','bób','','',2,'FOOD'),
- ('bean sprouts','kiełki fasoli','','',1,'FOOD'),
- ('bagel','bajgiel','obwarzanek','',2,'FOOD'),
- ('bread and butter','chleb z masłem','','',1,'FOOD'),
- ('baker','piekarz','cukiernia','piekarnia',3,'FOOD'),
- ('apron','fartuch','fartuszek','',2,'FOOD'),
- ('sausage','kiełbaska','kiełbasa','',2,'FOOD'),
- ('beefburger','kotlet mielony wołowy’,’burger wołowy’,’’,1,’FOOD'),
- ('starter','przystawka’,’’,’’,1,’FOOD'),
- ('beverage','napój','','',1,'FOOD'),
- ('bill','rachunek','','',1,'FOOD'),
- ('main course','danie główne','pierwsze danie’,’główne danie’,2,’FOOD'),
- ('soup','zupa','','',1,'FOOD'),
- ('dessert','deser','','',1,'FOOD'),
- ('menu','menu','jadłospis','karta dań',3,'FOOD'),
- ('waiter','kelner','','',1,'FOOD'),
- ('waitress','kelnerka','','',1,'FOOD'),
- ('chef','szef kuchni','','',1,'FOOD'),
- ('cook','kucharz','','',1,'FOOD'),
- ('customer','klient','','',1,'FOOD'),
- ('takeaway','danie na wynos','na wynos','',1,'FOOD'),
- ('order','zamówić','','',1,'FOOD'),
- ('credit card','karta kredytowa’,’’,’’,1,’FOOD'),
- ('boiling','temeratura wrzenia’,’wrzenie’,’gotowanie’,1,’FOOD'),
- ('braise','dusić','gotować na wolnym ogniu’,’udusić’,2,’FOOD'),
- ('bottle opener','otwieracz do butelek','','',1,'FOOD'),
- ('can opener','otwieracz do konserw','','',1,'FOOD'),
- ('tin opener','otwieracz do konserw','','',1,'FOOD'),
- ('chopsticks','pałeczki','','',1,'FOOD'),
- ('corkscrew','korkociag','','',1,'FOOD'),
- ('crockery','naczynia','porcelana','zastawa stołowa',3,'FOOD'),
- ('bouillon','bulion','rosół','',2,'FOOD'),
- ('broth','gęsta zupa’,’rosół’,’bulion’,2,’FOOD'),
- ('breakfast','śniadanie','','',1,'FOOD'),
- ('lunch','drugie śniadanie','lunch','obiad',3,'FOOD'),
- ('brunch','połączenie śniadania z lunchem’,’przekąska’,’późne śniadanie’,1,’FOOD'),
- ('dinner','obiad','kolacja','',2,'FOOD'),
- ('tea’,’herbata’,’herbatka’,’’,2,’FOOD'),
- ('supper','kolacja','','',1,'FOOD'),
- ('buffet','bufet','','',1,'FOOD'),
- ('restaurant','restauracja','','',1,'FOOD'),
- ('cafe','kawiarnia','herbaciarnia','',2,'FOOD'),
- ('canteen','kantyna','stołówka','',2,'FOOD'),
- ('diner','stołówka','jadłodalnia’,’tania restauracja’,2,’FOOD'),
- ('buffet car','wagon restauracyjny','','',1,'FOOD'),
- ('butcher','rzeźnik','sklep mięsny','',2,'FOOD'),
- ('cafeteria','stołówka','bufet','kantyna',3,'FOOD'),
- ('coffee bar','bar kawowy','','',1,'FOOD'),
- ('delicatessen','delikatesy’,’garmażeria’,’’,1,’FOOD'),
- ('can','puszka’,’konserwa’,’’,1,’FOOD'),
- ('bottle','butelka','','',1,'FOOD'),
- ('carafe','karafka','','',1,'FOOD'),
- ('tablespoon','łyżka stołowa','łyżka','',1,'FOOD''),
- ('lina','rope','','',2,'SPORT'),
- ('attack','atakować','','',1,'SPORT'),
- ('award','nagradzać','przyznawać nagrodę','',2,'SPORT'),
- ('backpack','uprawiać turystykę pieszą’,’plecak’,’chodzić pieszo’,1,’SPORT'),
- ('pedal','pedał’,’pedałować’,’’,1,’SPORT'),
- ('beat','pokonać','','',1,'SPORT'),
- ('canoe','pływać kajakiem’,’kajak’,’czółno’,1,’SPORT'),
- ('climb','wspinać się','','',1,'SPORT'),
- ('compete','współzawodniczyć','rywalizować','konkurować',3,'SPORT'),
- ('cycle','jechać na rowerze','cykl','',1,'SPORT'),
- ('defend','bronić','','',1,'SPORT'),
- ('aerobics','aerobik','','',1,'SPORT'),
- ('dribble','kozłować','odbijać’,’dryblować’,2,’SPORT'),
- ('exercise','ćwiczyc','gimnastykować się','',2,'SPORT'),
- ('bike','rowere','','',1,'SPORT'),
- ('jogging’,’bieganie’,’bieganie truchtem’,’’,1,’SPORT'),
- ('swimming’,’pływanie’,’’,’’,1,’SPORT'),
- ('run','biegać','bieg','bieganie',1,'SPORT'),
- ('jump','skakać’,’skok’,’przeskok’,1,’SPORT'),
- ('kick','kopać’,’kopnięcie’,’’,1,’SPORT'),
- ('pass','podać','podawać','',2,'SPORT'),
- ('play baseball','grać w baseball','','',1,'SPORT'),
- ('play basketball','grać w koszykówkę','','',1,'SPORT'),
- ('play chess','grać w szachy','','',1,'SPORT'),
- ('play football','grać w piłkę nożną','','',1,'SPORT'),
- ('play handball','grać w piłkę ręczną','','',1,'SPORT'),
- ('play hockey','grać w hokeja','','',1,'SPORT'),
- ('play rugby','grać w rugby','','',1,'SPORT'),
- ('play volleyball','grać w siatkówkę','','',1,'SPORT'),
- ('ride a bike','jeździć na rowerze','','',1,'SPORT'),
- ('row','wiosłować','','',1,'SPORT'),
- ('squat','przysiad','','',1,'SPORT'),
- ('tackle','kiwać','blokować','chwytać',1,'SPORT'),
- ('walk','iść','spacerować','',2,'SPORT'),
- ('abseiling','spuszczanie się na linie','','',1,'SPORT'),
- ('acrobatics','akrobatyka','','',1,'SPORT'),
- ('aerobics','aerobik','','',1,'SPORT'),
- ('American footbal','footbal amerykański','','',1,'SPORT'),
- ('archery','łucznictwo','','',1,'SPORT'),
- ('athletics','lekkoatletyka','','',1,'SPORT'),
- ('backpacking','turystyka piesza z plecakiem','','',1,'SPORT'),
- ('backstroke','styl grzbietowy','pływać grzbietem','',2,'SPORT'),
- ('badminton','badminton','kometka','',2,'SPORT'),
- ('basketball','koszykówka','','',1,'SPORT'),
- ('baseball','baseball','','',1,'SPORT'),
- ('board game','gra planszowa','','',1,'SPORT'),
- ('bodybuilding','kulturystyka','','',1,'SPORT'),
- ('bowling','gra w kręgle’,’kręgle’,’’,1,’SPORT'),
- ('boxing','boks','','',1,'SPORT'),
- ('swim','pływać','płynąć','popłynąć',2,'SPORT'),
- ('butterfly style’,’styl motylkowy’,’motylek’,’’,1,’SPORT'),
- ('canoeing','kajakarstwo','pływanie kajakiem','',2,'SPORT'),
- ('checkers','warcaby','','',1,'SPORT'),
- ('crawl','kraul','pływanie kraulem','',2,'SPORT'),
- ('cricket','krykiet','','',1,'SPORT'),
- ('cycling','kolarstwo’,’jazda rowerem’,’’,1,’SPORT'),
- ('draughts','warcaby','','',1,'SPORT'),
- ('fencing','szermierka','fechtunek','',2,'SPORT'),
- ('tennis','tenis','','',1,'SPORT'),
- ('football','piłka nożna','','',1,'SPORT'),
- ('golf','golf','','',1,'SPORT'),
- ('gymnastics','gimnastyka','','',1,'SPORT'),
- ('handball','piłka ręczna’,’’,’’,1,’SPORT'),
- ('hockey','hokej','','',1,'SPORT'),
- ('horse racing','wyścigi konne','','',1,'SPORT'),
- ('judo','dżudo’,’’,’’,1,’SPORT'),
- ('kayaking','kajakarstwo','pływanie kajakiem','',2,'SPORT'),
- ('dance','taniec','','',1,'SPORT'),
- ('marathon','maraton','','',1,'SPORT'),
- ('parachuting','skoki spadochronowe’,’skok ze spadochronem’,’’,1,’SPORT'),
- ('polo','polo','','',1,'SPORT'),
- ('rowing','wioślarstwo','','',1,'SPORT'),
- ('rugby','rugby','','',1,'SPORT'),
- ('sailing','żeglarstwo','','',1,'SPORT'),
- ('skateboarding','jazda na deskorolce’,’’,’’,1,’SPORT'),
- ('skating','łyżwiarstwo','','',1,'SPORT'),
- ('skiiing','narciarstwo','','',1,'SPORT'),
- ('skydiving','skoki spadochronowe','','',1,'SPORT'),
- ('snowboarding','snowboarding','','',1,'SPORT'),
- ('sprint','sprint','','',1,'SPORT'),
- ('surfing','pływanie na desce surfingowej','','',1,'SPORT'),
- ('swimming','pływanie','','',1,'SPORT'),
- ('table tennis','tenis stołowy','','',1,'SPORT'),
- ('triathlon','triatlon','','',1,'SPORT'),
- ('valleyball','siatkówka','piłka siatkowa','',2,'SPORT'),
- ('weightlifting','podnoszenie ciężarów','','',1,'SPORT'),
- ('wingsuit','latanie w kombinezonie','','',1,'SPORT'),
- ('sailing','żeglarstwo','','',1,'SPORT'),
- ('workout','trening','zaprawa fizyczna','',2,'SPORT'),
- ('yoga','joga','','',1,'SPORT'),
- ('backpack','plecak do wędrówek','','',1,'SPORT'),
- ('baseball court’,’boisko baseballowe','','',1,'SPORT'),
- ('basketball','piłka koszykowa','piłka do koszykówki’,’koszykówka’,2,’SPORT'),
- ('baseball bat','kij baseballowy','','',1,'SPORT'),
- ('baseball glove','rękawica baseballowa','rękawica bejsbolowa’,’’,1,’SPORT'),
- ('basket','kosz','','',1,'SPORT'),
- ('baseball','piłka baseballowa','piłka do baseballu’,’baseball’,2,’SPORT'),
- ('bat','rakietka do tenisa stołowego','kij baseballowy','kij do krykieta’,’rakietka’,’pałka’,3,’SPORT'),
- ('bicycle','rower’,’jechać na rowerze’,’’,1,’SPORT'),
- ('bike','rower','motocykl','',2,'SPORT'),
- ('bobsleigh','bobslej','','',2,'SPORT'),
- ('bow','łuk','','',1,'SPORT'),
- ('boxing gloves','rękawice bokserskie','','',1,'SPORT'),
- ('canoe','kajak’,’czółno’,’’,1,’SPORT'),
- ('exercise bike','rower treningowy','','',1,'SPORT'),
- ('foil','floret','','',1,'SPORT'),
- ('football','piłka nożna','piłka do footballu’,’piłka footballowa’,’piłka footbolowa’,2,’SPORT'),
- ('golf club’,’klub golfowy’,’’,’’,1,’SPORT'),
- ('handball','piłka do ręcznej','','',1,'SPORT'),
- ('helmet','kask’,’hełm’,’’,1,’SPORT'),
- ('hockey puck','krążek do hokeja','krążek hokejowy','',2,'SPORT'),
- ('hockey stick','kij hokejowy','','',1,'SPORT'),
- ('horse','koń','','',1,'SPORT'),
- ('jockey cap','toczek do jazdy konnej’,’toczek’,’’,1,’SPORT'),
- ('obstacle','przeszkoda','','',1,'SPORT'),
- ('kayak','kajak','','',1,'SPORT'),
- ('mask','maska','','',1,'SPORT'),
- ('net','siatka','','',1,'SPORT'),
- ('paddle','wiosło','','',1,'SPORT'),
- ('parachute','spadochron','','',1,'SPORT'),
- ('rugby ball','piłka do rugby','','',1,'SPORT'),
- ('racket','rakieta','','',1,'SPORT'),
- ('saddle','siodło','','',1,'SPORT'),
- ('sail','żagiel','','',1,'SPORT'),
- ('sailboat','żaglówka','','',1,'SPORT'),
- ('shuttlecock','lotka do badmintona’,’lotka’,’’,1,’SPORT'),
- ('skateboard','deskorolka','','',1,'SPORT'),
- ('ice skates','łyżwy','','',1,'SPORT'),
- ('skis','narty','','',1,'SPORT'),
- ('ski poles','kijki narciarskie','','',1,'SPORT'),
- ('snowboard','deska do snowboardu','','',1,'SPORT'),
- ('surfboard','deska surfingowa','','',1,'SPORT'),
- ('swimsuit','kostium pływacki','','',1,'SPORT'),
- ('swimming cap','czepek pływacki','','',1,'SPORT'),
- ('swimming trunks','kąpielówki','','',1,'SPORT'),
- ('target','cel','tarcza','',2,'SPORT'),
- ('tracksuit','dres','','',1,'SPORT'),
- ('trainers','butry sportowe','adidasy','',1,'SPORT'),
- ('weight','ciężar','ciężarek','',2,'SPORT'),
- ('wingsuit','kombinezon do latania','','',1,'SPORT'),
- ('yacht','jacht','','',1,'SPORT'),
- ('acrobat','akrobata','akrobatka','',1,'SPORT'),
- ('adversary','przeciwnik','przeciwniczka','rywal',1,'SPORT'),
- ('arbiter','arbiter','','',1,'SPORT'),
- ('archer','łucznik','łuczniczka','',1,'SPORT'),
- ('athlete','lekkoatleta','sportowiec','',2,'SPORT'),
- ('attacker','napastnik','','',1,'SPORT'),
- ('backpacker','turysta uprawiający wędrówkę pieszą','','',1,'SPORT'),
- ('baseplayer','biegacz','','',1,'SPORT'),
- ('biker','rowerzysta','cyklista','motocyklista',3,'SPORT'),
- ('bodybuilder','kulturysta','kulturystka','',1,'SPORT'),
- ('boxer','bokser','','',1,'SPORT'),
- ('catcher','łapacz','','',1,'SPORT'),
- ('champion','mistrz','mistrzyni','czempion',3,'SPORT'),
- ('coach','trener','','',1,'SPORT'),
- ('commenter','komentator','','',1,'SPORT'),
- ('competitor','zawodnik','przeciwnik','współzawodnik',3,'SPORT'),
- ('contestant','zawodnik','','',1,'SPORT'),
- ('cricketer','gracz w krykieta','','',1,'SPORT'),
- ('cyclist','rowerzysta','cyklista','',2,'SPORT'),
- ('defender','obrońca','','',1,'SPORT'),
- ('fan','kibic','fan','',2,'SPORT'),
- ('fencer','szermierz','','',1,'SPORT'),
- ('goalkeeper','bramkarz','','',1,'SPORT'),
- ('gymnast','gimnastyk','','',1,'SPORT'),
- ('jockey','dżokej','','',1,'SPORT'),
- ('parachuter','spadochroniarz','','',1,'SPORT'),
- ('pitcher','zawodnik rzucający piłką','miotacz','',2,'SPORT'),
- ('player','gracz','zawodnik','uczestnik',3,'SPORT'),
- ('refree','sędzia','','',1,'SPORT'),
- ('runner','biegacz','','',1,'SPORT'),
- ('skater','łyżwiarz','','',1,'SPORT'),
- ('skiier','narciarz','','',1,'SPORT'),
- ('ski jumper','skoczek narciarski','','',1,'SPORT'),
- ('sprinter','sprinter','','',1,'SPORT'),
- ('supporter','kibic','pomocnik','',2,'SPORT'),
- ('surfer','serfer','','',1,'SPORT'),
- ('umpire','sędzia','','',1,'SPORT'),
- ('winner','zwycięzca','','',1,'SPORT'),
- ('able-bodied','zdrowy fizycznie','pełnosprawny','',2,'SPORT'),
- ('ace','as','as serwisowy','',2,'SPORT'),
- ('acrobatic','akrobatyczny','','',1,'SPORT'),
- ('adrenalin','adrenalina','','',1,'SPORT'),
- ('alpine','alpejski','wysokogórski','',2,'SPORT'),
- ('amateur','amator','amatorka','',1,'SPORT'),
- ('ascent','wspinaczka','','',1,'SPORT'),
- ('athletic','wysportowany','lekkoatletyczny','spotowy',3,'SPORT'),
- ('attack','atak','','',1,'SPORT'),
- ('audience','publiczność','widownia','',2,'SPORT'),
- ('award','nagroda','','',1,'SPORT'),
- ('backhand','bekhend','','',1,'SPORT'),
- ('biceps','biceps','','',1,'SPORT'),
- ('bikini','dwuczęściowy kostium kąpielowy','bikini','',2,'SPORT'),
- ('bronze medal','brązowy medal','','',1,'SPORT'),
- ('championship','mistrzostwo','','',1,'SPORT'),
- ('checkmate','szach mat','','',1,'SPORT'),
- ('competition','rywalizacja','konkurencja','konkurs',3,'SPORT'),
- ('competitive','konkurencyjny','','',1,'SPORT'),
- ('contest','zawody','konkurs','',2,'SPORT'),
- ('tournament','zawody sportowe','rozgrywki sportowe','',2,'SPORT'),
- ('defence','obrona','','',1,'SPORT'),
- ('disabled','niepełnosprawny','','',1,'SPORT'),
- ('fit','sprawny','','',1,'SPORT'),
- ('physical activity','aktywność fizyczna','','',1,'SPORT'),
- ('stadium','stadion','','',1,'SPORT'),
- ('cross country','przełajowy (bieg)','','',1,'SPORT'),
- ('downhill','zjazdowe (narciarstwo)','','',1,'SPORT');
+INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('anchovies','anszua','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('caviar','kawior','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('crayfish','langusta','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('homar','homar','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('octopus','ośmiornica','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('squid','kałamarnica','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('amino acid','aminokwas','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('carbohydrates','węglowodany','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('vitamins','witaminy','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('calorie','kaloria','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cholesterol','cholesterol','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('powdered milk','mleko w proszku','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('almond','migdał','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('brazil nut','orzech brazylijski','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cashew','orzech nerkowca','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('raisin','rodzynka','rodzynek','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('coconut','kokos','orzech kokosowy','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('ammonia','amoniak','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baking powder','proszek do pieczenia','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('yeast','drożdże','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('breadcrumbs','bułka tarta','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('powdered sugar','cukier puder','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('aniseed','anyż','anyżek','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('basil','bazylia','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('chamomile','rumianek','rumiankowy','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('chive','szczypiorek','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('coriander','kolendra','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cress','rzeżucha','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('dill','koper','koperek','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('appetite','apetyt','łaknienie','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('appetizing','apetyczny','smakowity','smaczny',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('aroma','zapach','aromat','aromatyczny',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('aromatic','aromatyczny','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('jelly','galareta','galaretka','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bag lunch','drugie śniadanie','kanapki','lunch na wynos',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('box lunch','lunch w pudełku','drugie śniadanie','lunch na wynos',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('packed lunch','zapakowany lunch','drugie śniadanie','lunch na wynos',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bite','gryźć','ugryżć','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bon apetit','smacznego','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bone','kość','obierać mięso z kości','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('fishbone','ość','obierać rybę z ości','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('breaded','panierowany','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('caffeine','kofeina','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('creamy','kremowy','gęsty','śmietankowy',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('crisps','czipsy','chipsy','frytki',1,'fOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('crispy','kruche','chrupiące','chrupiący',2,'fOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('delicious','pyszne','smakowite','smaczne',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('spoon','łyżka','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('yummy','pyszne','dobre','smaczne',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('fork','widelec','','',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('apricot','morela','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('blackcurrant','czarna porzeczka','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('artichoke','karczoch','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('asparagus','szparagi','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baked beans','fasolka w sosie pomidorowym','fasolka po bretońsku','pieczona fasola',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baked potato','ziemniak w mundurku','pieczony ziemniak','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('oven','piekarnik','','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('green bean','zielona fasolka','fasolka szparagowa','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('soya','soja','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('broad bean','bób','','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bean sprouts','kiełki fasoli','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bagel','bajgiel','obwarzanek','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bread and butter','chleb z masłem','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baker','piekarz','cukiernia','piekarnia',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('apron','fartuch','fartuszek','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('sausage','kiełbaska','kiełbasa','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('beefburger','kotlet mielony wołowy','burger wołowy','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('starter','przystawka','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('beverage','napój','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bill','rachunek','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('main course','danie główne','pierwsze danie','główne danie',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('soup','zupa','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('dessert','deser','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('menu','menu','jadłospis','karta dań',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('waiter','kelner','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('waitress','kelnerka','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('chef','szef kuchni','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cook','kucharz','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('customer','klient','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('takeaway','danie na wynos','na wynos','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('order','zamówić','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('credit card','karta kredytowa','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('boiling','temeratura wrzenia','wrzenie','gotowanie',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('braise','dusić','gotować na wolnym ogniu','udusić',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bottle opener','otwieracz do butelek','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('can opener','otwieracz do konserw','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('tin opener','otwieracz do konserw','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('chopsticks','pałeczki','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('corkscrew','korkociag','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('crockery','naczynia','porcelana','zastawa stołowa',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bouillon','bulion','rosół','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('broth','gęsta zupa','rosół','bulion',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('breakfast','śniadanie','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('lunch','drugie śniadanie','lunch','obiad',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('brunch','połączenie śniadania z lunchem','przekąska','późne śniadanie',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('dinner','obiad','kolacja','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('tea','herbata','herbatka','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('supper','kolacja','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('buffet','bufet','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('restaurant','restauracja','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cafe','kawiarnia','herbaciarnia','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('canteen','kantyna','stołówka','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('diner','stołówka','jadłodalnia','tania restauracja',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('buffet car','wagon restauracyjny','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('butcher','rzeźnik','sklep mięsny','',2,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cafeteria','stołówka','bufet','kantyna',3,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('coffee bar','bar kawowy','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('delicatessen','delikatesy','garmażeria','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('can','puszka','konserwa','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bottle','butelka','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('carafe','karafka','','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('tablespoon','łyżka stołowa','łyżka','',1,'FOOD');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('lina','rope','','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('attack','atakować','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('award','nagradzać','przyznawać nagrodę','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('backpack','uprawiać turystykę pieszą','plecak','chodzić pieszo',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('pedal','pedał','pedałować','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('beat','pokonać','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('canoe','pływać kajakiem','kajak','czółno',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('climb','wspinać się','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('compete','współzawodniczyć','rywalizować','konkurować',3,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cycle','jechać na rowerze','cykl','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('defend','bronić','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('aerobics','aerobik','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('dribble','kozłować','odbijać','dryblować',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('exercise','ćwiczyc','gimnastykować się','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bike','rowere','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('jogging','bieganie','bieganie truchtem','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('swimming','pływanie','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('run','biegać','bieg','bieganie',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('jump','skakać','skok','przeskok',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('kick','kopać','kopnięcie','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('pass','podać','podawać','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('play baseball','grać w baseball','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('play basketball','grać w koszykówkę','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('play chess','grać w szachy','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('play football','grać w piłkę nożną','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('play handball','grać w piłkę ręczną','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('play hockey','grać w hokeja','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('play rugby','grać w rugby','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('play volleyball','grać w siatkówkę','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('ride a bike','jeździć na rowerze','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('row','wiosłować','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('squat','przysiad','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('tackle','kiwać','blokować','chwytać',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('walk','iść','spacerować','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('abseiling','spuszczanie się na linie','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('acrobatics','akrobatyka','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('aerobics','aerobik','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('American footbal','footbal amerykański','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('archery','łucznictwo','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('athletics','lekkoatletyka','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('backpacking','turystyka piesza z plecakiem','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('backstroke','styl grzbietowy','pływać grzbietem','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('badminton','badminton','kometka','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('basketball','koszykówka','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baseball','baseball','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('board game','gra planszowa','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bodybuilding','kulturystyka','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bowling','gra w kręgle','kręgle','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('boxing','boks','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('swim','pływać','płynąć','popłynąć',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('butterfly style','styl motylkowy','motylek','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('canoeing','kajakarstwo','pływanie kajakiem','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('checkers','warcaby','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('crawl','kraul','pływanie kraulem','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cricket','krykiet','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cycling','kolarstwo','jazda rowerem','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('draughts','warcaby','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('fencing','szermierka','fechtunek','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('tennis','tenis','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('football','piłka nożna','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('golf','golf','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('gymnastics','gimnastyka','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('handball','piłka ręczna','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('hockey','hokej','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('horse racing','wyścigi konne','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('judo','dżudo','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('kayaking','kajakarstwo','pływanie kajakiem','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('dance','taniec','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('marathon','maraton','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('parachuting','skoki spadochronowe','skok ze spadochronem','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('polo','polo','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('rowing','wioślarstwo','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('rugby','rugby','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('sailing','żeglarstwo','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('skateboarding','jazda na deskorolce','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('skating','łyżwiarstwo','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('skiiing','narciarstwo','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('skydiving','skoki spadochronowe','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('snowboarding','snowboarding','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('sprint','sprint','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('surfing','pływanie na desce surfingowej','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('swimming','pływanie','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('table tennis','tenis stołowy','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('triathlon','triatlon','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('valleyball','siatkówka','piłka siatkowa','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('weightlifting','podnoszenie ciężarów','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('wingsuit','latanie w kombinezonie','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('sailing','żeglarstwo','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('workout','trening','zaprawa fizyczna','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('yoga','joga','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('backpack','plecak do wędrówek','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baseball court','boisko baseballowe','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('basketball','piłka koszykowa','piłka do koszykówki','koszykówka',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baseball bat','kij baseballowy','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baseball glove','rękawica baseballowa','rękawica bejsbolowa','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('basket','kosz','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baseball','piłka baseballowa','piłka do baseballu','baseball',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bat','kij do krykieta','rakietka','pałka',3,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bicycle','rower','jechać na rowerze','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bike','rower','motocykl','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bobsleigh','bobslej','','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bow','łuk','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('boxing gloves','rękawice bokserskie','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('canoe','kajak','czółno','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('exercise bike','rower treningowy','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('foil','floret','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('football','piłka nożna','piłka footbolowa','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('golf club','klub golfowy','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('handball','piłka do ręcznej','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('helmet','kask','hełm','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('hockey puck','krążek do hokeja','krążek hokejowy','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('hockey stick','kij hokejowy','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('horse','koń','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('jockey cap','toczek do jazdy konnej','toczek','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('obstacle','przeszkoda','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('kayak','kajak','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('mask','maska','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('net','siatka','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('paddle','wiosło','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('parachute','spadochron','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('rugby ball','piłka do rugby','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('racket','rakieta','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('saddle','siodło','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('sail','żagiel','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('sailboat','żaglówka','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('shuttlecock','lotka do badmintona','lotka','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('skateboard','deskorolka','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('ice skates','łyżwy','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('skis','narty','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('ski poles','kijki narciarskie','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('snowboard','deska do snowboardu','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('surfboard','deska surfingowa','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('swimsuit','kostium pływacki','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('swimming cap','czepek pływacki','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('swimming trunks','kąpielówki','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('target','cel','tarcza','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('tracksuit','dres','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('trainers','butry sportowe','adidasy','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('weight','ciężar','ciężarek','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('wingsuit','kombinezon do latania','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('yacht','jacht','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('acrobat','akrobata','akrobatka','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('adversary','przeciwnik','przeciwniczka','rywal',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('arbiter','arbiter','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('archer','łucznik','łuczniczka','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('athlete','lekkoatleta','sportowiec','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('attacker','napastnik','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('backpacker','turysta uprawiający wędrówkę pieszą','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('baseplayer','biegacz','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('biker','rowerzysta','cyklista','motocyklista',3,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bodybuilder','kulturysta','kulturystka','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('boxer','bokser','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('catcher','łapacz','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('champion','mistrz','mistrzyni','czempion',3,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('coach','trener','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('commenter','komentator','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('competitor','zawodnik','przeciwnik','współzawodnik',3,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('contestant','zawodnik','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cricketer','gracz w krykieta','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cyclist','rowerzysta','cyklista','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('defender','obrońca','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('fan','kibic','fan','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('fencer','szermierz','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('goalkeeper','bramkarz','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('gymnast','gimnastyk','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('jockey','dżokej','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('parachuter','spadochroniarz','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('pitcher','zawodnik rzucający piłką','miotacz','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('player','gracz','zawodnik','uczestnik',3,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('refree','sędzia','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('runner','biegacz','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('skater','łyżwiarz','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('skiier','narciarz','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('ski jumper','skoczek narciarski','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('sprinter','sprinter','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('supporter','kibic','pomocnik','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('surfer','serfer','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('umpire','sędzia','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('winner','zwycięzca','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('able-bodied','zdrowy fizycznie','pełnosprawny','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('ace','as','as serwisowy','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('acrobatic','akrobatyczny','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('adrenalin','adrenalina','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('alpine','alpejski','wysokogórski','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('amateur','amator','amatorka','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('ascent','wspinaczka','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('athletic','wysportowany','lekkoatletyczny','spotowy',3,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('attack','atak','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('audience','publiczność','widownia','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('award','nagroda','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('backhand','bekhend','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('biceps','biceps','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bikini','dwuczęściowy kostium kąpielowy','bikini','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('bronze medal','brązowy medal','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('championship','mistrzostwo','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('checkmate','szach mat','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('competition','rywalizacja','konkurencja','konkurs',3,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('competitive','konkurencyjny','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('contest','zawody','konkurs','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('tournament','zawody sportowe','rozgrywki sportowe','',2,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('defence','obrona','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('disabled','niepełnosprawny','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('fit','sprawny','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('physical activity','aktywność fizyczna','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('stadium','stadion','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('cross country','przełajowy (bieg)','','',1,'SPORT');
+ INSERT INTO `POLISH` (WORD,TL1,TL2,TL3,NIVEL,TIPO) VALUES ('downhill','zjazdowe (narciarstwo)','','',1,'SPORT');
+
+
  DROP TABLE IF EXISTS "GERMAN";
 CREATE TABLE "GERMAN" (
 	`WORD`	TEXT NOT NULL,
